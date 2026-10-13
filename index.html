@@ -313,12 +313,8 @@
           </ul>
         </div>
 
-        <!--
-          Static sites can't process forms on their own, so this form posts to Formspree (free tier).
-          1. Sign up at https://formspree.io and create a form.
-          2. Replace YOUR_FORM_ID below with the ID they give you (e.g. "xyzabcd").
-        -->
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Static sites can't process forms on their own, so this form posts to Formspree (free tier). -->
+        <form class="contact-form" action="https://formspree.io/f/mqpedvkn" method="POST">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
@@ -331,6 +327,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New message from your portfolio site" />
           <!-- Honeypot field: hidden from humans, catches spam bots -->
           <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
           <button type="submit" class="btn">Send message</button>

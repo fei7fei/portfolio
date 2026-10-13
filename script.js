@@ -27,12 +27,6 @@ const status = form?.querySelector(".form-status");
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  if (form.action.includes("YOUR_FORM_ID")) {
-    status.className = "form-status error";
-    status.textContent = "The contact form isn't available yet. Please reach out on LinkedIn for now.";
-    return;
-  }
-
   const button = form.querySelector("button");
   button.disabled = true;
   status.className = "form-status";
@@ -51,7 +45,7 @@ form?.addEventListener("submit", async (event) => {
     status.textContent = "Thanks! Your message has been sent.";
   } catch {
     status.className = "form-status error";
-    status.textContent = "Something went wrong. Please email me directly instead.";
+    status.textContent = "Something went wrong. Please reach out on LinkedIn instead.";
   } finally {
     button.disabled = false;
   }
