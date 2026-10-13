@@ -189,5 +189,6 @@
   "travel.trip": "Bakasyon",
   "travel.map": "Tingnan ang mapa",
   "travel.zoomIn": "Mag-zoom in",
-  "travel.zoomOut": "Mag-zoom out"
+  "travel.zoomOut": "Mag-zoom out",
+  "int.rvtrips": "Mga RV trip"
 }

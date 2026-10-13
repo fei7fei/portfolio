@@ -189,5 +189,6 @@
   "travel.trip": "度假",
   "travel.map": "查看地图",
   "travel.zoomIn": "放大",
-  "travel.zoomOut": "缩小"
+  "travel.zoomOut": "缩小",
+  "int.rvtrips": "房车旅行"
 }

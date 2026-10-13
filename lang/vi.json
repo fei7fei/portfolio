@@ -189,5 +189,6 @@
   "travel.trip": "Kỳ nghỉ",
   "travel.map": "Xem bản đồ",
   "travel.zoomIn": "Phóng to",
-  "travel.zoomOut": "Thu nhỏ"
+  "travel.zoomOut": "Thu nhỏ",
+  "int.rvtrips": "Du lịch bằng xe RV"
 }

@@ -189,5 +189,6 @@
   "travel.trip": "休暇旅行",
   "travel.map": "地図を見る",
   "travel.zoomIn": "ズームイン",
-  "travel.zoomOut": "ズームアウト"
+  "travel.zoomOut": "ズームアウト",
+  "int.rvtrips": "キャンピングカー旅行"
 }

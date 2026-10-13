@@ -189,5 +189,6 @@
   "travel.trip": "휴가 여행",
   "travel.map": "지도 보기",
   "travel.zoomIn": "확대",
-  "travel.zoomOut": "축소"
+  "travel.zoomOut": "축소",
+  "int.rvtrips": "캠핑카 여행"
 }

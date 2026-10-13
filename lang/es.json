@@ -189,5 +189,6 @@
   "travel.trip": "Vacaciones",
   "travel.map": "Ver el mapa",
   "travel.zoomIn": "Acercar",
-  "travel.zoomOut": "Alejar"
+  "travel.zoomOut": "Alejar",
+  "int.rvtrips": "Viajes en autocaravana"
 }

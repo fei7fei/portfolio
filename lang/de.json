@@ -189,5 +189,6 @@
   "travel.trip": "Urlaub",
   "travel.map": "Karte ansehen",
   "travel.zoomIn": "Vergrößern",
-  "travel.zoomOut": "Verkleinern"
+  "travel.zoomOut": "Verkleinern",
+  "int.rvtrips": "Wohnmobilreisen"
 }

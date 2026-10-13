@@ -189,5 +189,6 @@
   "travel.trip": "Vacances",
   "travel.map": "Voir la carte",
   "travel.zoomIn": "Zoom avant",
-  "travel.zoomOut": "Zoom arrière"
+  "travel.zoomOut": "Zoom arrière",
+  "int.rvtrips": "Voyages en camping-car"
 }
