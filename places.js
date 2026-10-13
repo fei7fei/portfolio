@@ -15,6 +15,7 @@ window.PLACES = [
   // Trips
   { name: "Calgary", country: "Canada", lat: 51.0447, lng: -114.0719, type: "trip" },
   { name: "Montreal", country: "Canada", lat: 45.5019, lng: -73.5674, type: "trip" },
+  { name: "Quebec City", country: "Canada", lat: 46.8139, lng: -71.208, type: "trip" },
   { name: "Seattle", country: "United States", lat: 47.6062, lng: -122.3321, type: "trip" },
   { name: "Portland", country: "United States", lat: 45.5152, lng: -122.6784, type: "trip", side: "left" },
   { name: "Los Angeles", country: "United States", lat: 34.0522, lng: -118.2437, type: "trip" },
