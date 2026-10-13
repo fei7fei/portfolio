@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael Xie — Software Developer</title>
-  <meta name="description" content="Portfolio of Michael Xie, a Python developer who builds automation tools, Streamlit apps, and computer-vision projects." />
+  <title>Pei Lin (Michael) Xie — Software Developer</title>
+  <meta name="description" content="Portfolio of Pei Lin (Michael) Xie, a Python developer working on automation tools, computer vision, and medical-imaging AI research." />
 
   <!-- Social share preview (shows when you paste your link into LinkedIn, Slack, etc.) -->
-  <meta property="og:title" content="Michael Xie — Software Developer" />
+  <meta property="og:title" content="Pei Lin (Michael) Xie — Software Developer" />
   <meta property="og:description" content="Portfolio, projects, and contact info." />
   <meta property="og:type" content="website" />
 
@@ -34,6 +34,7 @@
       <ul class="nav-links" id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <!-- Add resume.pdf to this folder, then uncomment:
@@ -47,7 +48,7 @@
     <!-- ============ HERO ============ -->
     <section class="hero container" id="top">
       <p class="eyebrow">Hi, my name is</p>
-      <h1>Michael Xie.</h1>
+      <h1>Pei Lin (Michael) Xie.</h1>
       <h2 class="hero-sub">I build practical tools that automate the tedious stuff.</h2>
       <p class="hero-text">
         I'm a Python developer working on automation, web apps, and computer vision,
@@ -65,7 +66,7 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            Hello! I'm Michael Xie, a developer who enjoys turning repetitive, frustrating
+            Hello! I'm Pei Lin Xie (I go by Michael), a developer who enjoys turning repetitive, frustrating
             problems into simple tools that just work.
           </p>
           <p>
@@ -74,15 +75,19 @@
             2025–2026 capstone, a system that counts exuvia shells using a camera and a
             trained YOLO model.
           </p>
+          <p>
+            I also do research on medical-imaging AI, studying how chest X-ray classifiers
+            perform in practice, not just how they score on accuracy.
+          </p>
 
           <ul class="facts">
-            <li><strong>Focus</strong> Python, automation, computer vision</li>
+            <li><strong>Focus</strong> Python, automation, computer vision, medical-imaging AI</li>
             <li><strong>Currently</strong> Capstone project, 2025–2026</li>
           </ul>
         </div>
 
         <div class="about-photo">
-          <!-- Replace with: <img src="images/me.jpg" alt="Photo of Michael Xie" /> -->
+          <!-- Replace with: <img src="images/me.jpg" alt="Photo of Pei Lin (Michael) Xie" /> -->
           <div class="photo-placeholder" role="img" aria-label="Profile photo placeholder">MX</div>
         </div>
       </div>
@@ -127,9 +132,37 @@
       </div>
     </section>
 
+    <!-- ============ RESEARCH ============ -->
+    <section class="section container" id="research">
+      <h2 class="section-title"><span>03.</span> Research</h2>
+
+      <article class="project-card paper-card">
+        <div class="project-body">
+          <p class="paper-status">Submitted · SPIE Medical Imaging 2027 · Decision expected January 2027</p>
+          <h3>Does Medical Pretraining Change What a Chest-Radiograph Classifier Needs? A Frozen-Protocol Comparison on CheXpert</h3>
+          <p class="paper-authors"><strong>Pei Lin (Michael) Xie</strong> and Yi-An Su · University of British Columbia Okanagan</p>
+          <p>
+            Chest X-ray AI models are usually judged by accuracy, a number that can hide
+            dangerously low disease detection. Evaluating the medical foundation model Ark+ on
+            CheXpert, we found a model reaching 86% accuracy caught only about 3 in 10 true
+            disease cases at the standard threshold. Validation-tuned threshold selection raised
+            sensitivity to 0.73–0.84 with no retraining, and a targeted class-weighted loss
+            improved detection of Atelectasis and Consolidation. Five more architectures are
+            being compared under the same frozen protocol.
+          </p>
+          <ul class="tags tags-small">
+            <li>PyTorch</li><li>Swin Transformer</li><li>Medical Imaging</li><li>Calibration</li>
+          </ul>
+          <div class="project-links">
+            <a href="papers/xie-su-spie-abstract.pdf" target="_blank" rel="noopener">Read the abstract (PDF) →</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <!-- ============ PROJECTS ============ -->
     <section class="section container" id="projects">
-      <h2 class="section-title"><span>03.</span> Projects</h2>
+      <h2 class="section-title"><span>04.</span> Projects</h2>
 
       <div class="projects-grid">
         <!-- Copy one <article> block per project -->
@@ -195,7 +228,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="section container" id="contact">
-      <h2 class="section-title"><span>04.</span> Contact</h2>
+      <h2 class="section-title"><span>05.</span> Contact</h2>
 
       <div class="contact-grid">
         <div class="contact-intro">
@@ -243,7 +276,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Michael Xie. Built with HTML &amp; CSS.</p>
+      <p>© <span id="year"></span> Pei Lin (Michael) Xie. Built with HTML &amp; CSS.</p>
     </div>
   </footer>
 
