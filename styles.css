@@ -570,6 +570,41 @@ p {
   flex-wrap: wrap;
 }
 
+.timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.org-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
+  padding: 6px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.org-logo--bleed {
+  padding: 0;
+}
+
+.org-logo--text {
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.skill-card > .org-logo {
+  margin-bottom: 16px;
+}
+
 .timeline-head h3 {
   font-size: 1.15rem;
   margin-bottom: 2px;
