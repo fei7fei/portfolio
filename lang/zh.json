@@ -116,7 +116,7 @@
   "job.hyc.b4": "了解了公司内部系统，包括 HYC 自有的云网络和远程桌面方案。",
   "tag.mfg": "制造",
   "job.yili.role": "工程实习生",
-  "job.yili.org": "Suzhou Yi Li Energy · 中国苏州",
+  "job.yili.org": "苏州弈力能源 · 中国苏州",
   "job.yili.date": "2023 年 7 月 - 2023 年 8 月",
   "job.yili.b1": "解读电机系统的电气原理图。",
   "job.yili.b2": "对生产线上的故障电机进行诊断和维修。",
@@ -191,5 +191,6 @@
   "travel.zoomIn": "放大",
   "travel.zoomOut": "缩小",
   "int.rvtrips": "房车旅行",
-  "link.website": "官网"
+  "link.website": "官网",
+  "link.profile": "公司简介"
 }

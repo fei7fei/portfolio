@@ -116,7 +116,7 @@
   "job.hyc.b4": "了解公司內部系統，包括 HYC 自有的雲端網路與遠端桌面方案。",
   "tag.mfg": "製造",
   "job.yili.role": "工程實習生",
-  "job.yili.org": "Suzhou Yi Li Energy · 中國蘇州",
+  "job.yili.org": "蘇州弈力能源 · 中國蘇州",
   "job.yili.date": "2023 年 7 月 - 2023 年 8 月",
   "job.yili.b1": "判讀馬達系統的電路圖。",
   "job.yili.b2": "診斷並維修產線上的故障馬達。",
@@ -191,5 +191,6 @@
   "travel.zoomIn": "放大",
   "travel.zoomOut": "縮小",
   "int.rvtrips": "露營車旅行",
-  "link.website": "官網"
+  "link.website": "官網",
+  "link.profile": "公司簡介"
 }
