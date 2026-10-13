@@ -13,6 +13,8 @@ window.PLACES = [
   { name: "Washington, DC", country: "United States", lat: 38.9072, lng: -77.0369, type: "home" },
 
   // Trips
+  { name: "Calgary", country: "Canada", lat: 51.0447, lng: -114.0719, type: "trip" },
+  { name: "Montreal", country: "Canada", lat: 45.5019, lng: -73.5674, type: "trip" },
   { name: "Seattle", country: "United States", lat: 47.6062, lng: -122.3321, type: "trip" },
   { name: "Portland", country: "United States", lat: 45.5152, lng: -122.6784, type: "trip", side: "left" },
   { name: "Los Angeles", country: "United States", lat: 34.0522, lng: -118.2437, type: "trip" },
@@ -22,7 +24,7 @@ window.PLACES = [
   { name: "Taipei", country: "Taiwan", lat: 25.033, lng: 121.5654, type: "trip" },
   { name: "Shanghai", country: "China", lat: 31.2304, lng: 121.4737, type: "trip" },
   { name: "Beijing", country: "China", lat: 39.9042, lng: 116.4074, type: "trip" },
-  { name: "Xi'an", country: "China", lat: 34.3416, lng: 108.9398, type: "trip", side: "left" },
+  { name: "Xi'an, Shaanxi", country: "China", lat: 34.3416, lng: 108.9398, type: "trip", side: "left" },
   { name: "Chengdu", country: "China", lat: 30.5728, lng: 104.0668, type: "trip", side: "left" },
   { name: "Chongqing", country: "China", lat: 29.563, lng: 106.5516, type: "trip" },
   { name: "Guangzhou", country: "China", lat: 23.1291, lng: 113.2644, type: "trip", side: "left" },
