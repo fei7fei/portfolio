@@ -13,6 +13,7 @@ window.PLACES = [
   { name: "Washington, DC", country: "United States", lat: 38.9072, lng: -77.0369, type: "home" },
 
   // Trips
+  { name: "Victoria", country: "Canada", lat: 48.4284, lng: -123.3656, type: "trip", side: "left" },
   { name: "Calgary", country: "Canada", lat: 51.0447, lng: -114.0719, type: "trip" },
   { name: "Montreal", country: "Canada", lat: 45.5019, lng: -73.5674, type: "trip" },
   { name: "Quebec City", country: "Canada", lat: 46.8139, lng: -71.208, type: "trip" },
