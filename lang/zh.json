@@ -82,7 +82,7 @@
   "t.wm.title": "水印制作工具",
   "t.wm.desc": "一个 Streamlit 应用，可以为图片、PDF 和 Word 文档添加文字或图片水印，支持单个或倾斜平铺。",
   "t.site.title": "这个作品集网站",
-  "t.site.desc": "一个响应式、无依赖的作品集，使用 HTML 和 CSS 构建，部署在 Cloudflare 上。",
+  "t.site.desc": "我的创意试验场，用来尝试网页上的新玩法，比如 3D 电路板、可互动的旅行地球仪和 14 种语言，同时分享我的作品和生活。部署在 Cloudflare 上。",
   "contact.title": "联系",
   "contact.heading": "一起合作吧",
   "contact.text": "无论你有职位机会、项目想法，还是只想打个招呼，我的收件箱随时开放。我会尽快回复你。",

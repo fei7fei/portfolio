@@ -82,7 +82,7 @@
   "t.wm.title": "浮水印製作工具",
   "t.wm.desc": "一個 Streamlit 應用程式，可為圖片、PDF 與 Word 文件加上文字或圖片浮水印，支援單一或斜向平鋪。",
   "t.site.title": "這個作品集網站",
-  "t.site.desc": "一個響應式、無相依套件的作品集，以 HTML 和 CSS 打造，部署於 Cloudflare。",
+  "t.site.desc": "我的創意實驗場，用來嘗試網頁上的新玩法，例如 3D 電路板、可互動的旅行地球儀和 14 種語言，同時分享我的作品與生活。部署於 Cloudflare。",
   "contact.title": "聯絡",
   "contact.heading": "一起合作吧",
   "contact.text": "無論你有職缺、專案構想，或只是想打聲招呼，我的信箱隨時開放。我會盡快回覆你。",
