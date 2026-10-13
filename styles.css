@@ -604,6 +604,35 @@ p {
   margin-top: 16px;
 }
 
+.timeline-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+  gap: 12px;
+  margin: 20px 0 0;
+}
+
+.timeline-media figure {
+  margin: 0;
+}
+
+.timeline-media img,
+.timeline-media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+}
+
+.timeline-media figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
 /* =========================================================
    CONTACT
    ========================================================= */

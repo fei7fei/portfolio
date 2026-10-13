@@ -1,3 +1,10 @@
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Raw uploads (cropped/compressed copies are what the site uses)
+images/cellstretcher.jpg
+images/pcb.jpg
+images/picar.jpg
+videos/32c847311f535213150929b3da25c1be.mp4
+videos/fe837eeefe4ae343ea02d34692d36f73.mp4
