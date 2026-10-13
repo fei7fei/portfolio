@@ -184,8 +184,10 @@
   "travel.title": "जहाँ मैं जा चुका हूँ",
   "travel.intro": "ग्लोब घुमाने के लिए खींचें। हर बिंदु वह जगह है जहाँ मैं रहा, पढ़ा, काम किया या घूमने गया।",
   "travel.cities": "शहर",
-  "travel.countries": "देश",
+  "travel.countries": "देश और क्षेत्र",
   "travel.home": "रहा, पढ़ा या काम किया",
   "travel.trip": "छुट्टियाँ",
-  "travel.map": "नक्शा देखें"
+  "travel.map": "नक्शा देखें",
+  "travel.zoomIn": "ज़ूम इन",
+  "travel.zoomOut": "ज़ूम आउट"
 }

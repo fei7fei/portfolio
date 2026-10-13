@@ -184,8 +184,10 @@
   "travel.title": "Mga lugar na napuntahan ko",
   "travel.intro": "I-drag para paikutin ang globo. Bawat tuldok ay lugar kung saan ako tumira, nag-aral, nagtrabaho, o naglakbay.",
   "travel.cities": "Mga lungsod",
-  "travel.countries": "Mga bansa",
+  "travel.countries": "Mga bansa at rehiyon",
   "travel.home": "Tumira, nag-aral, o nagtrabaho",
   "travel.trip": "Bakasyon",
-  "travel.map": "Tingnan ang mapa"
+  "travel.map": "Tingnan ang mapa",
+  "travel.zoomIn": "Mag-zoom in",
+  "travel.zoomOut": "Mag-zoom out"
 }

@@ -184,8 +184,10 @@
   "travel.title": "جاهایی که رفته‌ام",
   "travel.intro": "برای چرخاندن کره زمین بکشید. هر نقطه جایی است که در آن زندگی، تحصیل یا کار کرده‌ام یا به سفر رفته‌ام.",
   "travel.cities": "شهر",
-  "travel.countries": "کشور",
+  "travel.countries": "کشورها و مناطق",
   "travel.home": "زندگی، تحصیل یا کار",
   "travel.trip": "تعطیلات",
-  "travel.map": "دیدن نقشه"
+  "travel.map": "دیدن نقشه",
+  "travel.zoomIn": "بزرگ‌نمایی",
+  "travel.zoomOut": "کوچک‌نمایی"
 }

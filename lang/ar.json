@@ -184,8 +184,10 @@
   "travel.title": "أماكن زرتها",
   "travel.intro": "اسحب لتدوير الكرة الأرضية. كل نقطة مكان عشت أو درست أو عملت فيه، أو سافرت إليه.",
   "travel.cities": "مدن",
-  "travel.countries": "دول",
+  "travel.countries": "دول ومناطق",
   "travel.home": "عشت أو درست أو عملت",
   "travel.trip": "العطلات",
-  "travel.map": "اعرض الخريطة"
+  "travel.map": "اعرض الخريطة",
+  "travel.zoomIn": "تكبير",
+  "travel.zoomOut": "تصغير"
 }

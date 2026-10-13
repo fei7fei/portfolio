@@ -184,8 +184,10 @@
   "travel.title": "我去過的地方",
   "travel.intro": "拖曳以旋轉地球。每個點都是我生活、求學、工作或旅行過的地方。",
   "travel.cities": "城市",
-  "travel.countries": "國家",
+  "travel.countries": "國家和地區",
   "travel.home": "生活、求學或工作過",
   "travel.trip": "度假",
-  "travel.map": "查看地圖"
+  "travel.map": "查看地圖",
+  "travel.zoomIn": "放大",
+  "travel.zoomOut": "縮小"
 }

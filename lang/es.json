@@ -184,8 +184,10 @@
   "travel.title": "Lugares donde he estado",
   "travel.intro": "Arrastra para girar el globo. Cada punto es un lugar donde he vivido, estudiado, trabajado o viajado.",
   "travel.cities": "Ciudades",
-  "travel.countries": "Países",
+  "travel.countries": "Países y regiones",
   "travel.home": "Viví, estudié o trabajé",
   "travel.trip": "Vacaciones",
-  "travel.map": "Ver el mapa"
+  "travel.map": "Ver el mapa",
+  "travel.zoomIn": "Acercar",
+  "travel.zoomOut": "Alejar"
 }

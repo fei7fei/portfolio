@@ -1683,6 +1683,59 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   border-radius: var(--radius-tag);
 }
 
+.globe-label.is-back,
+.globe-label.is-crowded {
+  opacity: 0;
+}
+
+.globe-wrap {
+  position: relative;
+}
+
+.globe-zoom {
+  position: absolute;
+  inset-inline-end: 12px;
+  bottom: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.globe-zoom button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--text);
+  background: rgb(17 21 26 / 0.85);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.16s var(--ease-out);
+}
+
+.globe-zoom button:hover {
+  border-color: var(--accent-line);
+  background: var(--surface-2);
+}
+
+.globe-zoom button:active {
+  transform: scale(0.95);
+}
+
+/* Hover tooltip globe.gl shows for each pin */
+.globe .float-tooltip-kap {
+  padding: 4px 8px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text);
+  background: rgb(10 12 15 / 0.9);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-tag);
+}
+
 .globe-label--left span {
   inset-inline-start: auto;
   inset-inline-end: 10px;

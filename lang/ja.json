@@ -184,8 +184,10 @@
   "travel.title": "訪れた場所",
   "travel.intro": "ドラッグして地球儀を回せます。各ポイントは、私が住んだり、学んだり、働いたり、旅行したりした場所です。",
   "travel.cities": "都市",
-  "travel.countries": "国",
+  "travel.countries": "国・地域",
   "travel.home": "住んだ・学んだ・働いた場所",
   "travel.trip": "休暇旅行",
-  "travel.map": "地図を見る"
+  "travel.map": "地図を見る",
+  "travel.zoomIn": "ズームイン",
+  "travel.zoomOut": "ズームアウト"
 }

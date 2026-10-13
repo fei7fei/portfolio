@@ -184,8 +184,10 @@
   "travel.title": "내가 가 본 곳",
   "travel.intro": "드래그해서 지구본을 돌려 보세요. 각 지점은 제가 살거나, 공부하거나, 일하거나, 여행한 곳입니다.",
   "travel.cities": "도시",
-  "travel.countries": "국가",
+  "travel.countries": "국가 및 지역",
   "travel.home": "살았거나 공부했거나 일한 곳",
   "travel.trip": "휴가 여행",
-  "travel.map": "지도 보기"
+  "travel.map": "지도 보기",
+  "travel.zoomIn": "확대",
+  "travel.zoomOut": "축소"
 }

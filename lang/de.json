@@ -184,8 +184,10 @@
   "travel.title": "Orte, an denen ich war",
   "travel.intro": "Ziehen, um den Globus zu drehen. Jeder Punkt ist ein Ort, an dem ich gelebt, studiert, gearbeitet oder Urlaub gemacht habe.",
   "travel.cities": "Städte",
-  "travel.countries": "Länder",
+  "travel.countries": "Länder und Regionen",
   "travel.home": "Gelebt, studiert oder gearbeitet",
   "travel.trip": "Urlaub",
-  "travel.map": "Karte ansehen"
+  "travel.map": "Karte ansehen",
+  "travel.zoomIn": "Vergrößern",
+  "travel.zoomOut": "Verkleinern"
 }

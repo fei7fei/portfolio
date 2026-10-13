@@ -375,12 +375,18 @@
       <p class="section-intro" data-reveal data-i18n="travel.intro">Drag to spin the globe. Each point is somewhere I've lived, studied, worked, or traveled.</p>
 
       <div class="travel-grid">
-        <div class="globe" dir="ltr" aria-hidden="true"></div>
+        <div class="globe-wrap">
+          <div class="globe" dir="ltr" aria-hidden="true"></div>
+          <div class="globe-zoom">
+            <button type="button" data-zoom="in" data-i18n-aria="travel.zoomIn" aria-label="Zoom in">+</button>
+            <button type="button" data-zoom="out" data-i18n-aria="travel.zoomOut" aria-label="Zoom out">−</button>
+          </div>
+        </div>
 
         <aside class="travel-panel" data-reveal>
           <dl class="travel-stats">
             <div><dt data-stat="cities">0</dt><dd data-i18n="travel.cities">Cities</dd></div>
-            <div><dt data-stat="countries">0</dt><dd data-i18n="travel.countries">Countries</dd></div>
+            <div><dt data-stat="countries">0</dt><dd data-i18n="travel.countries">Countries &amp; regions</dd></div>
           </dl>
           <ul class="place-list"></ul>
           <ul class="place-legend">

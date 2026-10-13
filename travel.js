@@ -14,6 +14,8 @@
   const places = Array.isArray(window.PLACES) ? window.PLACES : [];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const mount = section.querySelector(".globe");
+  const zoomIn = section.querySelector("[data-zoom='in']");
+  const zoomOut = section.querySelector("[data-zoom='out']");
   const list = section.querySelector(".place-list");
 
   // ---------- Stats and list (works without WebGL) ----------
@@ -54,6 +56,7 @@
 
   function labelElement(place) {
     const el = document.createElement("div");
+    el.dataset.rank = places.indexOf(place);
     el.className = `globe-label${place.side === "left" ? " globe-label--left" : ""}`;
     const text = document.createElement("span");
     text.textContent = place.name;
@@ -75,8 +78,9 @@
     const visited = new Set(countries.map((c) => ATLAS_NAMES[c] || c));
 
     const home = places.find((p) => p.type === "home") || places[0];
+    // Arcs connect the places you lived or worked; trips are pins only, to keep the globe readable
     const arcs = places
-      .filter((p) => p !== home)
+      .filter((p) => p !== home && p.type === "home")
       .map((p) => ({ startLat: home.lat, startLng: home.lng, endLat: p.lat, endLng: p.lng }));
 
     const still = reduceMotion.matches;
@@ -97,8 +101,9 @@
       .pointLng("lng")
       .pointColor(() => ACCENT)
       .pointAltitude(0.012)
-      .pointRadius((p) => (p.type === "trip" ? 0.32 : 0.45))
-      .ringsData(still ? [] : places)
+      .pointRadius((p) => (p.type === "trip" ? 0.3 : 0.45))
+      .pointLabel((p) => p.name)
+      .ringsData(still ? [] : places.filter((p) => p.type === "home"))
       .ringLat("lat")
       .ringLng("lng")
       .ringColor(() => (t) => `rgba(87,224,166,${0.8 * (1 - t)})`)
@@ -107,7 +112,7 @@
       .ringRepeatPeriod(1800)
       .arcsData(arcs)
       .arcColor(() => ["rgba(87,224,166,0.15)", "rgba(87,224,166,0.9)"])
-      .arcStroke(0.45)
+      .arcStroke(0.35)
       .arcDashLength(0.45)
       .arcDashGap(0.25)
       .arcDashAnimateTime(still ? 0 : 2800)
@@ -120,7 +125,7 @@
 
     if (typeof globe.htmlElementVisibilityModifier === "function") {
       globe.htmlElementVisibilityModifier((el, isVisible) => {
-        el.style.opacity = isVisible ? "1" : "0";
+        el.classList.toggle("is-back", !isVisible);
       });
     }
 
@@ -135,7 +140,39 @@
     controls.autoRotateSpeed = 0.45;
     mount.addEventListener("pointerdown", () => (controls.autoRotate = false), { once: true });
 
-    globe.pointOfView({ lat: 38, lng: -40, altitude: 2.3 }, 0);
+    // Start over East Asia, where most places are; the slow spin brings North America around
+    let altitude = 2.1;
+    globe.pointOfView({ lat: 30, lng: 125, altitude }, 0);
+
+    const zoom = (factor) => {
+      altitude = Math.min(2.8, Math.max(0.45, altitude * factor));
+      controls.autoRotate = false;
+      globe.pointOfView({ altitude }, 600);
+    };
+    zoomIn?.addEventListener("click", () => zoom(0.6));
+    zoomOut?.addEventListener("click", () => zoom(1 / 0.6));
+
+    // Hide labels that overlap a more important one; they reappear as you zoom in
+    function declutter() {
+      const taken = [];
+      [...mount.querySelectorAll(".globe-label")]
+        .sort((a, b) => a.dataset.rank - b.dataset.rank)
+        .forEach((el) => {
+          if (el.classList.contains("is-back")) return;
+          const r = el.firstChild.getBoundingClientRect();
+          const hit = taken.some((t) => r.left < t.right + 4 && r.right > t.left - 4 && r.top < t.bottom + 2 && r.bottom > t.top - 2);
+          el.classList.toggle("is-crowded", hit);
+          if (!hit) taken.push(r);
+        });
+    }
+    let declutterTimer = 0;
+    const startDeclutter = () => {
+      if (!declutterTimer) declutterTimer = setInterval(declutter, 200);
+    };
+    const stopDeclutter = () => {
+      clearInterval(declutterTimer);
+      declutterTimer = 0;
+    };
 
     const fit = () => globe.width(mount.clientWidth).height(mount.clientHeight);
     new ResizeObserver(fit).observe(mount);
@@ -143,7 +180,13 @@
 
     // Pause rendering while the globe is off screen
     new IntersectionObserver(([entry]) => {
-      entry.isIntersecting ? globe.resumeAnimation() : globe.pauseAnimation();
+      if (entry.isIntersecting) {
+        globe.resumeAnimation();
+        startDeclutter();
+      } else {
+        globe.pauseAnimation();
+        stopDeclutter();
+      }
     }).observe(mount);
 
     mount.classList.add("is-ready");
