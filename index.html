@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="home.title">Michael Xie | Electrical Engineering</title>
-  <meta name="description" content="Portfolio of Michael Xie (Pei Lin Xie), an Electrical Engineering student at UBC Okanagan building embedded, computer-vision, and AI projects." />
+  <meta name="description" content="Portfolio of Michael Xie (Pei Lin Xie), an Electrical Engineering student at UBC building embedded, computer-vision, and AI projects." />
   <meta name="theme-color" content="#0a0c0f" />
   <meta name="color-scheme" content="dark" />
 
@@ -12,7 +12,11 @@
   <meta property="og:title" content="Michael Xie | Electrical Engineering" />
   <meta property="og:description" content="Portfolio, projects, and contact info." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/me.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/fei7fei/portfolio/main/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Michael Xie, Electrical Engineering at UBC" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0c0f'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2357e0a6'>MX</text></svg>" />
 
@@ -27,9 +31,7 @@
     } catch (e) {}
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -50,10 +52,9 @@
         <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
         <li><a href="#tools" data-i18n="nav.tools">Tools</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        <!-- Add resume.pdf to this folder, then uncomment:
-        <li><a href="resume.pdf" class="btn btn-small" target="_blank" rel="noopener">Resume</a></li>
-        -->
       </ul>
+
+      <a class="btn btn-small nav-resume" href="Michael-Xie-Resume.pdf" target="_blank" rel="noopener" data-i18n="nav.resume">Resume</a>
 
       <div class="lang">
         <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="lang.label" aria-label="Language">
@@ -95,7 +96,7 @@
           <h1><bdi>Michael Xie.</bdi></h1>
           <p class="hero-alt-name"><bdi>Pei Lin Xie</bdi></p>
           <h2 class="hero-sub" data-i18n="hero.sub">I build hardware and software that solve real problems.</h2>
-          <p class="hero-text" data-i18n="hero.text">I'm an Electrical Engineering student at UBC Okanagan working across embedded systems, computer vision, and AI, from a Raspberry Pi insect counter delivered to an industry client to research on chest X-ray classifiers.</p>
+          <p class="hero-text" data-i18n="hero.text">I'm an Electrical Engineering student at UBC working across embedded systems, computer vision, and AI, from a Raspberry Pi insect counter delivered to an industry client to research on chest X-ray classifiers.</p>
           <div class="hero-actions">
             <a href="#projects" class="btn" data-i18n="hero.cta1">View my work</a>
             <a href="experience.html" class="btn btn-ghost"><span data-i18n="hero.cta2">See my experience</span> <span class="arr" aria-hidden="true">→</span></a>
@@ -103,7 +104,7 @@
         </div>
 
         <figure class="hero-photo">
-          <img src="images/me.jpg" alt="Photo of Michael Xie" width="640" height="640" fetchpriority="high" />
+          <img src="images/me.webp" alt="Photo of Michael Xie" width="640" height="640" fetchpriority="high" />
         </figure>
       </div>
     </section>
@@ -113,18 +114,60 @@
       <h2 class="section-title" data-reveal data-i18n="about.title">About me</h2>
       <div class="about-grid">
         <div class="about-text" data-reveal>
-          <p class="lead" data-i18n="about.p1">Hello! I'm Michael Xie (Pei Lin Xie), an Electrical Engineering student at the University of British Columbia Okanagan, graduating in May 2027. I enjoy turning repetitive, frustrating problems into tools that just work.</p>
+          <p class="lead" data-i18n="about.p1">Hello! I'm Michael Xie (Pei Lin Xie), an Electrical Engineering student at the University of British Columbia, graduating in May 2027. I enjoy turning repetitive, frustrating problems into tools that just work.</p>
           <p data-i18n="about.p2">I've interned at the UBC MEMS Lab, HYC Technology, and Suzhou Yi Li Energy, working on everything from cardiac-tissue test rigs to PCB diagnostics and repair.</p>
           <p data-i18n="about.p3">On my own time I build Python tools, like a bot that books hard-to-get restaurant reservations and a Streamlit app for watermarking documents. For my capstone, my team delivered a camera-based system that counts codling moth exuviae with a trained YOLOv8 model.</p>
           <p data-i18n="about.p4">I also do research on medical-imaging AI, studying how chest X-ray classifiers perform in practice, not just how they score on accuracy.</p>
         </div>
 
         <ul class="facts" data-stagger>
-          <li data-reveal><strong data-i18n="facts.edu.label">Education</strong> <span data-i18n="facts.edu">B.A.Sc. Electrical Engineering, UBC Okanagan (May 2027)</span></li>
+          <li data-reveal><strong data-i18n="facts.edu.label">Education</strong> <span data-i18n="facts.edu">B.A.Sc. Electrical Engineering, UBC (May 2027)</span></li>
           <li data-reveal><strong data-i18n="facts.loc.label">Location</strong> <span data-i18n="facts.loc">Vancouver, BC</span></li>
           <li data-reveal><strong data-i18n="facts.status.label">Status</strong> <span data-i18n="facts.status">Open to 4, 8, or 12-month co-op terms</span></li>
+          <li data-reveal class="fact-now"><strong data-i18n="facts.now.label">Now · October 2026</strong> <span data-i18n="facts.now">Comparing five more model architectures for my SPIE chest X-ray paper.</span></li>
         </ul>
       </div>
+    </section>
+
+    <!-- ============ EXPERIENCE PREVIEW ============ -->
+    <section class="section container" id="experience">
+      <h2 class="section-title" data-reveal data-i18n="nav.experience">Experience</h2>
+      <ol class="exp-preview" data-stagger>
+        <li data-reveal>
+          <a class="exp-row spot" href="experience.html#work">
+            <img class="org-logo org-logo--bleed" src="images/logos/ubc.png" alt="UBC logo" width="48" height="48" loading="lazy" />
+            <span class="exp-row-main">
+              <span class="exp-row-role" data-i18n="job.mems.role">Internship / Volunteer</span>
+              <span class="exp-row-org" data-i18n="job.mems.org">UBC MEMS Lab · Vancouver, BC</span>
+            </span>
+            <span class="exp-row-date" data-i18n="job.mems.date">Apr 2025 - Jun 2025</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="exp-row spot" href="experience.html#work">
+            <img class="org-logo" src="images/logos/hyc.svg" alt="HYC Technology logo" width="48" height="48" loading="lazy" />
+            <span class="exp-row-main">
+              <span class="exp-row-role" data-i18n="job.hyc.role">Engineering &amp; Operations Intern</span>
+              <span class="exp-row-org" data-i18n="job.hyc.org">HYC Technology · Suzhou, China</span>
+            </span>
+            <span class="exp-row-date" data-i18n="job.hyc.date">Jul 2024 - Aug 2024</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li data-reveal>
+          <a class="exp-row spot" href="experience.html#work">
+            <img class="org-logo" src="images/logos/yili.png" alt="Suzhou Yi Li Energy logo" width="48" height="48" loading="lazy" />
+            <span class="exp-row-main">
+              <span class="exp-row-role" data-i18n="job.yili.role">Engineering Intern</span>
+              <span class="exp-row-org" data-i18n="job.yili.org">Suzhou Yi Li Energy · Suzhou, China</span>
+            </span>
+            <span class="exp-row-date" data-i18n="job.yili.date">Jul 2023 - Aug 2023</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ol>
+      <a href="experience.html" class="btn btn-ghost exp-cta" data-reveal><span data-i18n="hero.cta2">See my experience</span> <span class="arr" aria-hidden="true">→</span></a>
     </section>
 
     <!-- ============ SKILLS ============ -->
@@ -133,7 +176,7 @@
 
       <div class="skills-bento" data-stagger>
         <div class="skill-card spot skill-card--image" data-reveal>
-          <img class="skill-bg" src="images/yili-pcbs.jpg" alt="" loading="lazy" />
+          <img class="skill-bg" src="images/yili-pcbs.webp" alt="" loading="lazy" />
           <div class="skill-card-content">
             <h3 data-i18n="skills.elec">Electrical &amp; Hardware</h3>
             <ul class="tags">
@@ -173,7 +216,7 @@
         <div class="paper-head">
           <p class="paper-status" data-i18n="paper.status">Submitted · SPIE Medical Imaging 2027 · Decision expected January 2027</p>
           <h3 dir="ltr">Does Medical Pretraining Change What a Chest-Radiograph Classifier Needs? A Frozen-Protocol Comparison on CheXpert</h3>
-          <p class="paper-authors" dir="ltr"><strong>Pei Lin (Michael) Xie</strong> and Yi-An Su · University of British Columbia Okanagan</p>
+          <p class="paper-authors" dir="ltr"><strong>Pei Lin (Michael) Xie</strong> and Yi-An Su · University of British Columbia</p>
         </div>
 
         <div class="paper-body">
@@ -212,7 +255,7 @@
       <div class="projects-grid" data-stagger>
         <article class="project-card spot project-card--featured" data-reveal>
           <a class="project-thumb video-thumb" href="https://youtu.be/ZW0dnDYto4E" target="_blank" rel="noopener" aria-label="Watch the Codling Moth Exuvia Counting capstone video on YouTube">
-            <img src="images/exuvia-capstone.jpg" alt="Title card: Codling Moth Exuvia Counting, Okanagan Kootenay Sterile Insect Release, Group I26" loading="lazy" />
+            <img src="images/exuvia-capstone.webp" alt="Title card: Codling Moth Exuvia Counting, Okanagan Kootenay Sterile Insect Release, Group I26" loading="lazy" />
           </a>
           <div class="project-body">
             <h3 data-i18n="p.exuvia.title">Codling Moth Exuvia Counting</h3>
@@ -229,7 +272,7 @@
 
         <article class="project-card spot span-4" data-reveal>
           <div class="project-thumb">
-            <img src="images/pi-car.jpg" alt="The self-driving Pi-Car with its camera module and orange wheels" loading="lazy" />
+            <img src="images/pi-car.webp" alt="The self-driving Pi-Car with its camera module and orange wheels" loading="lazy" />
           </div>
           <div class="project-body">
             <h3 data-i18n="p.picar.title">Self-Driving Crack-Avoidance Pi-Car</h3>
@@ -262,7 +305,7 @@
 
         <article class="project-card spot span-4" data-reveal>
           <div class="project-thumb thumb-diagram">
-            <img src="images/cpu-architecture.png" alt="Block diagram of the two-cycle processor: instruction register, finite state machine, memory control, address bus multiplexer, program counter, and RAM" loading="lazy" />
+            <img src="images/cpu-architecture.webp" alt="Block diagram of the two-cycle processor: instruction register, finite state machine, memory control, address bus multiplexer, program counter, and RAM" loading="lazy" />
           </div>
           <div class="project-body">
             <h3 data-i18n="p.cpu.title">32-Bit Microprocessor</h3>
@@ -275,7 +318,7 @@
 
         <article class="project-card spot span-3" data-reveal>
           <a class="project-thumb video-thumb" href="https://youtu.be/A7I5nu9C7j0" target="_blank" rel="noopener" aria-label="Watch the brushless DC motor demo on YouTube">
-            <img src="images/bldc-motor.jpg" alt="Brushless DC motor with a 3D-printed frame and copper coils, wired to an Arduino on a breadboard" loading="lazy" />
+            <img src="images/bldc-motor.webp" alt="Brushless DC motor with a 3D-printed frame and copper coils, wired to an Arduino on a breadboard" loading="lazy" />
           </a>
           <div class="project-body">
             <h3 data-i18n="p.bldc.title">Brushless DC Motor</h3>
@@ -291,7 +334,7 @@
 
         <article class="project-card spot span-3" data-reveal>
           <a class="project-thumb video-thumb" href="https://www.youtube.com/watch?v=WvzyVKP_a9E&amp;t=22s" target="_blank" rel="noopener" aria-label="Watch the F-117A Nighthawk SolidWorks animation on YouTube">
-            <img src="images/f117-cockpit.jpg" alt="SolidWorks render of the F-117A Nighthawk cockpit with instrument panels, joystick, and ejection seat" loading="lazy" />
+            <img src="images/f117-cockpit.webp" alt="SolidWorks render of the F-117A Nighthawk cockpit with instrument panels, joystick, and ejection seat" loading="lazy" />
           </a>
           <div class="project-body">
             <h3 data-i18n="p.f117.title">F-117A Nighthawk in SolidWorks</h3>
@@ -315,7 +358,7 @@
       <div class="tools-grid" data-stagger>
         <article class="project-card spot tool-main" data-reveal>
           <div class="project-thumb thumb-shot">
-            <img src="images/resy-dashboard.png" alt="Resy Reservation Bot dashboard showing running bots, check counts, and a booking calendar" loading="lazy" />
+            <img src="images/resy-dashboard.webp" alt="Resy Reservation Bot dashboard showing running bots, check counts, and a booking calendar" loading="lazy" />
           </div>
           <div class="project-body">
             <h3 data-i18n="t.resy.title">Resy Reservation Bot</h3>
@@ -331,7 +374,7 @@
 
         <article class="project-card spot" data-reveal>
           <div class="project-thumb thumb-shot thumb-right">
-            <img src="images/watermark-studio.png" alt="Watermark Studio app showing an original image beside a preview tiled with a slanted CONFIDENTIAL watermark" loading="lazy" />
+            <img src="images/watermark-studio.webp" alt="Watermark Studio app showing an original image beside a preview tiled with a slanted CONFIDENTIAL watermark" loading="lazy" />
           </div>
           <div class="project-body">
             <h3 data-i18n="t.wm.title">Watermark Creation Tool</h3>
@@ -386,9 +429,9 @@
           <h3 data-i18n="contact.heading">Let's work together</h3>
           <p data-i18n="contact.text">Whether you have a role in mind, a project idea, or just want to say hi, my inbox is always open. I'll get back to you as soon as I can.</p>
           <ul class="contact-links">
-            <!-- Add when ready:
-            <li><a href="mailto:you@example.com">you@example.com</a></li>
-            -->
+            <!-- The address is assembled by script.js to keep it away from simple scrapers -->
+            <li><a class="email-link" data-user="michaelxie04" data-domain="gmail.com" href="#contact">michaelxie04 [at] gmail.com</a></li>
+            <li><a href="Michael-Xie-Resume.pdf" target="_blank" rel="noopener"><span data-i18n="link.resume">Resume (PDF)</span> <span class="arr" aria-hidden="true">↗</span></a></li>
             <li><a href="https://www.linkedin.com/in/michael-xie-32806a171" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">→</span></a></li>
             <li><a href="https://github.com/fei7fei" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">→</span></a></li>
           </ul>

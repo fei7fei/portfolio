@@ -14,6 +14,9 @@
   const places = Array.isArray(window.PLACES) ? window.PLACES : [];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const mount = section.querySelector(".globe");
+  const card = section.querySelector(".place-card");
+  const tr = (key, fallback) => (window.I18N ? window.I18N.t(key, fallback) : fallback);
+  let focusPlace = null; // set once the globe is ready
   const zoomIn = section.querySelector("[data-zoom='in']");
   const zoomOut = section.querySelector("[data-zoom='out']");
   const list = section.querySelector(".place-list");
@@ -35,12 +38,53 @@
       .forEach((p) => {
         const item = document.createElement("li");
         item.className = `place place--${p.type === "trip" ? "trip" : "home"}`;
-        item.textContent = p.name;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "place-btn";
+        btn.textContent = p.name;
+        btn.addEventListener("click", () => {
+          mount.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "center" });
+          if (focusPlace) focusPlace(p);
+          else showCard(p);
+        });
+        item.appendChild(btn);
         cities.appendChild(item);
       });
     group.append(heading, cities);
     list.appendChild(group);
   });
+
+  // ---------- Place card (photo, name, note) ----------
+  function showCard(p) {
+    if (!card) return;
+    const img = card.querySelector("img");
+    if (p.photo) {
+      img.src = p.photo;
+      img.alt = p.name;
+      img.hidden = false;
+    } else {
+      img.removeAttribute("src");
+      img.hidden = true;
+    }
+    card.querySelector(".place-card-name").textContent = p.name;
+    card.querySelector(".place-card-meta").textContent = `${p.country} · ${
+      p.type === "trip" ? tr("travel.trip", "Vacations") : tr("travel.home", "Lived, studied, or worked")
+    }`;
+    const note = card.querySelector(".place-card-note");
+    note.textContent = p.note || "";
+    note.hidden = !p.note;
+    card.hidden = false;
+    requestAnimationFrame(() => card.classList.add("is-open"));
+  }
+
+  function hideCard() {
+    if (!card || card.hidden) return;
+    card.classList.remove("is-open");
+    setTimeout(() => (card.hidden = true), 200);
+  }
+
+  card?.querySelector(".place-card-close").addEventListener("click", hideCard);
+  document.addEventListener("keydown", (e) => e.key === "Escape" && hideCard());
 
   if (!mount || !places.length) return;
 
@@ -140,6 +184,8 @@
     controls.autoRotateSpeed = 0.45;
     mount.addEventListener("pointerdown", () => (controls.autoRotate = false), { once: true });
 
+
+
     // Start over East Asia, where most places are; the slow spin brings North America around
     let altitude = 2.1;
     globe.pointOfView({ lat: 30, lng: 125, altitude }, 0);
@@ -151,6 +197,16 @@
     };
     zoomIn?.addEventListener("click", () => zoom(0.6));
     zoomOut?.addEventListener("click", () => zoom(1 / 0.6));
+
+    // Click a pin (or a name in the list) to fly there and open its card
+    focusPlace = (p) => {
+      controls.autoRotate = false;
+      altitude = Math.min(altitude, 1.3);
+      globe.pointOfView({ lat: p.lat, lng: p.lng, altitude }, still ? 0 : 1000);
+      showCard(p);
+    };
+    globe.onPointClick((p) => focusPlace(p));
+    globe.pointsMerge(false);
 
     // Hide labels that overlap a more important one; they reappear as you zoom in
     function declutter() {

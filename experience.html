@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="exp.title">Experience | Michael Xie</title>
-  <meta name="description" content="Work experience, education, and leadership of Michael Xie (Pei Lin Xie), Electrical Engineering student at UBC Okanagan." />
+  <meta name="description" content="Work experience, education, and leadership of Michael Xie (Pei Lin Xie), Electrical Engineering student at UBC." />
   <meta name="theme-color" content="#0a0c0f" />
   <meta name="color-scheme" content="dark" />
 
   <meta property="og:title" content="Experience | Michael Xie" />
   <meta property="og:description" content="Work experience, education, and leadership." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/me.jpg" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/fei7fei/portfolio/main/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Michael Xie, Electrical Engineering at UBC" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0c0f'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2357e0a6'>MX</text></svg>" />
 
@@ -26,9 +30,7 @@
     } catch (e) {}
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -49,6 +51,8 @@
         <li><a href="index.html#tools" data-i18n="nav.tools">Tools</a></li>
         <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
+
+      <a class="btn btn-small nav-resume" href="Michael-Xie-Resume.pdf" target="_blank" rel="noopener" data-i18n="nav.resume">Resume</a>
 
       <div class="lang">
         <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="lang.label" aria-label="Language">
@@ -83,7 +87,7 @@
     <section class="container page-intro">
       <p class="eyebrow" data-i18n="nav.experience">Experience</p>
       <h1 data-i18n="exp.h1">Where I've worked and learned.</h1>
-      <p class="hero-text" data-i18n="exp.intro">Electrical Engineering student at UBC Okanagan, graduating May 2027. Available for 4, 8, or 12-month co-op terms.</p>
+      <p class="hero-text" data-i18n="exp.intro">Electrical Engineering student at UBC, graduating May 2027. Available for 4, 8, or 12-month co-op terms.</p>
     </section>
 
     <!-- ============ WORK ============ -->
@@ -115,15 +119,15 @@
           </ul>
           <div class="timeline-media">
             <figure>
-              <img src="images/cell-stretcher.jpg" alt="MEMS cell stretcher rig with its 3D-printed actuator arms and motor-driver electronics, next to the lab workstation" loading="lazy" />
+              <img src="images/cell-stretcher.webp" alt="MEMS cell stretcher rig with its 3D-printed actuator arms and motor-driver electronics, next to the lab workstation" loading="lazy" />
               <figcaption data-i18n="job.mems.c1">The cell stretcher and its control electronics</figcaption>
             </figure>
             <figure>
-              <video src="videos/cell-stretcher-rig.mp4" poster="images/cell-stretcher-rig-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Cell stretcher running with live strain data on the lab monitor"></video>
+              <video src="videos/cell-stretcher-rig.mp4" poster="images/cell-stretcher-rig-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Cell stretcher running with live strain data on the lab monitor"></video>
               <figcaption data-i18n="job.mems.c2">Running a stretch cycle with live data</figcaption>
             </figure>
             <figure>
-              <video src="videos/cell-stretcher-membrane.mp4" poster="images/cell-stretcher-membrane-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Close-up of four clamps stretching the cell membrane, filmed with a custom camera rig"></video>
+              <video src="videos/cell-stretcher-membrane.mp4" poster="images/cell-stretcher-membrane-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Close-up of four clamps stretching the cell membrane, filmed with a custom camera rig"></video>
               <figcaption data-i18n="job.mems.c3">Filmed with a camera rig I built, using the ruler as a scale reference to calculate stress and strain</figcaption>
             </figure>
           </div>
@@ -179,7 +183,7 @@
           </ul>
           <div class="timeline-media">
             <figure>
-              <img src="images/yili-pcbs.jpg" alt="Motor-driver PCBs and power modules laid out on a workbench for diagnostics" loading="lazy" />
+              <img src="images/yili-pcbs.webp" alt="Motor-driver PCBs and power modules laid out on a workbench for diagnostics" loading="lazy" />
               <figcaption data-i18n="job.yili.c1">Motor-driver PCBs on the repair bench</figcaption>
             </figure>
           </div>
@@ -201,12 +205,12 @@
               <img class="org-logo org-logo--bleed" src="images/logos/ubc.png" alt="UBC logo" width="48" height="48" loading="lazy" />
               <div>
                 <h3 data-i18n="edu.ubc.role">Bachelor of Applied Science, Electrical Engineering</h3>
-                <p class="timeline-org" data-i18n="edu.ubc.org">University of British Columbia Okanagan · Kelowna, BC</p>
+                <p class="timeline-org" data-i18n="edu.ubc.org">University of British Columbia · Kelowna, BC</p>
               </div>
             </div>
             <div class="timeline-meta">
               <p class="timeline-date" data-i18n="edu.ubc.date">Expected May 2027</p>
-              <a class="org-link" href="https://engineering.ok.ubc.ca/" target="_blank" rel="noopener"><span data-i18n="link.website">Website</span><span class="sr-only">: UBC Okanagan School of Engineering</span> <span class="arr" aria-hidden="true">↗</span></a>
+              <a class="org-link" href="https://engineering.ok.ubc.ca/" target="_blank" rel="noopener"><span data-i18n="link.website">Website</span><span class="sr-only">: UBC School of Engineering</span> <span class="arr" aria-hidden="true">↗</span></a>
             </div>
           </div>
           <ul>
@@ -408,6 +412,13 @@
       <div class="travel-grid">
         <div class="globe-wrap">
           <div class="globe" dir="ltr" aria-hidden="true"></div>
+          <div class="place-card" hidden>
+            <button type="button" class="place-card-close" data-i18n-aria="travel.close" aria-label="Close">×</button>
+            <img alt="" hidden />
+            <p class="place-card-name"></p>
+            <p class="place-card-meta"></p>
+            <p class="place-card-note" hidden></p>
+          </div>
           <div class="globe-zoom">
             <button type="button" data-zoom="in" data-i18n-aria="travel.zoomIn" aria-label="Zoom in">+</button>
             <button type="button" data-zoom="out" data-i18n-aria="travel.zoomOut" aria-label="Zoom out">−</button>

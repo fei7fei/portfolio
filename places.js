@@ -4,6 +4,8 @@
 //   type: "home" = somewhere you lived, studied, or worked
 //         "trip" = a vacation or visit
 //   side: optional, "left" puts the label on the left of the dot
+//   photo: optional, e.g. "images/travel/tokyo.webp"; shows in the card when the pin is clicked
+//   note: optional, one short line shown under the photo (e.g. "Spring 2024 with family")
 // When labels overlap, places higher in this list win and the rest appear as you zoom in.
 window.PLACES = [
   // Lived, studied, or worked

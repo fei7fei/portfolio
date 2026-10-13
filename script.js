@@ -5,6 +5,13 @@ const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Email link: built at runtime so the address isn't sitting in the HTML for scrapers
+document.querySelectorAll(".email-link").forEach((link) => {
+  const address = `${link.dataset.user}@${link.dataset.domain}`;
+  link.href = `mailto:${address}`;
+  link.textContent = address;
+});
+
 // ---------------------------------------------------------
 // Mobile menu
 // ---------------------------------------------------------
