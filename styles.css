@@ -31,8 +31,9 @@
 
   --max-width: 1200px;
   --nav-h: 64px;
-  --font: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono: "Geist Mono", ui-monospace, Consolas, monospace;
+  --script-fonts: "Noto Sans SC", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Noto Sans Devanagari", "Noto Sans Gurmukhi", "Noto Sans Arabic";
+  --font: "Geist", var(--script-fonts), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "Geist Mono", ui-monospace, Consolas, var(--script-fonts), monospace;
 
   /* Motion tokens */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -40,6 +41,7 @@
 
   /* Z-index scale */
   --z-header: 50;
+  --z-dropdown: 55;
   --z-grain: 60;
   --z-skip: 70;
 }
@@ -123,14 +125,16 @@ p {
   padding: 0 32px;
 }
 
+/* Hidden above the viewport (not off to the side, which would widen right-to-left pages) */
 .skip-link {
   position: absolute;
-  left: -9999px;
+  top: 16px;
+  inset-inline-start: 16px;
+  transform: translateY(calc(-100% - 32px));
 }
 
 .skip-link:focus {
-  left: 16px;
-  top: 16px;
+  transform: none;
   z-index: var(--z-skip);
   background: var(--accent);
   color: var(--accent-ink);
@@ -242,7 +246,7 @@ p {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   height: var(--nav-h);
 }
 
@@ -267,6 +271,7 @@ p {
   gap: 4px;
   list-style: none;
   margin: 0;
+  margin-inline-start: auto;
   padding: 0;
 }
 
@@ -317,7 +322,7 @@ p {
   width: 44px;
   height: 44px;
   padding: 10px;
-  margin-right: -10px;
+  margin-inline-end: -10px;
   background: none;
   border: 0;
   cursor: pointer;
@@ -334,6 +339,175 @@ p {
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================================
+   LANGUAGE SWITCHER
+   ========================================================= */
+.lang {
+  position: relative;
+  margin-inline-start: 12px;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  font: inherit;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.16s var(--ease-out);
+}
+
+.lang-btn::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s var(--ease-out);
+}
+
+.lang.open .lang-btn::after {
+  transform: translateY(3px) rotate(-135deg);
+}
+
+.lang-btn:hover {
+  border-color: var(--accent-line);
+  background: var(--surface-2);
+}
+
+.lang-btn:active {
+  transform: scale(0.97);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  z-index: var(--z-dropdown);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: rgb(17 21 26 / 0.96);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  box-shadow: 0 24px 48px -16px rgb(2 6 10 / 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform-origin: top right;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.96) translateY(-4px);
+  transition: opacity 0.16s var(--ease-out), transform 0.16s var(--ease-out), visibility 0s linear 0.16s;
+}
+
+[dir="rtl"] .lang-menu {
+  transform-origin: top left;
+}
+
+.lang.open .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.16s var(--ease-out), transform 0.16s var(--ease-out), visibility 0s;
+}
+
+.lang-menu button {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 0.925rem;
+  text-align: start;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lang-menu button:hover,
+.lang-menu button:focus-visible {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.lang-menu button[aria-current="true"] {
+  color: var(--accent);
+}
+
+/* Hide content briefly while a saved language loads, to avoid a flash of English */
+.i18n-pending main,
+.i18n-pending .nav-links,
+.i18n-pending .site-footer {
+  opacity: 0;
+}
+
+/* Scripts that need looser tracking and taller lines than Latin display type.
+   html:lang() outranks rules like .hero h1 so these always apply. */
+html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(fa)) :is(h1, h2, h3, .hero-sub, .section-title) {
+  letter-spacing: 0;
+}
+
+html:is(:lang(hi), :lang(pa), :lang(ar), :lang(fa)) :is(h1, h2, h3, .hero-sub) {
+  line-height: 1.4;
+}
+
+html:is(:lang(zh), :lang(ja), :lang(ko)) :is(h2, h3, .hero-sub) {
+  line-height: 1.3;
+}
+
+html:is(:lang(hi), :lang(pa), :lang(ar), :lang(fa)) body {
+  line-height: 1.9;
+}
+
+/* Arabic script must never be letter-spaced: it breaks the joins between letters */
+html:is(:lang(ar), :lang(fa)) * {
+  letter-spacing: 0 !important;
+}
+
+html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(fa)) :is(.eyebrow, .facts strong, .paper-status, .timeline-date) {
+  font-family: var(--font);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Short English fragments (C++, Git/GitHub) keep their own direction inside right-to-left pages */
+.tags li,
+.timeline-date,
+.paper-stats dt {
+  unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .arr {
+  transform: scaleX(-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  [dir="rtl"] a:hover .arr {
+    transform: scaleX(-1) translateX(3px);
+  }
+}
+
+[dir="rtl"] .paper-head h3,
+[dir="rtl"] .paper-authors {
+  text-align: right;
+}
 
 /* =========================================================
    HERO
@@ -360,6 +534,24 @@ p {
     radial-gradient(40% 40% at 10% 90%, rgb(87 224 166 / 0.05), transparent 70%);
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
   mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+/* 3D circuit board behind the hero (pcb.js). Fades in once WebGL is ready. */
+.pcb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+  -webkit-mask-image: radial-gradient(80% 62% at 60% 40%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(80% 62% at 60% 40%, #000 30%, transparent 100%);
+}
+
+.pcb.is-ready {
+  opacity: 0.9;
 }
 
 .scope {
@@ -448,6 +640,10 @@ p {
 }
 
 /* Offset frame behind the photo for depth */
+[dir="rtl"] .hero-photo::before {
+  inset: 18px 18px -18px -18px;
+}
+
 .hero-photo::before {
   content: "";
   position: absolute;
@@ -830,11 +1026,12 @@ p {
   margin: 0;
   display: grid;
   gap: 0;
-  border-left: 1px solid var(--border);
+  border-inline-start: 1px solid var(--border);
 }
 
 .paper-stats > div {
-  padding: 4px 0 24px 28px;
+  padding-block: 4px 24px;
+  padding-inline: 28px 0;
 }
 
 .paper-stats > div + div {
@@ -892,7 +1089,7 @@ p {
   aspect-ratio: auto;
   min-height: 100%;
   border-bottom: 0;
-  border-right: 1px solid var(--border);
+  border-inline-end: 1px solid var(--border);
 }
 
 .project-card--featured .project-body {
@@ -1205,7 +1402,8 @@ p {
   position: relative;
   list-style: none;
   margin: 0;
-  padding: 0 0 0 var(--rail);
+  padding: 0;
+  padding-inline-start: var(--rail);
   display: grid;
   gap: 20px;
 }
@@ -1215,7 +1413,7 @@ p {
 .timeline::after {
   content: "";
   position: absolute;
-  left: 5px;
+  inset-inline-start: 5px;
   top: 8px;
   bottom: 8px;
   width: 2px;
@@ -1266,7 +1464,7 @@ p {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: calc(var(--rail) * -1);
+  inset-inline-start: calc(var(--rail) * -1);
   top: 34px;
   width: 12px;
   height: 12px;
@@ -1350,7 +1548,7 @@ p {
 
 .timeline-item > ul:not(.tags) {
   margin: 20px 0 0;
-  padding-left: 20px;
+  padding-inline-start: 20px;
   color: var(--muted);
   font-size: 0.95rem;
   max-width: 78ch;
@@ -1437,7 +1635,7 @@ p {
 
   .project-card--featured .project-thumb {
     aspect-ratio: 16 / 9;
-    border-right: 0;
+    border-inline-end: 0;
     border-bottom: 1px solid var(--border);
   }
 
@@ -1448,13 +1646,14 @@ p {
 
   .paper-stats {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    border-left: 0;
+    border-inline-start: 0;
     border-top: 1px solid var(--border);
   }
 
   .paper-stats > div,
   .paper-stats > div + div {
-    padding: 20px 20px 0 0;
+    padding-block: 20px 0;
+    padding-inline: 0 20px;
     border-top: 0;
   }
 }
@@ -1470,6 +1669,10 @@ p {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .lang {
+    margin-inline-start: auto;
   }
 
   .site-header {
@@ -1509,8 +1712,7 @@ p {
   }
 
   .nav-links a:not(.btn)::after {
-    left: 0;
-    right: auto;
+    inset-inline: 0 auto;
     width: 24px;
   }
 
@@ -1634,7 +1836,7 @@ p {
 
   .timeline::before,
   .timeline::after {
-    left: 3px;
+    inset-inline-start: 3px;
   }
 
   .timeline-item {

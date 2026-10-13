@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience | Michael Xie</title>
+  <title data-i18n="exp.title">Experience | Michael Xie</title>
   <meta name="description" content="Work experience, education, and leadership of Michael Xie (Pei Lin Xie), Electrical Engineering student at UBC Okanagan." />
   <meta name="theme-color" content="#0a0c0f" />
   <meta name="color-scheme" content="dark" />
@@ -15,7 +15,16 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0c0f'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2357e0a6'>MX</text></svg>" />
 
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script>
+    document.documentElement.classList.replace("no-js", "js");
+    try {
+      var savedLang = localStorage.getItem("lang");
+      if (savedLang && savedLang !== "en") {
+        document.documentElement.classList.add("i18n-pending");
+        setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 1500);
+      }
+    } catch (e) {}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +33,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <div class="top-sentinel" aria-hidden="true"></div>
 
   <!-- ============ HEADER / NAV ============ -->
@@ -32,34 +41,54 @@
     <nav class="nav container" aria-label="Main">
       <a href="index.html" class="logo">Michael<span>Xie</span></a>
 
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="experience.html" aria-current="page" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="index.html#research" data-i18n="nav.research">Research</a></li>
+        <li><a href="index.html#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="index.html#tools" data-i18n="nav.tools">Tools</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="lang">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="lang.label" aria-label="Language">
+          <span class="lang-current">EN</span>
+        </button>
+        <ul class="lang-menu" id="lang-menu">
+          <li><button type="button" data-lang="en" lang="en">English</button></li>
+          <li><button type="button" data-lang="fr" lang="fr">Français</button></li>
+          <li><button type="button" data-lang="es" lang="es">Español</button></li>
+          <li><button type="button" data-lang="de" lang="de">Deutsch</button></li>
+          <li><button type="button" data-lang="pt" lang="pt">Português</button></li>
+          <li><button type="button" data-lang="zh" lang="zh-Hans">简体中文</button></li>
+          <li><button type="button" data-lang="zht" lang="zh-Hant">繁體中文</button></li>
+          <li><button type="button" data-lang="ja" lang="ja">日本語</button></li>
+          <li><button type="button" data-lang="ko" lang="ko">한국어</button></li>
+          <li><button type="button" data-lang="hi" lang="hi">हिन्दी</button></li>
+          <li><button type="button" data-lang="pa" lang="pa">ਪੰਜਾਬੀ</button></li>
+          <li><button type="button" data-lang="tl" lang="tl">Tagalog</button></li>
+          <li><button type="button" data-lang="vi" lang="vi">Tiếng Việt</button></li>
+          <li><button type="button" data-lang="fa" lang="fa">فارسی</button></li>
+          <li><button type="button" data-lang="ar" lang="ar">العربية</button></li>
+        </ul>
+      </div>
+
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="experience.html" aria-current="page">Experience</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#tools">Tools</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
   <main id="main">
     <section class="container page-intro">
-      <p class="eyebrow">Experience</p>
-      <h1>Where I've worked and learned.</h1>
-      <p class="hero-text">
-        Electrical Engineering student at UBC Okanagan, graduating May 2027. Available for
-        4, 8, or 12-month co-op terms.
-      </p>
+      <p class="eyebrow" data-i18n="nav.experience">Experience</p>
+      <h1 data-i18n="exp.h1">Where I've worked and learned.</h1>
+      <p class="hero-text" data-i18n="exp.intro">Electrical Engineering student at UBC Okanagan, graduating May 2027. Available for 4, 8, or 12-month co-op terms.</p>
     </section>
 
     <!-- ============ WORK ============ -->
     <section class="section container" id="work">
-      <h2 class="section-title" data-reveal>Technical work experience</h2>
+      <h2 class="section-title" data-reveal data-i18n="exp.work.title">Technical work experience</h2>
 
       <ol class="timeline">
         <li class="timeline-item" data-reveal>
@@ -67,36 +96,36 @@
             <div class="timeline-title">
               <img class="org-logo org-logo--bleed" src="images/logos/ubc.png" alt="UBC logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Internship / Volunteer</h3>
-                <p class="timeline-org">UBC MEMS Lab · Vancouver, BC</p>
+                <h3 data-i18n="job.mems.role">Internship / Volunteer</h3>
+                <p class="timeline-org" data-i18n="job.mems.org">UBC MEMS Lab · Vancouver, BC</p>
               </div>
             </div>
-            <p class="timeline-date">Apr 2025 - Jun 2025</p>
+            <p class="timeline-date" data-i18n="job.mems.date">Apr 2025 - Jun 2025</p>
           </div>
           <ul>
-            <li>Assisted a PhD student in cardiac tissue modelling using a MEMS-based cell stretcher, calibrating load cells for force measurement.</li>
-            <li>Operated microscopes and collected substrate stress and strain data under various motor conditions.</li>
-            <li>Created graphical visualizations of the substrate's mechanical behaviour to support ongoing cardiac research.</li>
-            <li>Contributed to a custom Petri dish prototype that runs multiple trials in one container, so cells can be cultured under different drug treatments at once.</li>
-            <li>Improved Python and C++ control code for ease of use and proposed hardware upgrades (closed-loop drivers, compact design, magnetic placement).</li>
-            <li>Enhanced the clamping mechanism and enabled membrane underside observation for improved imaging.</li>
+            <li data-i18n="job.mems.b1">Assisted a PhD student in cardiac tissue modelling using a MEMS-based cell stretcher, calibrating load cells for force measurement.</li>
+            <li data-i18n="job.mems.b2">Operated microscopes and collected substrate stress and strain data under various motor conditions.</li>
+            <li data-i18n="job.mems.b3">Created graphical visualizations of the substrate's mechanical behaviour to support ongoing cardiac research.</li>
+            <li data-i18n="job.mems.b4">Contributed to a custom Petri dish prototype that runs multiple trials in one container, so cells can be cultured under different drug treatments at once.</li>
+            <li data-i18n="job.mems.b5">Improved Python and C++ control code for ease of use and proposed hardware upgrades (closed-loop drivers, compact design, magnetic placement).</li>
+            <li data-i18n="job.mems.b6">Enhanced the clamping mechanism and enabled membrane underside observation for improved imaging.</li>
           </ul>
           <div class="timeline-media">
             <figure>
               <img src="images/cell-stretcher.jpg" alt="MEMS cell stretcher rig with its 3D-printed actuator arms and motor-driver electronics, next to the lab workstation" loading="lazy" />
-              <figcaption>The cell stretcher and its control electronics</figcaption>
+              <figcaption data-i18n="job.mems.c1">The cell stretcher and its control electronics</figcaption>
             </figure>
             <figure>
               <video src="videos/cell-stretcher-rig.mp4" poster="images/cell-stretcher-rig-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Cell stretcher running with live strain data on the lab monitor"></video>
-              <figcaption>Running a stretch cycle with live data</figcaption>
+              <figcaption data-i18n="job.mems.c2">Running a stretch cycle with live data</figcaption>
             </figure>
             <figure>
               <video src="videos/cell-stretcher-membrane.mp4" poster="images/cell-stretcher-membrane-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Close-up of four clamps stretching the cell membrane, filmed with a custom camera rig"></video>
-              <figcaption>Filmed with a camera rig I built, using the ruler as a scale reference to calculate stress and strain</figcaption>
+              <figcaption data-i18n="job.mems.c3">Filmed with a camera rig I built, using the ruler as a scale reference to calculate stress and strain</figcaption>
             </figure>
           </div>
           <ul class="tags tags-small">
-            <li>Python</li><li>C++</li><li>MEMS</li><li>Microscopy</li>
+            <li>Python</li><li>C++</li><li>MEMS</li><li data-i18n="tag.microscopy">Microscopy</li>
           </ul>
         </li>
 
@@ -105,20 +134,20 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/hyc.svg" alt="HYC Technology logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Engineering &amp; Operations Intern</h3>
-                <p class="timeline-org">HYC Technology · Suzhou, China</p>
+                <h3 data-i18n="job.hyc.role">Engineering &amp; Operations Intern</h3>
+                <p class="timeline-org" data-i18n="job.hyc.org">HYC Technology · Suzhou, China</p>
               </div>
             </div>
-            <p class="timeline-date">Jul 2024 - Aug 2024</p>
+            <p class="timeline-date" data-i18n="job.hyc.date">Jul 2024 - Aug 2024</p>
           </div>
           <ul>
-            <li>Completed rotational training across 7 departments, including semiconductor R&amp;D, EV R&amp;D, smart device development, quality control, and supply chain.</li>
-            <li>Assembled 100 smartwatch panel carriers for automated testing machines on the production line.</li>
-            <li>Gained exposure to Git, SolidWorks, Quartus Prime, Cadence Allegro, and Siemens/Mitsubishi PLC software.</li>
-            <li>Explored internal systems including HYC's proprietary cloud network and remote desktop solutions.</li>
+            <li data-i18n="job.hyc.b1">Completed rotational training across 7 departments, including semiconductor R&amp;D, EV R&amp;D, smart device development, quality control, and supply chain.</li>
+            <li data-i18n="job.hyc.b2">Assembled 100 smartwatch panel carriers for automated testing machines on the production line.</li>
+            <li data-i18n="job.hyc.b3">Gained exposure to Git, SolidWorks, Quartus Prime, Cadence Allegro, and Siemens/Mitsubishi PLC software.</li>
+            <li data-i18n="job.hyc.b4">Explored internal systems including HYC's proprietary cloud network and remote desktop solutions.</li>
           </ul>
           <ul class="tags tags-small">
-            <li>Manufacturing</li><li>Quartus</li>
+            <li data-i18n="tag.mfg">Manufacturing</li><li>Quartus</li>
           </ul>
         </li>
 
@@ -127,26 +156,26 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/yili.png" alt="Suzhou Yi Li Energy logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Engineering Intern</h3>
-                <p class="timeline-org">Suzhou Yi Li Energy · Suzhou, China</p>
+                <h3 data-i18n="job.yili.role">Engineering Intern</h3>
+                <p class="timeline-org" data-i18n="job.yili.org">Suzhou Yi Li Energy · Suzhou, China</p>
               </div>
             </div>
-            <p class="timeline-date">Jul 2023 - Aug 2023</p>
+            <p class="timeline-date" data-i18n="job.yili.date">Jul 2023 - Aug 2023</p>
           </div>
           <ul>
-            <li>Interpreted electrical schematics for motor systems.</li>
-            <li>Conducted diagnostics and repairs on defective motors from the production line.</li>
-            <li>Used multimeters, oscilloscopes, and DC/AC generators to diagnose faulty PCBs, then repaired them by soldering resistors, capacitors, and other components.</li>
-            <li>Gained insight into electric motor industry trends from a business and manufacturing perspective.</li>
+            <li data-i18n="job.yili.b1">Interpreted electrical schematics for motor systems.</li>
+            <li data-i18n="job.yili.b2">Conducted diagnostics and repairs on defective motors from the production line.</li>
+            <li data-i18n="job.yili.b3">Used multimeters, oscilloscopes, and DC/AC generators to diagnose faulty PCBs, then repaired them by soldering resistors, capacitors, and other components.</li>
+            <li data-i18n="job.yili.b4">Gained insight into electric motor industry trends from a business and manufacturing perspective.</li>
           </ul>
           <div class="timeline-media">
             <figure>
               <img src="images/yili-pcbs.jpg" alt="Motor-driver PCBs and power modules laid out on a workbench for diagnostics" loading="lazy" />
-              <figcaption>Motor-driver PCBs on the repair bench</figcaption>
+              <figcaption data-i18n="job.yili.c1">Motor-driver PCBs on the repair bench</figcaption>
             </figure>
           </div>
           <ul class="tags tags-small">
-            <li>PCB Repair</li><li>Soldering</li><li>Oscilloscope</li><li>Motors</li>
+            <li data-i18n="tag.pcbrepair">PCB Repair</li><li data-i18n="tag.soldering">Soldering</li><li data-i18n="tag.scope">Oscilloscope</li><li data-i18n="tag.motors">Motors</li>
           </ul>
         </li>
       </ol>
@@ -154,7 +183,7 @@
 
     <!-- ============ EDUCATION ============ -->
     <section class="section container" id="education">
-      <h2 class="section-title" data-reveal>Education</h2>
+      <h2 class="section-title" data-reveal data-i18n="edu.title">Education</h2>
 
       <ol class="timeline">
         <li class="timeline-item" data-reveal>
@@ -162,15 +191,15 @@
             <div class="timeline-title">
               <img class="org-logo org-logo--bleed" src="images/logos/ubc.png" alt="UBC logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Bachelor of Applied Science, Electrical Engineering</h3>
-                <p class="timeline-org">University of British Columbia Okanagan · Kelowna, BC</p>
+                <h3 data-i18n="edu.ubc.role">Bachelor of Applied Science, Electrical Engineering</h3>
+                <p class="timeline-org" data-i18n="edu.ubc.org">University of British Columbia Okanagan · Kelowna, BC</p>
               </div>
             </div>
-            <p class="timeline-date">Expected May 2027</p>
+            <p class="timeline-date" data-i18n="edu.ubc.date">Expected May 2027</p>
           </div>
           <ul>
-            <li>Capstone: Codling Moth Exuvia Counting System for the Okanagan Kootenay Sterile Insect Release Program.</li>
-            <li>Research: medical-imaging AI abstract submitted to SPIE Medical Imaging 2027.</li>
+            <li data-i18n="edu.ubc.b1">Capstone: Codling Moth Exuvia Counting System for the Okanagan Kootenay Sterile Insect Release Program.</li>
+            <li data-i18n="edu.ubc.b2">Research: medical-imaging AI abstract submitted to SPIE Medical Imaging 2027.</li>
           </ul>
         </li>
 
@@ -179,15 +208,15 @@
             <div class="timeline-title">
               <img class="org-logo org-logo--bleed" src="images/logos/georgetown.png" alt="Georgetown logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Summer Program</h3>
-                <p class="timeline-org">Georgetown Business Academy · Washington, DC</p>
+                <h3 data-i18n="edu.gt.role">Summer Program</h3>
+                <p class="timeline-org" data-i18n="edu.gt.org">Georgetown Business Academy · Washington, DC</p>
               </div>
             </div>
-            <p class="timeline-date">Jul 2020 - Aug 2021</p>
+            <p class="timeline-date" data-i18n="edu.gt.date">Jul 2020 - Aug 2021</p>
           </div>
           <ul>
-            <li>College-level lectures and projects in finance, real estate, marketing, and international trade.</li>
-            <li>Developed a startup business plan with peers and pitched it in a Shark Tank-style presentation.</li>
+            <li data-i18n="edu.gt.b1">College-level lectures and projects in finance, real estate, marketing, and international trade.</li>
+            <li data-i18n="edu.gt.b2">Developed a startup business plan with peers and pitched it in a Shark Tank-style presentation.</li>
           </ul>
         </li>
 
@@ -196,11 +225,11 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/sjs.svg" alt="St. John's School logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>High School</h3>
-                <p class="timeline-org">St. John's School · Vancouver, BC</p>
+                <h3 data-i18n="edu.sjs.role">High School</h3>
+                <p class="timeline-org" data-i18n="edu.sjs.org">St. John's School · Vancouver, BC</p>
               </div>
             </div>
-            <p class="timeline-date">Sep 2016 - Jun 2022</p>
+            <p class="timeline-date" data-i18n="edu.sjs.date">Sep 2016 - Jun 2022</p>
           </div>
         </li>
       </ol>
@@ -208,7 +237,7 @@
 
     <!-- ============ LEADERSHIP ============ -->
     <section class="section container" id="leadership">
-      <h2 class="section-title" data-reveal>Leadership</h2>
+      <h2 class="section-title" data-reveal data-i18n="lead.title">Leadership</h2>
 
       <ol class="timeline">
         <li class="timeline-item" data-reveal>
@@ -216,16 +245,16 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/sjs.svg" alt="St. John's School logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Prefect &amp; Gunn House Captain</h3>
-                <p class="timeline-org">Student Council, St. John's School</p>
+                <h3 data-i18n="lead.prefect.role">Prefect &amp; Gunn House Captain</h3>
+                <p class="timeline-org" data-i18n="lead.prefect.org">Student Council, St. John's School</p>
               </div>
             </div>
-            <p class="timeline-date">Sep 2020 - Jun 2022</p>
+            <p class="timeline-date" data-i18n="lead.prefect.date">Sep 2020 - Jun 2022</p>
           </div>
           <ul>
-            <li>Ran orientation for all new students, including campus tours and school history.</li>
-            <li>Primary organizer of School International Day; convinced the principal to allow cultural clothing and music during lunch.</li>
-            <li>Primary organizer of Halloween Week: designed a haunted house and ran door decorating, pumpkin carving, a costume contest, and a scavenger hunt.</li>
+            <li data-i18n="lead.prefect.b1">Ran orientation for all new students, including campus tours and school history.</li>
+            <li data-i18n="lead.prefect.b2">Primary organizer of School International Day; convinced the principal to allow cultural clothing and music during lunch.</li>
+            <li data-i18n="lead.prefect.b3">Primary organizer of Halloween Week: designed a haunted house and ran door decorating, pumpkin carving, a costume contest, and a scavenger hunt.</li>
           </ul>
         </li>
 
@@ -234,16 +263,16 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/sjs.svg" alt="St. John's School logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Team Leader</h3>
-                <p class="timeline-org">School Business Club, St. John's School</p>
+                <h3 data-i18n="lead.biz.role">Team Leader</h3>
+                <p class="timeline-org" data-i18n="lead.biz.org">School Business Club, St. John's School</p>
               </div>
             </div>
-            <p class="timeline-date">Sep 2020 - Jun 2022</p>
+            <p class="timeline-date" data-i18n="lead.biz.date">Sep 2020 - Jun 2022</p>
           </div>
           <ul>
-            <li>Led student teams in business competitions, including the Wharton Global High School Investment Competition.</li>
-            <li>Ranked 1st in British Columbia and top 52 in Canada in the Junior Achievement Stock Market Competition; presented investment strategies to organizers and stakeholders.</li>
-            <li>Conducted market research and analysis using frameworks such as PEST.</li>
+            <li data-i18n="lead.biz.b1">Led student teams in business competitions, including the Wharton Global High School Investment Competition.</li>
+            <li data-i18n="lead.biz.b2">Ranked 1st in British Columbia and top 52 in Canada in the Junior Achievement Stock Market Competition; presented investment strategies to organizers and stakeholders.</li>
+            <li data-i18n="lead.biz.b3">Conducted market research and analysis using frameworks such as PEST.</li>
           </ul>
         </li>
 
@@ -252,16 +281,16 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/sjs.svg" alt="St. John's School logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Co-Founder</h3>
-                <p class="timeline-org">Project Plum Blossom, St. John's School</p>
+                <h3 data-i18n="lead.plum.role">Co-Founder</h3>
+                <p class="timeline-org" data-i18n="lead.plum.org">Project Plum Blossom, St. John's School</p>
               </div>
             </div>
-            <p class="timeline-date">Sep 2020 - Jun 2021</p>
+            <p class="timeline-date" data-i18n="lead.plum.date">Sep 2020 - Jun 2021</p>
           </div>
           <ul>
-            <li>Led a team of three to launch a Stop Anti-Asian Hate initiative promoting cultural awareness and community support.</li>
-            <li>Designed enamel pins and posters, and coordinated with international manufacturers for production and logistics.</li>
-            <li>Raised $1,123 for the Vancouver Chinatown Foundation through an Instagram campaign and in-person sales.</li>
+            <li data-i18n="lead.plum.b1">Led a team of three to launch a Stop Anti-Asian Hate initiative promoting cultural awareness and community support.</li>
+            <li data-i18n="lead.plum.b2">Designed enamel pins and posters, and coordinated with international manufacturers for production and logistics.</li>
+            <li data-i18n="lead.plum.b3">Raised $1,123 for the Vancouver Chinatown Foundation through an Instagram campaign and in-person sales.</li>
           </ul>
         </li>
 
@@ -270,14 +299,14 @@
             <div class="timeline-title">
               <img class="org-logo" src="images/logos/scouts.png" alt="Scouts Canada logo" width="48" height="48" loading="lazy" />
               <div>
-                <h3>Secretary, Venturer</h3>
-                <p class="timeline-org">Scouts Canada · Vancouver, BC</p>
+                <h3 data-i18n="lead.scouts.role">Secretary, Venturer</h3>
+                <p class="timeline-org" data-i18n="lead.scouts.org">Scouts Canada · Vancouver, BC</p>
               </div>
             </div>
-            <p class="timeline-date">Sep 2011 - Jun 2022</p>
+            <p class="timeline-date" data-i18n="lead.scouts.date">Sep 2011 - Jun 2022</p>
           </div>
           <ul>
-            <li>Planned events, led youth activities, maintained records, and promoted teamwork and safety during camps and community service projects.</li>
+            <li data-i18n="lead.scouts.b1">Planned events, led youth activities, maintained records, and promoted teamwork and safety during camps and community service projects.</li>
           </ul>
         </li>
       </ol>
@@ -285,28 +314,28 @@
 
     <!-- ============ MORE ============ -->
     <section class="section container" id="more">
-      <h2 class="section-title" data-reveal>Affiliations &amp; interests</h2>
+      <h2 class="section-title" data-reveal data-i18n="more.title">Affiliations &amp; interests</h2>
 
       <div class="interests-grid" data-stagger>
         <div class="skill-card spot" data-reveal>
           <img class="org-logo" src="images/logos/egbc.png" alt="EGBC logo" width="48" height="48" loading="lazy" />
-          <h3>Affiliations</h3>
+          <h3 data-i18n="more.aff">Affiliations</h3>
           <ul class="tags">
-            <li>Engineers and Geoscientists BC (EGBC), 2024-present</li>
+            <li data-i18n="more.egbc">Engineers and Geoscientists BC (EGBC), 2024-present</li>
           </ul>
         </div>
 
         <div class="skill-card spot skill-card--perf" data-reveal>
-          <h3>Sports</h3>
+          <h3 data-i18n="more.sports">Sports</h3>
           <ul class="tags">
-            <li>Golf</li><li>Travel</li><li>UBC intramurals</li><li>Volleyball</li><li>Soccer</li><li>Basketball</li><li>Badminton</li><li>Bronze Medallion</li>
+            <li data-i18n="int.golf">Golf</li><li data-i18n="int.travel">Travel</li><li data-i18n="int.intramurals">UBC intramurals</li><li data-i18n="int.volleyball">Volleyball</li><li data-i18n="int.soccer">Soccer</li><li data-i18n="int.basketball">Basketball</li><li data-i18n="int.badminton">Badminton</li><li data-i18n="int.bronze">Bronze Medallion</li>
           </ul>
         </div>
 
         <div class="skill-card spot" data-reveal>
-          <h3>Activities</h3>
+          <h3 data-i18n="more.activities">Activities</h3>
           <ul class="tags">
-            <li>Piano, since age 6</li><li>PC &amp; VR gaming</li><li>Custom keyboards</li><li>Stock trading</li>
+            <li data-i18n="int.piano">Piano, since age 6</li><li data-i18n="int.gaming">PC &amp; VR gaming</li><li data-i18n="int.keyboards">Custom keyboards</li><li data-i18n="int.stocks">Stock trading</li>
           </ul>
         </div>
       </div>
@@ -316,10 +345,11 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Michael Xie. Built with HTML &amp; CSS.</p>
+      <p>© <span id="year"></span> Michael Xie. <span data-i18n="footer.built">Built with HTML &amp; CSS.</span></p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

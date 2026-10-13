@@ -1,4 +1,5 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const t = (key, fallback) => (window.I18N ? window.I18N.t(key, fallback) : fallback);
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 // Footer year
@@ -13,13 +14,15 @@ const menu = document.getElementById("nav-menu");
 function setMenu(open) {
   menu.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  toggle.setAttribute("aria-label", open ? t("menu.close", "Close menu") : t("menu.open", "Open menu"));
 }
 
 toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
 
 // Close the mobile menu after tapping a link, or on Escape
 menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+
+document.addEventListener("langchange", () => setMenu(menu.classList.contains("open")));
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menu.classList.contains("open")) {
@@ -239,6 +242,19 @@ if (scope && scope.getContext) {
 }
 
 // ---------------------------------------------------------
+// Hero circuit board (Three.js), loaded once the page is idle
+// ---------------------------------------------------------
+const pcbCanvas = document.querySelector(".pcb");
+
+if (pcbCanvas && "IntersectionObserver" in window) {
+  const startPCB = () =>
+    import("./pcb.js")
+      .then((module) => module.initPCB(pcbCanvas, { reduceMotion }))
+      .catch(() => pcbCanvas.remove());
+  "requestIdleCallback" in window ? requestIdleCallback(startPCB, { timeout: 1500 }) : setTimeout(startPCB, 600);
+}
+
+// ---------------------------------------------------------
 // Contact form: submit without leaving the page (Formspree)
 // ---------------------------------------------------------
 const form = document.querySelector(".contact-form");
@@ -250,7 +266,7 @@ form?.addEventListener("submit", async (event) => {
   const button = form.querySelector("button");
   button.disabled = true;
   status.className = "form-status";
-  status.textContent = "Sending…";
+  status.textContent = t("form.sending", "Sending…");
 
   try {
     const response = await fetch(form.action, {
@@ -262,10 +278,10 @@ form?.addEventListener("submit", async (event) => {
     if (!response.ok) throw new Error();
     form.reset();
     status.className = "form-status success";
-    status.textContent = "Thanks. Your message has been sent.";
+    status.textContent = t("form.success", "Thanks. Your message has been sent.");
   } catch {
     status.className = "form-status error";
-    status.textContent = "Something went wrong. Please reach out on LinkedIn instead.";
+    status.textContent = t("form.error", "Something went wrong. Please reach out on LinkedIn instead.");
   } finally {
     button.disabled = false;
   }

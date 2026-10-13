@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Michael Xie | Electrical Engineering</title>
+  <title data-i18n="home.title">Michael Xie | Electrical Engineering</title>
   <meta name="description" content="Portfolio of Michael Xie (Pei Lin Xie), an Electrical Engineering student at UBC Okanagan building embedded, computer-vision, and AI projects." />
   <meta name="theme-color" content="#0a0c0f" />
   <meta name="color-scheme" content="dark" />
@@ -16,7 +16,16 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0c0f'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2357e0a6'>MX</text></svg>" />
 
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script>
+    document.documentElement.classList.replace("no-js", "js");
+    try {
+      var savedLang = localStorage.getItem("lang");
+      if (savedLang && savedLang !== "en") {
+        document.documentElement.classList.add("i18n-pending");
+        setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 1500);
+      }
+    } catch (e) {}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +34,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <div class="top-sentinel" aria-hidden="true"></div>
 
   <!-- ============ HEADER / NAV ============ -->
@@ -33,43 +42,63 @@
     <nav class="nav container" aria-label="Main">
       <a href="#top" class="logo">Michael<span>Xie</span></a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-
       <ul class="nav-links" id="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#research" data-i18n="nav.research">Research</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#tools" data-i18n="nav.tools">Tools</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         <!-- Add resume.pdf to this folder, then uncomment:
         <li><a href="resume.pdf" class="btn btn-small" target="_blank" rel="noopener">Resume</a></li>
         -->
       </ul>
+
+      <div class="lang">
+        <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="lang.label" aria-label="Language">
+          <span class="lang-current">EN</span>
+        </button>
+        <ul class="lang-menu" id="lang-menu">
+          <li><button type="button" data-lang="en" lang="en">English</button></li>
+          <li><button type="button" data-lang="fr" lang="fr">Français</button></li>
+          <li><button type="button" data-lang="es" lang="es">Español</button></li>
+          <li><button type="button" data-lang="de" lang="de">Deutsch</button></li>
+          <li><button type="button" data-lang="pt" lang="pt">Português</button></li>
+          <li><button type="button" data-lang="zh" lang="zh-Hans">简体中文</button></li>
+          <li><button type="button" data-lang="zht" lang="zh-Hant">繁體中文</button></li>
+          <li><button type="button" data-lang="ja" lang="ja">日本語</button></li>
+          <li><button type="button" data-lang="ko" lang="ko">한국어</button></li>
+          <li><button type="button" data-lang="hi" lang="hi">हिन्दी</button></li>
+          <li><button type="button" data-lang="pa" lang="pa">ਪੰਜਾਬੀ</button></li>
+          <li><button type="button" data-lang="tl" lang="tl">Tagalog</button></li>
+          <li><button type="button" data-lang="vi" lang="vi">Tiếng Việt</button></li>
+          <li><button type="button" data-lang="fa" lang="fa">فارسی</button></li>
+          <li><button type="button" data-lang="ar" lang="ar">العربية</button></li>
+        </ul>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </header>
 
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
+      <canvas class="pcb" aria-hidden="true"></canvas>
       <canvas class="scope" aria-hidden="true"></canvas>
       <div class="hero-inner container">
         <div class="hero-copy">
-          <p class="eyebrow">Hi, my name is</p>
-          <h1>Michael Xie.</h1>
-          <p class="hero-alt-name">Pei Lin Xie</p>
-          <h2 class="hero-sub">I build hardware and software that solve real problems.</h2>
-          <p class="hero-text">
-            I'm an Electrical Engineering student at UBC Okanagan working across embedded systems,
-            computer vision, and AI, from a Raspberry Pi insect counter delivered to an industry
-            client to research on chest X-ray classifiers.
-          </p>
+          <p class="eyebrow" data-i18n="hero.hi">Hi, my name is</p>
+          <h1><bdi>Michael Xie.</bdi></h1>
+          <p class="hero-alt-name"><bdi>Pei Lin Xie</bdi></p>
+          <h2 class="hero-sub" data-i18n="hero.sub">I build hardware and software that solve real problems.</h2>
+          <p class="hero-text" data-i18n="hero.text">I'm an Electrical Engineering student at UBC Okanagan working across embedded systems, computer vision, and AI, from a Raspberry Pi insect counter delivered to an industry client to research on chest X-ray classifiers.</p>
           <div class="hero-actions">
-            <a href="#projects" class="btn">View my work</a>
-            <a href="experience.html" class="btn btn-ghost">See my experience <span class="arr" aria-hidden="true">→</span></a>
+            <a href="#projects" class="btn" data-i18n="hero.cta1">View my work</a>
+            <a href="experience.html" class="btn btn-ghost"><span data-i18n="hero.cta2">See my experience</span> <span class="arr" aria-hidden="true">→</span></a>
           </div>
         </div>
 
@@ -81,69 +110,54 @@
 
     <!-- ============ ABOUT ============ -->
     <section class="section container" id="about">
-      <h2 class="section-title" data-reveal>About me</h2>
+      <h2 class="section-title" data-reveal data-i18n="about.title">About me</h2>
       <div class="about-grid">
         <div class="about-text" data-reveal>
-          <p class="lead">
-            Hello! I'm Michael Xie (Pei Lin Xie), an Electrical Engineering student at the
-            University of British Columbia Okanagan, graduating in May 2027. I enjoy turning
-            repetitive, frustrating problems into tools that just work.
-          </p>
-          <p>
-            I've interned at the UBC MEMS Lab, HYC Technology, and Suzhou Yi Li Energy, working
-            on everything from cardiac-tissue test rigs to PCB diagnostics and repair.
-          </p>
-          <p>
-            On my own time I build Python tools, like a bot that books hard-to-get restaurant
-            reservations and a Streamlit app for watermarking documents. For my capstone, my team
-            delivered a camera-based system that counts codling moth exuviae with a trained
-            YOLOv8 model.
-          </p>
-          <p>
-            I also do research on medical-imaging AI, studying how chest X-ray classifiers
-            perform in practice, not just how they score on accuracy.
-          </p>
+          <p class="lead" data-i18n="about.p1">Hello! I'm Michael Xie (Pei Lin Xie), an Electrical Engineering student at the University of British Columbia Okanagan, graduating in May 2027. I enjoy turning repetitive, frustrating problems into tools that just work.</p>
+          <p data-i18n="about.p2">I've interned at the UBC MEMS Lab, HYC Technology, and Suzhou Yi Li Energy, working on everything from cardiac-tissue test rigs to PCB diagnostics and repair.</p>
+          <p data-i18n="about.p3">On my own time I build Python tools, like a bot that books hard-to-get restaurant reservations and a Streamlit app for watermarking documents. For my capstone, my team delivered a camera-based system that counts codling moth exuviae with a trained YOLOv8 model.</p>
+          <p data-i18n="about.p4">I also do research on medical-imaging AI, studying how chest X-ray classifiers perform in practice, not just how they score on accuracy.</p>
         </div>
 
         <ul class="facts" data-stagger>
-          <li data-reveal><strong>Education</strong> B.A.Sc. Electrical Engineering, UBC Okanagan (May 2027)</li>
-          <li data-reveal><strong>Location</strong> Vancouver, BC</li>
-          <li data-reveal><strong>Status</strong> Open to 4, 8, or 12-month co-op terms</li>
+          <li data-reveal><strong data-i18n="facts.edu.label">Education</strong> <span data-i18n="facts.edu">B.A.Sc. Electrical Engineering, UBC Okanagan (May 2027)</span></li>
+          <li data-reveal><strong data-i18n="facts.loc.label">Location</strong> <span data-i18n="facts.loc">Vancouver, BC</span></li>
+          <li data-reveal><strong data-i18n="facts.status.label">Status</strong> <span data-i18n="facts.status">Open to 4, 8, or 12-month co-op terms</span></li>
         </ul>
       </div>
     </section>
 
     <!-- ============ SKILLS ============ -->
     <section class="section container" id="skills">
-      <h2 class="section-title" data-reveal>Skills</h2>
+      <h2 class="section-title" data-reveal data-i18n="skills.title">Skills</h2>
 
       <div class="skills-bento" data-stagger>
         <div class="skill-card spot skill-card--image" data-reveal>
           <img class="skill-bg" src="images/yili-pcbs.jpg" alt="" loading="lazy" />
           <div class="skill-card-content">
-            <h3>Electrical &amp; Hardware</h3>
+            <h3 data-i18n="skills.elec">Electrical &amp; Hardware</h3>
             <ul class="tags">
-              <li>Circuit design</li><li>SMT/THT soldering</li><li>Oscilloscopes</li><li>Arduino</li><li>ARM</li><li>Quartus</li><li>Cadence Virtuoso</li>
+              <li data-i18n="tag.circuit">Circuit design</li><li data-i18n="tag.smt">SMT/THT soldering</li><li data-i18n="tag.scopes">Oscilloscopes</li><li>Arduino</li><li>ARM</li><li>Quartus</li><li>Cadence Virtuoso</li>
             </ul>
           </div>
         </div>
 
         <div class="skill-card spot skill-card--wide" data-reveal>
-          <h3>Languages</h3>
+          <h3 data-i18n="skills.lang">Languages</h3>
           <ul class="tags">
             <li>Python</li><li>C++</li><li>SystemVerilog</li><li>MATLAB</li><li>R</li><li>HTML/CSS</li>
           </ul>
         </div>
 
         <div class="skill-card spot skill-card--perf" data-reveal>
-          <h3>AI &amp; Computer Vision</h3>
+          <h3 data-i18n="skills.ai">AI &amp; Computer Vision</h3>
           <ul class="tags">
             <li>YOLOv8</li><li>PyTorch</li><li>Keras</li><li>OpenCV</li><li>Raspberry Pi</li><li>Streamlit</li>
           </ul>
         </div>
 
         <div class="skill-card spot" data-reveal>
-          <h3>Tools</h3>
+          <h3 data-i18n="skills.tools">Tools</h3>
           <ul class="tags">
             <li>Git/GitHub</li><li>SolidWorks</li><li>ModelSim</li><li>LaTeX</li><li>Claude Code</li><li>VS Code</li>
           </ul>
@@ -153,46 +167,38 @@
 
     <!-- ============ RESEARCH ============ -->
     <section class="section container" id="research">
-      <h2 class="section-title" data-reveal>Research</h2>
+      <h2 class="section-title" data-reveal data-i18n="research.title">Research</h2>
 
       <article class="paper spot" data-reveal>
         <div class="paper-head">
-          <p class="paper-status">Submitted · SPIE Medical Imaging 2027 · Decision expected January 2027</p>
-          <h3>Does Medical Pretraining Change What a Chest-Radiograph Classifier Needs? A Frozen-Protocol Comparison on CheXpert</h3>
-          <p class="paper-authors"><strong>Pei Lin (Michael) Xie</strong> and Yi-An Su · University of British Columbia Okanagan</p>
+          <p class="paper-status" data-i18n="paper.status">Submitted · SPIE Medical Imaging 2027 · Decision expected January 2027</p>
+          <h3 dir="ltr">Does Medical Pretraining Change What a Chest-Radiograph Classifier Needs? A Frozen-Protocol Comparison on CheXpert</h3>
+          <p class="paper-authors" dir="ltr"><strong>Pei Lin (Michael) Xie</strong> and Yi-An Su · University of British Columbia Okanagan</p>
         </div>
 
         <div class="paper-body">
           <div class="paper-abstract">
-            <p>
-              Chest X-ray AI models are usually judged by accuracy, a number that can hide
-              dangerously low disease detection. Evaluating the medical foundation model Ark+ on
-              CheXpert, we found a model reaching 86% accuracy caught only about 3 in 10 true
-              disease cases at the standard threshold. Validation-tuned threshold selection raised
-              sensitivity to 0.73-0.84 with no retraining, and a targeted class-weighted loss
-              improved detection of Atelectasis and Consolidation. Five more architectures are
-              being compared under the same frozen protocol.
-            </p>
+            <p data-i18n="paper.abstract">Chest X-ray AI models are usually judged by accuracy, a number that can hide dangerously low disease detection. Evaluating the medical foundation model Ark+ on CheXpert, we found a model reaching 86% accuracy caught only about 3 in 10 true disease cases at the standard threshold. Validation-tuned threshold selection raised sensitivity to 0.73-0.84 with no retraining, and a targeted class-weighted loss improved detection of Atelectasis and Consolidation. Five more architectures are being compared under the same frozen protocol.</p>
             <ul class="tags">
-              <li>PyTorch</li><li>Swin Transformer</li><li>Medical Imaging</li><li>Calibration</li>
+              <li>PyTorch</li><li>Swin Transformer</li><li data-i18n="tag.medimg">Medical Imaging</li><li data-i18n="tag.calib">Calibration</li>
             </ul>
             <div class="project-links">
-              <a href="papers/xie-su-spie-abstract.pdf" target="_blank" rel="noopener">Read the abstract (PDF) <span class="arr" aria-hidden="true">→</span></a>
+              <a href="papers/xie-su-spie-abstract.pdf" target="_blank" rel="noopener"><span data-i18n="paper.link">Read the abstract (PDF)</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
 
           <dl class="paper-stats" data-stagger>
             <div data-reveal>
               <dt>86%</dt>
-              <dd>Accuracy that hid the problem</dd>
+              <dd data-i18n="paper.stat1">Accuracy that hid the problem</dd>
             </div>
             <div data-reveal>
-              <dt>~3 in 10</dt>
-              <dd>True disease cases caught at the standard threshold</dd>
+              <dt data-i18n="paper.stat2.value">~3 in 10</dt>
+              <dd data-i18n="paper.stat2">True disease cases caught at the standard threshold</dd>
             </div>
             <div data-reveal>
               <dt>0.73-0.84</dt>
-              <dd>Sensitivity after threshold tuning, no retraining</dd>
+              <dd data-i18n="paper.stat3">Sensitivity after threshold tuning, no retraining</dd>
             </div>
           </dl>
         </div>
@@ -201,7 +207,7 @@
 
     <!-- ============ PROJECTS ============ -->
     <section class="section container" id="projects">
-      <h2 class="section-title" data-reveal>Projects</h2>
+      <h2 class="section-title" data-reveal data-i18n="projects.title">Projects</h2>
 
       <div class="projects-grid" data-stagger>
         <article class="project-card spot project-card--featured" data-reveal>
@@ -209,14 +215,14 @@
             <img src="images/exuvia-capstone.jpg" alt="Title card: Codling Moth Exuvia Counting, Okanagan Kootenay Sterile Insect Release, Group I26" loading="lazy" />
           </a>
           <div class="project-body">
-            <h3>Codling Moth Exuvia Counting</h3>
-            <p>Capstone (2025-2026) for the Okanagan Kootenay Sterile Insect Release Program. A 5-person team built an imaging box with white/UV lighting, a Raspberry Pi HQ camera, and a 3-click Streamlit GUI. Our YOLOv8 model, trained on 15,000 labeled exuviae, reached ~92% mAP@50 and met every client target.</p>
+            <h3 data-i18n="p.exuvia.title">Codling Moth Exuvia Counting</h3>
+            <p data-i18n="p.exuvia.desc">Capstone (2025-2026) for the Okanagan Kootenay Sterile Insect Release Program. A 5-person team built an imaging box with white/UV lighting, a Raspberry Pi HQ camera, and a 3-click Streamlit GUI. Our YOLOv8 model, trained on 15,000 labeled exuviae, reached ~92% mAP@50 and met every client target.</p>
             <ul class="tags tags-small">
               <li>Python</li><li>YOLOv8</li><li>Raspberry Pi</li><li>Streamlit</li>
             </ul>
             <div class="project-links">
-              <a href="https://youtu.be/ZW0dnDYto4E" target="_blank" rel="noopener">Watch the video <span class="arr" aria-hidden="true">→</span></a>
-              <a href="https://github.com/fei7fei/Exuvia-Counting" target="_blank" rel="noopener">Source code <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://youtu.be/ZW0dnDYto4E" target="_blank" rel="noopener"><span data-i18n="link.video">Watch the video</span> <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://github.com/fei7fei/Exuvia-Counting" target="_blank" rel="noopener"><span data-i18n="link.source">Source code</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
@@ -226,8 +232,8 @@
             <img src="images/pi-car.jpg" alt="The self-driving Pi-Car with its camera module and orange wheels" loading="lazy" />
           </div>
           <div class="project-body">
-            <h3>Self-Driving Crack-Avoidance Pi-Car</h3>
-            <p>As team captain, built an autonomous Raspberry Pi car that streams camera video to a CNN and stops when it detects surface cracks. Trained on 1,000 labeled images, it reached a 98% success rate in testing.</p>
+            <h3 data-i18n="p.picar.title">Self-Driving Crack-Avoidance Pi-Car</h3>
+            <p data-i18n="p.picar.desc">As team captain, built an autonomous Raspberry Pi car that streams camera video to a CNN and stops when it detects surface cracks. Trained on 1,000 labeled images, it reached a 98% success rate in testing.</p>
             <ul class="tags tags-small">
               <li>Python</li><li>Keras</li><li>OpenCV</li><li>Raspberry Pi</li>
             </ul>
@@ -236,20 +242,20 @@
 
         <article class="project-card spot project-card--text span-2" data-reveal>
           <div class="project-body">
-            <h3>TI ARM Cortex Alarm Clock</h3>
-            <p>Programmed a full alarm clock on a TI Tiva (ARM Cortex-M) board: joystick and button input, Bluetooth alarm selection, a buzzer, an ultrasonic-sensor snooze, a gyroscope-driven rotating display, and a live room-temperature readout.</p>
+            <h3 data-i18n="p.clock.title">TI ARM Cortex Alarm Clock</h3>
+            <p data-i18n="p.clock.desc">Programmed a full alarm clock on a TI Tiva (ARM Cortex-M) board: joystick and button input, Bluetooth alarm selection, a buzzer, an ultrasonic-sensor snooze, a gyroscope-driven rotating display, and a live room-temperature readout.</p>
             <ul class="tags tags-small">
-              <li>ARM Cortex-M</li><li>Energia</li><li>Bluetooth</li><li>Sensors</li>
+              <li>ARM Cortex-M</li><li>Energia</li><li>Bluetooth</li><li data-i18n="tag.sensors">Sensors</li>
             </ul>
           </div>
         </article>
 
         <article class="project-card spot project-card--text project-card--alt span-2" data-reveal>
           <div class="project-body">
-            <h3>Lego Brick Sorting Classifier</h3>
-            <p>Classified four Lego brick types from conveyor-belt images. Replacing raw pixels with 23 rotation- and translation-invariant geometric features raised test accuracy from 63% to 88% using logistic regression.</p>
+            <h3 data-i18n="p.lego.title">Lego Brick Sorting Classifier</h3>
+            <p data-i18n="p.lego.desc">Classified four Lego brick types from conveyor-belt images. Replacing raw pixels with 23 rotation- and translation-invariant geometric features raised test accuracy from 63% to 88% using logistic regression.</p>
             <ul class="tags tags-small">
-              <li>Python</li><li>Machine Learning</li><li>Feature Engineering</li>
+              <li>Python</li><li data-i18n="tag.ml">Machine Learning</li><li data-i18n="tag.fe">Feature Engineering</li>
             </ul>
           </div>
         </article>
@@ -259,10 +265,10 @@
             <img src="images/cpu-architecture.png" alt="Block diagram of the two-cycle processor: instruction register, finite state machine, memory control, address bus multiplexer, program counter, and RAM" loading="lazy" />
           </div>
           <div class="project-body">
-            <h3>32-Bit Microprocessor</h3>
-            <p>With a partner, built a fully synchronous, multi-cycle Von Neumann 32-bit processor in Verilog for a 15-instruction ISA: an ALU with NZCV flags, conditional execution, shift/rotate, and RAM with memory control. A two-cycle fetch/execute state machine fixed a deadlock on loads and stores, and ModelSim testbenches verified it running a compiled if/else program.</p>
+            <h3 data-i18n="p.cpu.title">32-Bit Microprocessor</h3>
+            <p data-i18n="p.cpu.desc">With a partner, built a fully synchronous, multi-cycle Von Neumann 32-bit processor in Verilog for a 15-instruction ISA: an ALU with NZCV flags, conditional execution, shift/rotate, and RAM with memory control. A two-cycle fetch/execute state machine fixed a deadlock on loads and stores, and ModelSim testbenches verified it running a compiled if/else program.</p>
             <ul class="tags tags-small">
-              <li>Verilog</li><li>ModelSim</li><li>Quartus</li><li>Computer Architecture</li>
+              <li>Verilog</li><li>ModelSim</li><li>Quartus</li><li data-i18n="tag.arch">Computer Architecture</li>
             </ul>
           </div>
         </article>
@@ -272,13 +278,13 @@
             <img src="images/bldc-motor.jpg" alt="Brushless DC motor with a 3D-printed frame and copper coils, wired to an Arduino on a breadboard" loading="lazy" />
           </a>
           <div class="project-body">
-            <h3>Brushless DC Motor</h3>
-            <p>As assistant captain of a 6-person team, built a brushless DC motor from scratch: 3D-printed SolidWorks chassis, neodymium magnets, and hand-wound copper coils, with Arduino control of speed, direction, and a direction indicator. Scored 14/15.</p>
+            <h3 data-i18n="p.bldc.title">Brushless DC Motor</h3>
+            <p data-i18n="p.bldc.desc">As assistant captain of a 6-person team, built a brushless DC motor from scratch: 3D-printed SolidWorks chassis, neodymium magnets, and hand-wound copper coils, with Arduino control of speed, direction, and a direction indicator. Scored 14/15.</p>
             <ul class="tags tags-small">
-              <li>Arduino</li><li>SolidWorks</li><li>3D Printing</li><li>Motors</li>
+              <li>Arduino</li><li>SolidWorks</li><li data-i18n="tag.3dp">3D Printing</li><li data-i18n="tag.motors">Motors</li>
             </ul>
             <div class="project-links">
-              <a href="https://youtu.be/A7I5nu9C7j0" target="_blank" rel="noopener">Watch the demo <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://youtu.be/A7I5nu9C7j0" target="_blank" rel="noopener"><span data-i18n="link.demo">Watch the demo</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
@@ -288,13 +294,13 @@
             <img src="images/f117-cockpit.jpg" alt="SolidWorks render of the F-117A Nighthawk cockpit with instrument panels, joystick, and ejection seat" loading="lazy" />
           </a>
           <div class="project-body">
-            <h3>F-117A Nighthawk in SolidWorks</h3>
-            <p>As captain of a 5-person team, modelled the F-117A Nighthawk stealth jet over 30+ hours: ~5,000 parts, 200 subassemblies, and 1,500 mates across the wings, engine, fuselage, cockpit, and landing gear, plus an animation of its moving parts. Earned an A.</p>
+            <h3 data-i18n="p.f117.title">F-117A Nighthawk in SolidWorks</h3>
+            <p data-i18n="p.f117.desc">As captain of a 5-person team, modelled the F-117A Nighthawk stealth jet over 30+ hours: ~5,000 parts, 200 subassemblies, and 1,500 mates across the wings, engine, fuselage, cockpit, and landing gear, plus an animation of its moving parts. Earned an A.</p>
             <ul class="tags tags-small">
-              <li>SolidWorks</li><li>CAD</li><li>Animation</li>
+              <li>SolidWorks</li><li>CAD</li><li data-i18n="tag.anim">Animation</li>
             </ul>
             <div class="project-links">
-              <a href="https://www.youtube.com/watch?v=WvzyVKP_a9E&amp;t=22s" target="_blank" rel="noopener">Watch the animation <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://www.youtube.com/watch?v=WvzyVKP_a9E&amp;t=22s" target="_blank" rel="noopener"><span data-i18n="link.animation">Watch the animation</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
@@ -303,8 +309,8 @@
 
     <!-- ============ TOOLS & BOTS ============ -->
     <section class="section container" id="tools">
-      <h2 class="section-title" data-reveal>Python tools &amp; bots</h2>
-      <p class="section-intro" data-reveal>Side projects I build on my own time to automate everyday tasks.</p>
+      <h2 class="section-title" data-reveal data-i18n="tools.title">Python tools &amp; bots</h2>
+      <p class="section-intro" data-reveal data-i18n="tools.intro">Side projects I build on my own time to automate everyday tasks.</p>
 
       <div class="tools-grid" data-stagger>
         <article class="project-card spot tool-main" data-reveal>
@@ -312,13 +318,13 @@
             <img src="images/resy-dashboard.png" alt="Resy Reservation Bot dashboard showing running bots, check counts, and a booking calendar" loading="lazy" />
           </div>
           <div class="project-body">
-            <h3>Resy Reservation Bot</h3>
-            <p>Automatically books hard-to-get Resy tables: watches for cancellations and snipes new releases the second they open. Includes phone alerts, a cancellation tracker, and a Streamlit dashboard.</p>
+            <h3 data-i18n="t.resy.title">Resy Reservation Bot</h3>
+            <p data-i18n="t.resy.desc">Automatically books hard-to-get Resy tables: watches for cancellations and snipes new releases the second they open. Includes phone alerts, a cancellation tracker, and a Streamlit dashboard.</p>
             <ul class="tags tags-small">
               <li>Python</li><li>Streamlit</li><li>pandas</li><li>Altair</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/fei7fei/resy-reservation-bot" target="_blank" rel="noopener">Source code <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://github.com/fei7fei/resy-reservation-bot" target="_blank" rel="noopener"><span data-i18n="link.source">Source code</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
@@ -328,26 +334,26 @@
             <img src="images/watermark-studio.png" alt="Watermark Studio app showing an original image beside a preview tiled with a slanted CONFIDENTIAL watermark" loading="lazy" />
           </div>
           <div class="project-body">
-            <h3>Watermark Creation Tool</h3>
-            <p>A Streamlit app that adds text or image watermarks, single or slanted/tiled, to images, PDFs, and Word documents.</p>
+            <h3 data-i18n="t.wm.title">Watermark Creation Tool</h3>
+            <p data-i18n="t.wm.desc">A Streamlit app that adds text or image watermarks, single or slanted/tiled, to images, PDFs, and Word documents.</p>
             <ul class="tags tags-small">
               <li>Python</li><li>Streamlit</li><li>Pillow</li><li>PyMuPDF</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/fei7fei/watermark-creation-tool" target="_blank" rel="noopener">Source code <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://github.com/fei7fei/watermark-creation-tool" target="_blank" rel="noopener"><span data-i18n="link.source">Source code</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
 
         <article class="project-card spot project-card--text" data-reveal>
           <div class="project-body">
-            <h3>This Portfolio</h3>
-            <p>A responsive, dependency-free portfolio built with HTML and CSS, deployed on Cloudflare.</p>
+            <h3 data-i18n="t.site.title">This Portfolio</h3>
+            <p data-i18n="t.site.desc">A responsive, dependency-free portfolio built with HTML and CSS, deployed on Cloudflare.</p>
             <ul class="tags tags-small">
               <li>HTML</li><li>CSS</li><li>Cloudflare</li>
             </ul>
             <div class="project-links">
-              <a href="https://github.com/fei7fei/portfolio" target="_blank" rel="noopener">Source code <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://github.com/fei7fei/portfolio" target="_blank" rel="noopener"><span data-i18n="link.source">Source code</span> <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
@@ -356,15 +362,12 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="section container" id="contact">
-      <h2 class="section-title" data-reveal>Contact</h2>
+      <h2 class="section-title" data-reveal data-i18n="contact.title">Contact</h2>
 
       <div class="contact-grid">
         <div class="contact-intro" data-reveal>
-          <h3>Let's work together</h3>
-          <p>
-            Whether you have a role in mind, a project idea, or just want to say hi,
-            my inbox is always open. I'll get back to you as soon as I can.
-          </p>
+          <h3 data-i18n="contact.heading">Let's work together</h3>
+          <p data-i18n="contact.text">Whether you have a role in mind, a project idea, or just want to say hi, my inbox is always open. I'll get back to you as soon as I can.</p>
           <ul class="contact-links">
             <!-- Add when ready:
             <li><a href="mailto:you@example.com">you@example.com</a></li>
@@ -377,21 +380,21 @@
         <!-- Static sites can't process forms on their own, so this form posts to Formspree (free tier). -->
         <form class="contact-form" action="https://formspree.io/f/mqpedvkn" method="POST" data-reveal>
           <div class="field">
-            <label for="name">Name</label>
+            <label for="name" data-i18n="form.name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
           <div class="field">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="form.email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
           <div class="field">
-            <label for="message">Message</label>
+            <label for="message" data-i18n="form.message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <input type="hidden" name="_subject" value="New message from your portfolio site" />
           <!-- Honeypot field: hidden from humans, catches spam bots -->
           <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
-          <button type="submit" class="btn">Send message</button>
+          <button type="submit" class="btn" data-i18n="form.send">Send message</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -401,10 +404,11 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Michael Xie. Built with HTML &amp; CSS.</p>
+      <p>© <span id="year"></span> Michael Xie. <span data-i18n="footer.built">Built with HTML &amp; CSS.</span></p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
