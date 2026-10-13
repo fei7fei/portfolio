@@ -1537,6 +1537,31 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   margin: 0;
 }
 
+/* Date and website link stacked at the end of each entry's header */
+.timeline-meta {
+  display: grid;
+  justify-items: end;
+  gap: 6px;
+}
+
+.org-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .timeline-date {
   font-family: var(--mono);
   font-size: 0.8rem;
@@ -2115,6 +2140,10 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 
   .timeline-item {
     padding: 20px;
+  }
+
+  .timeline-meta {
+    justify-items: start;
   }
 
   .timeline-item::before {
