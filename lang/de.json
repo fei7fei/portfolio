@@ -180,5 +180,12 @@
   "int.stocks": "Aktienhandel",
   "more.travel": "Reisen",
   "int.roadtrips": "Roadtrips",
-  "int.vacations": "Urlaub"
+  "int.vacations": "Urlaub",
+  "travel.title": "Orte, an denen ich war",
+  "travel.intro": "Ziehen, um den Globus zu drehen. Jeder Punkt ist ein Ort, an dem ich gelebt, studiert, gearbeitet oder Urlaub gemacht habe.",
+  "travel.cities": "Städte",
+  "travel.countries": "Länder",
+  "travel.home": "Gelebt, studiert oder gearbeitet",
+  "travel.trip": "Urlaub",
+  "travel.map": "Karte ansehen"
 }

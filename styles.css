@@ -1621,6 +1621,185 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   }
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   TRAVEL GLOBE
+   ========================================================= */
+.travel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.globe {
+  position: relative;
+  height: 560px;
+  cursor: grab;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  touch-action: pan-y;
+}
+
+.globe:active {
+  cursor: grabbing;
+}
+
+.globe.is-ready {
+  opacity: 1;
+}
+
+.globe.is-failed {
+  display: none;
+}
+
+/* Place labels drawn on the globe */
+.globe-label {
+  position: relative;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.globe-label span {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 10px;
+  transform: translateY(-50%);
+  padding: 2px 7px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
+  color: var(--text);
+  background: rgb(10 12 15 / 0.72);
+  border: 1px solid var(--accent-line);
+  border-radius: var(--radius-tag);
+}
+
+.globe-label--left span {
+  inset-inline-start: auto;
+  inset-inline-end: 10px;
+}
+
+.travel-panel {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.travel-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.travel-stats dt {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.travel-stats dd {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.place-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.place-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.place-country {
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.place {
+  position: relative;
+  padding-inline-start: 16px;
+  font-size: 0.95rem;
+}
+
+.place::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.place--trip::before {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+}
+
+.place-legend {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.place-legend .place {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media (max-width: 1024px) {
+  .travel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .globe {
+    height: 460px;
+  }
+}
+
+@media (max-width: 767px) {
+  .globe {
+    height: 340px;
+  }
+
+  .travel-panel {
+    padding: 20px;
+  }
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */

@@ -180,5 +180,12 @@
   "int.stocks": "股票交易",
   "more.travel": "旅行",
   "int.roadtrips": "公路旅行",
-  "int.vacations": "度假"
+  "int.vacations": "度假",
+  "travel.title": "我去過的地方",
+  "travel.intro": "拖曳以旋轉地球。每個點都是我生活、求學、工作或旅行過的地方。",
+  "travel.cities": "城市",
+  "travel.countries": "國家",
+  "travel.home": "生活、求學或工作過",
+  "travel.trip": "度假",
+  "travel.map": "查看地圖"
 }

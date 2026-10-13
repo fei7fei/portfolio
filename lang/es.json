@@ -180,5 +180,12 @@
   "int.stocks": "Inversión en bolsa",
   "more.travel": "Viajes",
   "int.roadtrips": "Viajes por carretera",
-  "int.vacations": "Vacaciones"
+  "int.vacations": "Vacaciones",
+  "travel.title": "Lugares donde he estado",
+  "travel.intro": "Arrastra para girar el globo. Cada punto es un lugar donde he vivido, estudiado, trabajado o viajado.",
+  "travel.cities": "Ciudades",
+  "travel.countries": "Países",
+  "travel.home": "Viví, estudié o trabajé",
+  "travel.trip": "Vacaciones",
+  "travel.map": "Ver el mapa"
 }

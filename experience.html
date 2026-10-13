@@ -365,7 +365,29 @@
           <ul class="tags">
             <li data-i18n="int.roadtrips">Road trips</li><li data-i18n="int.vacations">Vacations</li>
           </ul>
+          <a class="card-link" href="#travel"><span data-i18n="travel.map">See the map</span> <span class="arr" aria-hidden="true">→</span></a>
         </div>
+      </div>
+    </section>
+    <!-- ============ TRAVEL MAP ============ -->
+    <section class="section container" id="travel">
+      <h2 class="section-title" data-reveal data-i18n="travel.title">Places I've been</h2>
+      <p class="section-intro" data-reveal data-i18n="travel.intro">Drag to spin the globe. Each point is somewhere I've lived, studied, worked, or traveled.</p>
+
+      <div class="travel-grid">
+        <div class="globe" dir="ltr" aria-hidden="true"></div>
+
+        <aside class="travel-panel" data-reveal>
+          <dl class="travel-stats">
+            <div><dt data-stat="cities">0</dt><dd data-i18n="travel.cities">Cities</dd></div>
+            <div><dt data-stat="countries">0</dt><dd data-i18n="travel.countries">Countries</dd></div>
+          </dl>
+          <ul class="place-list"></ul>
+          <ul class="place-legend">
+            <li class="place place--home" data-i18n="travel.home">Lived, studied, or worked</li>
+            <li class="place place--trip" data-i18n="travel.trip">Vacations</li>
+          </ul>
+        </aside>
       </div>
     </section>
   </main>
@@ -377,6 +399,8 @@
     </div>
   </footer>
 
+  <script src="places.js"></script>
+  <script src="travel.js"></script>
   <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>

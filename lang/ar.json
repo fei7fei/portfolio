@@ -180,5 +180,12 @@
   "int.stocks": "تداول الأسهم",
   "more.travel": "السفر",
   "int.roadtrips": "الرحلات البرية بالسيارة",
-  "int.vacations": "العطلات"
+  "int.vacations": "العطلات",
+  "travel.title": "أماكن زرتها",
+  "travel.intro": "اسحب لتدوير الكرة الأرضية. كل نقطة مكان عشت أو درست أو عملت فيه، أو سافرت إليه.",
+  "travel.cities": "مدن",
+  "travel.countries": "دول",
+  "travel.home": "عشت أو درست أو عملت",
+  "travel.trip": "العطلات",
+  "travel.map": "اعرض الخريطة"
 }

@@ -180,5 +180,12 @@
   "int.stocks": "स्टॉक ट्रेडिंग",
   "more.travel": "यात्रा",
   "int.roadtrips": "रोड ट्रिप",
-  "int.vacations": "छुट्टियाँ"
+  "int.vacations": "छुट्टियाँ",
+  "travel.title": "जहाँ मैं जा चुका हूँ",
+  "travel.intro": "ग्लोब घुमाने के लिए खींचें। हर बिंदु वह जगह है जहाँ मैं रहा, पढ़ा, काम किया या घूमने गया।",
+  "travel.cities": "शहर",
+  "travel.countries": "देश",
+  "travel.home": "रहा, पढ़ा या काम किया",
+  "travel.trip": "छुट्टियाँ",
+  "travel.map": "नक्शा देखें"
 }

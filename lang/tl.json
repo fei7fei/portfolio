@@ -180,5 +180,12 @@
   "int.stocks": "Stock trading",
   "more.travel": "Paglalakbay",
   "int.roadtrips": "Road trip",
-  "int.vacations": "Bakasyon"
+  "int.vacations": "Bakasyon",
+  "travel.title": "Mga lugar na napuntahan ko",
+  "travel.intro": "I-drag para paikutin ang globo. Bawat tuldok ay lugar kung saan ako tumira, nag-aral, nagtrabaho, o naglakbay.",
+  "travel.cities": "Mga lungsod",
+  "travel.countries": "Mga bansa",
+  "travel.home": "Tumira, nag-aral, o nagtrabaho",
+  "travel.trip": "Bakasyon",
+  "travel.map": "Tingnan ang mapa"
 }

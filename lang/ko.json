@@ -180,5 +180,12 @@
   "int.stocks": "주식 투자",
   "more.travel": "여행",
   "int.roadtrips": "자동차 여행",
-  "int.vacations": "휴가 여행"
+  "int.vacations": "휴가 여행",
+  "travel.title": "내가 가 본 곳",
+  "travel.intro": "드래그해서 지구본을 돌려 보세요. 각 지점은 제가 살거나, 공부하거나, 일하거나, 여행한 곳입니다.",
+  "travel.cities": "도시",
+  "travel.countries": "국가",
+  "travel.home": "살았거나 공부했거나 일한 곳",
+  "travel.trip": "휴가 여행",
+  "travel.map": "지도 보기"
 }

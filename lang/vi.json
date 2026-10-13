@@ -180,5 +180,12 @@
   "int.stocks": "Đầu tư chứng khoán",
   "more.travel": "Du lịch",
   "int.roadtrips": "Lái xe đường dài",
-  "int.vacations": "Kỳ nghỉ"
+  "int.vacations": "Kỳ nghỉ",
+  "travel.title": "Những nơi tôi đã đến",
+  "travel.intro": "Kéo để xoay quả địa cầu. Mỗi điểm là nơi tôi đã sống, học tập, làm việc hoặc du lịch.",
+  "travel.cities": "Thành phố",
+  "travel.countries": "Quốc gia",
+  "travel.home": "Đã sống, học tập hoặc làm việc",
+  "travel.trip": "Kỳ nghỉ",
+  "travel.map": "Xem bản đồ"
 }

@@ -180,5 +180,12 @@
   "int.stocks": "ਸਟਾਕ ਟ੍ਰੇਡਿੰਗ",
   "more.travel": "ਯਾਤਰਾ",
   "int.roadtrips": "ਰੋਡ ਟ੍ਰਿੱਪ",
-  "int.vacations": "ਛੁੱਟੀਆਂ"
+  "int.vacations": "ਛੁੱਟੀਆਂ",
+  "travel.title": "ਜਿੱਥੇ ਮੈਂ ਜਾ ਚੁੱਕਾ ਹਾਂ",
+  "travel.intro": "ਗਲੋਬ ਘੁਮਾਉਣ ਲਈ ਖਿੱਚੋ। ਹਰ ਬਿੰਦੂ ਉਹ ਥਾਂ ਹੈ ਜਿੱਥੇ ਮੈਂ ਰਿਹਾ, ਪੜ੍ਹਿਆ, ਕੰਮ ਕੀਤਾ ਜਾਂ ਘੁੰਮਣ ਗਿਆ।",
+  "travel.cities": "ਸ਼ਹਿਰ",
+  "travel.countries": "ਦੇਸ਼",
+  "travel.home": "ਰਿਹਾ, ਪੜ੍ਹਿਆ ਜਾਂ ਕੰਮ ਕੀਤਾ",
+  "travel.trip": "ਛੁੱਟੀਆਂ",
+  "travel.map": "ਨਕਸ਼ਾ ਵੇਖੋ"
 }
