@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Software Developer</title>
+  <meta name="description" content="Portfolio and resume of Your Name, a software developer who builds clean, useful things for the web." />
+
+  <!-- Social share preview (shows when you paste your link into LinkedIn, Slack, etc.) -->
+  <meta property="og:title" content="Your Name — Software Developer" />
+  <meta property="og:description" content="Portfolio, projects, and contact info." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f46e5'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>YN</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="logo">Your<span>Name</span></a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" class="btn btn-small" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top">
+      <p class="eyebrow">Hi, my name is</p>
+      <h1>Your Name.</h1>
+      <h2 class="hero-sub">I build clean, fast, useful things for the web.</h2>
+      <p class="hero-text">
+        I'm a software developer focused on crafting accessible, well-designed applications.
+        Currently looking for opportunities to learn, ship, and grow with a great team.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about">
+      <h2 class="section-title"><span>01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hello! I'm Your Name, a developer based in Your City. I enjoy turning
+            complex problems into simple, beautiful, and intuitive solutions.
+          </p>
+          <p>
+            My interest in programming started when <em>[a short personal story — e.g. "I tried
+            to automate my homework with a Python script"]</em>. Since then I've worked on
+            <em>[school projects, internships, freelance work, open source]</em>.
+          </p>
+          <p>
+            Outside of coding, you'll find me <em>[hobbies — hiking, gaming, cooking, etc.]</em>.
+          </p>
+
+          <ul class="facts">
+            <li><strong>Education</strong> B.S. Computer Science, Your University</li>
+            <li><strong>Location</strong> Your City, Country</li>
+            <li><strong>Status</strong> Open to work</li>
+          </ul>
+        </div>
+
+        <div class="about-photo">
+          <!-- Replace with: <img src="images/me.jpg" alt="Photo of Your Name" /> -->
+          <div class="photo-placeholder" role="img" aria-label="Profile photo placeholder">YN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills">
+      <h2 class="section-title"><span>02.</span> Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+          <h3>Languages</h3>
+          <ul class="tags">
+            <li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Java</li><li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon" aria-hidden="true">◧</div>
+          <h3>Frontend</h3>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>React</li><li>Tailwind</li><li>Accessibility</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon" aria-hidden="true">⚙</div>
+          <h3>Backend</h3>
+          <ul class="tags">
+            <li>Node.js</li><li>Express</li><li>REST APIs</li><li>PostgreSQL</li><li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon" aria-hidden="true">⚒</div>
+          <h3>Tools</h3>
+          <ul class="tags">
+            <li>Git</li><li>GitHub</li><li>VS Code</li><li>Docker</li><li>Figma</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects">
+      <h2 class="section-title"><span>03.</span> Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Copy one <article> block per project -->
+        <article class="project-card">
+          <div class="project-thumb thumb-1" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project One</h3>
+            <p>A short, one-to-two sentence description of what this project does and the problem it solves.</p>
+            <ul class="tags tags-small">
+              <li>React</li><li>Node.js</li><li>MongoDB</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live demo →</a>
+              <a href="#" target="_blank" rel="noopener">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb thumb-2" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project Two</h3>
+            <p>Highlight a result if you can: "Cut page load time by 40%" or "Used by 200+ students."</p>
+            <ul class="tags tags-small">
+              <li>Python</li><li>Flask</li><li>PostgreSQL</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live demo →</a>
+              <a href="#" target="_blank" rel="noopener">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb thumb-3" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project Three</h3>
+            <p>Mention what you personally built and what you learned along the way.</p>
+            <ul class="tags tags-small">
+              <li>TypeScript</li><li>Next.js</li><li>Tailwind</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live demo →</a>
+              <a href="#" target="_blank" rel="noopener">Source code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb thumb-4" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>This Portfolio</h3>
+            <p>A responsive, dependency-free portfolio built with HTML and CSS, deployed with Cloudflare Pages.</p>
+            <ul class="tags tags-small">
+              <li>HTML</li><li>CSS</li><li>Cloudflare</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Source code →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container" id="contact">
+      <h2 class="section-title"><span>04.</span> Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <h3>Let's work together</h3>
+          <p>
+            Whether you have a role in mind, a project idea, or just want to say hi,
+            my inbox is always open. I'll get back to you as soon as I can.
+          </p>
+          <ul class="contact-links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!--
+          Static sites can't process forms on their own, so this form posts to Formspree (free tier).
+          1. Sign up at https://formspree.io and create a form.
+          2. Replace YOUR_FORM_ID below with the ID they give you (e.g. "xyzabcd").
+        -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <!-- Honeypot field: hidden from humans, catches spam bots -->
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. Built with HTML &amp; CSS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
