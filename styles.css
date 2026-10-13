@@ -243,6 +243,13 @@ p {
   margin-bottom: 8px;
 }
 
+.hero-alt-name {
+  font-family: var(--mono);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--muted);
+  margin: -4px 0 20px;
+}
+
 .hero-sub {
   font-size: clamp(1.5rem, 4.5vw, 2.75rem);
   font-weight: 700;
