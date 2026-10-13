@@ -460,6 +460,7 @@ p {
 .thumb-6 { background: linear-gradient(135deg, #64748b, #0ea5e9); }
 .thumb-7 { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
 .thumb-8 { background: linear-gradient(135deg, #14b8a6, #3b82f6); }
+.thumb-9 { background: linear-gradient(135deg, #ef4444, #f59e0b); }
 
 .project-body {
   padding: 24px;
