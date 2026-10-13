@@ -1631,25 +1631,22 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 /* =========================================================
    TRAVEL GLOBE
    ========================================================= */
+/* Globe runs edge to edge across the window; the places panel sits below it */
 .travel-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: center;
+  gap: 24px;
 }
 
-/* The canvas bleeds past its column and fades out in a soft circle,
-   so a zoomed-in globe dissolves at the edges instead of being cut off in straight lines. */
+/* Full-width canvas; only the top and bottom fade, so a zoomed-in globe reaches the sides of the window */
 .globe {
   position: relative;
-  height: 620px;
-  margin-inline: -32px;
+  height: 680px;
   cursor: grab;
   opacity: 0;
   transition: opacity 1.2s ease;
   touch-action: pan-y;
-  -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
-  mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
 }
 
 .globe:active {
@@ -1695,12 +1692,15 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 
 .globe-wrap {
   position: relative;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
 }
 
+/* Zoom buttons line up with the right edge of the page content */
 .globe-zoom {
   position: absolute;
-  inset-inline-end: 12px;
-  bottom: 12px;
+  inset-inline-end: calc((100vw - min(100vw, var(--max-width))) / 2 + 32px);
+  bottom: 48px;
   display: grid;
   gap: 6px;
 }
@@ -1747,6 +1747,9 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 }
 
 .travel-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: 8px 40px;
   padding: 28px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1754,12 +1757,13 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 }
 
 .travel-stats {
+  grid-row: span 2;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin: 0 0 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  align-content: start;
+  gap: 24px;
+  margin: 0;
+  padding-inline-end: 32px;
+  border-inline-end: 1px solid var(--border);
 }
 
 .travel-stats dt {
@@ -1781,7 +1785,8 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px 32px;
 }
 
 .place-list ul {
@@ -1839,9 +1844,6 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
 }
 
 @media (max-width: 1024px) {
-  .travel-grid {
-    grid-template-columns: 1fr;
-  }
 
   .globe {
     height: 520px;
@@ -1855,7 +1857,21 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   }
 
   .travel-panel {
+    grid-template-columns: 1fr;
     padding: 20px;
+  }
+
+  .travel-stats {
+    grid-row: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 0 20px;
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .globe-zoom {
+    inset-inline-end: 16px;
+    bottom: 32px;
   }
 }
 
