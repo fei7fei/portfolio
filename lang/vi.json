@@ -14,14 +14,12 @@
   "form.sending": "Đang gửi…",
   "form.success": "Cảm ơn bạn. Tin nhắn đã được gửi.",
   "form.error": "Đã có lỗi xảy ra. Vui lòng liên hệ tôi qua LinkedIn.",
-
   "home.title": "Michael Xie | Kỹ thuật Điện",
   "hero.hi": "Xin chào, tôi là",
   "hero.sub": "Tôi tạo ra phần cứng và phần mềm giải quyết những vấn đề thực tế.",
   "hero.text": "Tôi là sinh viên Kỹ thuật Điện tại UBC Okanagan, làm việc với hệ thống nhúng, thị giác máy tính và AI, từ một bộ đếm côn trùng bằng Raspberry Pi bàn giao cho khách hàng trong ngành đến nghiên cứu về bộ phân loại ảnh X-quang ngực.",
   "hero.cta1": "Xem dự án của tôi",
   "hero.cta2": "Xem kinh nghiệm",
-
   "about.title": "Về tôi",
   "about.p1": "Xin chào! Tôi là Michael Xie (Pei Lin Xie), sinh viên Kỹ thuật Điện tại Đại học British Columbia Okanagan, tốt nghiệp vào tháng 5 năm 2027. Tôi thích biến những vấn đề lặp đi lặp lại, gây khó chịu thành những công cụ thật sự hữu dụng.",
   "about.p2": "Tôi đã thực tập tại UBC MEMS Lab, HYC Technology và Suzhou Yi Li Energy, làm mọi thứ từ thiết bị thử nghiệm mô tim đến chẩn đoán và sửa chữa bo mạch PCB.",
@@ -33,7 +31,6 @@
   "facts.loc": "Vancouver, BC",
   "facts.status.label": "Tình trạng",
   "facts.status": "Sẵn sàng cho kỳ co-op 4, 8 hoặc 12 tháng",
-
   "skills.title": "Kỹ năng",
   "skills.elec": "Điện và phần cứng",
   "tag.circuit": "Thiết kế mạch",
@@ -42,7 +39,6 @@
   "skills.lang": "Ngôn ngữ lập trình",
   "skills.ai": "AI và thị giác máy tính",
   "skills.tools": "Công cụ",
-
   "research.title": "Nghiên cứu",
   "paper.status": "Đã nộp · SPIE Medical Imaging 2027 · Dự kiến có kết quả vào tháng 1/2027",
   "paper.abstract": "Các mô hình AI cho X-quang ngực thường được đánh giá bằng độ chính xác, một con số có thể che giấu khả năng phát hiện bệnh thấp đến mức nguy hiểm. Khi đánh giá mô hình nền tảng y khoa Ark+ trên CheXpert, chúng tôi thấy một mô hình đạt độ chính xác 86% chỉ phát hiện khoảng 3 trên 10 ca bệnh thật ở ngưỡng tiêu chuẩn. Chọn ngưỡng theo dữ liệu kiểm định đã nâng độ nhạy lên 0,73-0,84 mà không cần huấn luyện lại, và hàm mất mát có trọng số theo lớp được nhắm mục tiêu đã cải thiện việc phát hiện xẹp phổi và đông đặc phổi. Năm kiến trúc khác đang được so sánh theo cùng một giao thức cố định.",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "~3 trên 10",
   "paper.stat2": "Ca bệnh thật được phát hiện ở ngưỡng tiêu chuẩn",
   "paper.stat3": "Độ nhạy sau khi điều chỉnh ngưỡng, không cần huấn luyện lại",
-
   "projects.title": "Dự án",
   "p.exuvia.title": "Đếm xác lột sâu đục quả táo",
   "p.exuvia.desc": "Đồ án tốt nghiệp (2025-2026) cho Okanagan Kootenay Sterile Insect Release Program. Nhóm 5 người đã chế tạo một hộp chụp ảnh với đèn trắng/UV, camera Raspberry Pi HQ và giao diện Streamlit chỉ cần 3 cú nhấp. Mô hình YOLOv8 của chúng tôi, huấn luyện trên 15.000 xác lột được gán nhãn, đạt khoảng 92% mAP@50 và đáp ứng mọi mục tiêu của khách hàng.",
@@ -80,7 +75,6 @@
   "p.f117.desc": "Với vai trò đội trưởng nhóm 5 người, tôi dựng mô hình máy bay tàng hình F-117A Nighthawk trong hơn 30 giờ: khoảng 5.000 chi tiết, 200 cụm lắp ráp con và 1.500 ràng buộc lắp ghép trên cánh, động cơ, thân, buồng lái và càng đáp, kèm hoạt ảnh các bộ phận chuyển động. Đạt điểm A.",
   "tag.anim": "Hoạt ảnh",
   "link.animation": "Xem hoạt ảnh",
-
   "tools.title": "Công cụ và bot Python",
   "tools.intro": "Các dự án cá nhân tôi làm lúc rảnh để tự động hóa những việc hằng ngày.",
   "t.resy.title": "Bot đặt bàn Resy",
@@ -89,7 +83,6 @@
   "t.wm.desc": "Một ứng dụng Streamlit chèn hình mờ dạng chữ hoặc hình ảnh, đơn lẻ hoặc xếp nghiêng lặp lại, vào ảnh, PDF và tài liệu Word.",
   "t.site.title": "Trang portfolio này",
   "t.site.desc": "Một portfolio đáp ứng mọi màn hình, không phụ thuộc thư viện, viết bằng HTML và CSS và triển khai trên Cloudflare.",
-
   "contact.title": "Liên hệ",
   "contact.heading": "Cùng hợp tác nhé",
   "contact.text": "Dù bạn có một vị trí đang tuyển, một ý tưởng dự án hay chỉ muốn chào hỏi, hộp thư của tôi luôn rộng mở. Tôi sẽ trả lời sớm nhất có thể.",
@@ -97,12 +90,10 @@
   "form.email": "Email",
   "form.message": "Tin nhắn",
   "form.send": "Gửi tin nhắn",
-
   "exp.title": "Kinh nghiệm | Michael Xie",
   "exp.h1": "Những nơi tôi đã làm việc và học hỏi.",
   "exp.intro": "Sinh viên Kỹ thuật Điện tại UBC Okanagan, tốt nghiệp tháng 5/2027. Sẵn sàng cho kỳ co-op 4, 8 hoặc 12 tháng.",
   "exp.work.title": "Kinh nghiệm làm việc kỹ thuật",
-
   "job.mems.role": "Thực tập / Tình nguyện",
   "job.mems.org": "UBC MEMS Lab · Vancouver, BC",
   "job.mems.date": "Th4 2025 - Th6 2025",
@@ -116,7 +107,6 @@
   "job.mems.c2": "Chạy một chu kỳ kéo giãn với dữ liệu trực tiếp",
   "job.mems.c3": "Quay bằng giá camera tôi tự làm, dùng thước kẻ làm thang đo để tính ứng suất và biến dạng",
   "tag.microscopy": "Hiển vi",
-
   "job.hyc.role": "Thực tập sinh Kỹ thuật và Vận hành",
   "job.hyc.org": "HYC Technology · Tô Châu, Trung Quốc",
   "job.hyc.date": "Th7 2024 - Th8 2024",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "Làm quen với Git, SolidWorks, Quartus Prime, Cadence Allegro và phần mềm PLC của Siemens/Mitsubishi.",
   "job.hyc.b4": "Tìm hiểu các hệ thống nội bộ, gồm mạng đám mây riêng của HYC và các giải pháp máy tính từ xa.",
   "tag.mfg": "Sản xuất",
-
   "job.yili.role": "Thực tập sinh Kỹ thuật",
   "job.yili.org": "Suzhou Yi Li Energy · Tô Châu, Trung Quốc",
   "job.yili.date": "Th7 2023 - Th8 2023",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "Sửa chữa PCB",
   "tag.soldering": "Hàn linh kiện",
   "tag.scope": "Máy hiện sóng",
-
   "edu.title": "Học vấn",
   "edu.ubc.role": "Cử nhân Khoa học Ứng dụng, Kỹ thuật Điện",
   "edu.ubc.org": "Đại học British Columbia Okanagan · Kelowna, BC",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "Trung học",
   "edu.sjs.org": "St. John's School · Vancouver, BC",
   "edu.sjs.date": "Th9 2016 - Th6 2022",
-
   "lead.title": "Lãnh đạo",
   "lead.prefect.role": "Cán bộ học sinh và Đội trưởng nhà Gunn",
   "lead.prefect.org": "Hội đồng học sinh, St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "Scouts Canada · Vancouver, BC",
   "lead.scouts.date": "Th9 2011 - Th6 2022",
   "lead.scouts.b1": "Lên kế hoạch sự kiện, dẫn dắt hoạt động thanh thiếu niên, lưu giữ hồ sơ và đề cao tinh thần đồng đội cùng sự an toàn trong các kỳ cắm trại và dự án phục vụ cộng đồng.",
-
   "more.title": "Hội viên và sở thích",
   "more.aff": "Hội viên",
   "more.egbc": "Engineers and Geoscientists BC (EGBC), từ 2024 đến nay",
   "more.sports": "Thể thao",
   "int.golf": "Golf",
-  "int.travel": "Du lịch",
-  "int.intramurals": "Giải nội bộ UBC",
-  "int.volleyball": "Bóng chuyền",
-  "int.soccer": "Bóng đá",
   "int.basketball": "Bóng rổ",
   "int.badminton": "Cầu lông",
-  "int.bronze": "Huy chương Đồng (cứu hộ)",
-  "more.activities": "Hoạt động",
   "int.piano": "Piano, từ năm 6 tuổi",
-  "int.gaming": "Chơi game PC và VR",
   "int.keyboards": "Bàn phím tùy chỉnh",
-  "int.stocks": "Đầu tư chứng khoán"
+  "more.music": "Âm nhạc",
+  "more.gaming": "Trò chơi điện tử",
+  "more.builds": "Tự lắp phần cứng",
+  "int.pcbuild": "Lắp ráp PC",
+  "more.investing": "Đầu tư",
+  "int.stocks": "Đầu tư chứng khoán",
+  "more.travel": "Du lịch",
+  "int.roadtrips": "Lái xe đường dài",
+  "int.vacations": "Kỳ nghỉ"
 }

@@ -14,14 +14,12 @@
   "form.sending": "Ipinapadala…",
   "form.success": "Salamat. Naipadala na ang iyong mensahe.",
   "form.error": "May nagkaproblema. Pakikontak na lang ako sa LinkedIn.",
-
   "home.title": "Michael Xie | Electrical Engineering",
   "hero.hi": "Kumusta, ang pangalan ko ay",
   "hero.sub": "Gumagawa ako ng hardware at software na lumulutas ng totoong mga problema.",
   "hero.text": "Isa akong estudyante ng Electrical Engineering sa UBC Okanagan na nagtatrabaho sa embedded systems, computer vision, at AI, mula sa isang Raspberry Pi na pambilang ng insekto na ibinigay sa isang industry client hanggang sa pananaliksik tungkol sa mga chest X-ray classifier.",
   "hero.cta1": "Tingnan ang aking gawa",
   "hero.cta2": "Tingnan ang aking karanasan",
-
   "about.title": "Tungkol sa akin",
   "about.p1": "Kumusta! Ako si Michael Xie (Pei Lin Xie), estudyante ng Electrical Engineering sa University of British Columbia Okanagan, at magtatapos ako sa Mayo 2027. Gusto kong gawing mga tool na talagang gumagana ang mga paulit-ulit at nakakainis na problema.",
   "about.p2": "Nag-intern ako sa UBC MEMS Lab, HYC Technology, at Suzhou Yi Li Energy, kung saan humawak ako ng iba't ibang gawain, mula sa mga test rig para sa tisyu ng puso hanggang sa pag-diagnose at pag-aayos ng PCB.",
@@ -33,7 +31,6 @@
   "facts.loc": "Vancouver, BC",
   "facts.status.label": "Katayuan",
   "facts.status": "Bukas sa 4, 8, o 12 buwang co-op term",
-
   "skills.title": "Mga Kasanayan",
   "skills.elec": "Electrical at Hardware",
   "tag.circuit": "Disenyo ng circuit",
@@ -42,7 +39,6 @@
   "skills.lang": "Mga Programming Language",
   "skills.ai": "AI at Computer Vision",
   "skills.tools": "Mga Tool",
-
   "research.title": "Pananaliksik",
   "paper.status": "Naipasa · SPIE Medical Imaging 2027 · Inaasahang desisyon sa Enero 2027",
   "paper.abstract": "Karaniwang hinuhusgahan ang mga chest X-ray AI model ayon sa accuracy, isang numero na maaaring magtago ng mapanganib na kababaan ng pagtukoy sa sakit. Sa pagsusuri namin sa medical foundation model na Ark+ sa CheXpert, nakita naming ang isang model na may 86% accuracy ay nakahuli lang ng mga 3 sa bawat 10 totoong kaso ng sakit sa karaniwang threshold. Ang pagpili ng threshold batay sa validation ay nagtaas ng sensitivity sa 0.73-0.84 nang walang muling pagsasanay, at ang isang naka-target na class-weighted loss ay nagpabuti sa pagtukoy ng Atelectasis at Consolidation. Limang iba pang architecture ang inihahambing sa parehong frozen protocol.",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "~3 sa 10",
   "paper.stat2": "Totoong kaso ng sakit na nahuli sa karaniwang threshold",
   "paper.stat3": "Sensitivity matapos ayusin ang threshold, walang muling pagsasanay",
-
   "projects.title": "Mga Proyekto",
   "p.exuvia.title": "Pagbilang ng Exuviae ng Codling Moth",
   "p.exuvia.desc": "Capstone (2025-2026) para sa Okanagan Kootenay Sterile Insect Release Program. Gumawa ang isang team na may 5 miyembro ng imaging box na may puti/UV na ilaw, Raspberry Pi HQ camera, at Streamlit GUI na 3 click lang ang kailangan. Ang aming YOLOv8 model, na sinanay sa 15,000 may-label na exuviae, ay umabot sa ~92% mAP@50 at natugunan ang lahat ng target ng client.",
@@ -80,7 +75,6 @@
   "p.f117.desc": "Bilang kapitan ng team na may 5 miyembro, minodelo ang F-117A Nighthawk stealth jet sa loob ng 30+ oras: ~5,000 piyesa, 200 subassembly, at 1,500 mate sa mga pakpak, makina, fuselage, cockpit, at landing gear, kasama ang animation ng mga gumagalaw na bahagi nito. Nakakuha ng A.",
   "tag.anim": "Animation",
   "link.animation": "Panoorin ang animation",
-
   "tools.title": "Mga Python Tool at Bot",
   "tools.intro": "Mga side project na ginagawa ko sa libreng oras para i-automate ang mga pang-araw-araw na gawain.",
   "t.resy.title": "Resy Reservation Bot",
@@ -89,7 +83,6 @@
   "t.wm.desc": "Isang Streamlit app na naglalagay ng text o image watermark, isahan o pahilis/naka-tile, sa mga larawan, PDF, at Word document.",
   "t.site.title": "Ang Portfolio na Ito",
   "t.site.desc": "Isang responsive at walang dependency na portfolio na gawa sa HTML at CSS, naka-deploy sa Cloudflare.",
-
   "contact.title": "Kontak",
   "contact.heading": "Magtulungan tayo",
   "contact.text": "May posisyon ka man, ideya para sa proyekto, o gusto mo lang mangumusta, laging bukas ang aking inbox. Sasagot ako sa lalong madaling panahon.",
@@ -97,12 +90,10 @@
   "form.email": "Email",
   "form.message": "Mensahe",
   "form.send": "Ipadala ang mensahe",
-
   "exp.title": "Karanasan | Michael Xie",
   "exp.h1": "Kung saan ako nagtrabaho at natuto.",
   "exp.intro": "Estudyante ng Electrical Engineering sa UBC Okanagan, magtatapos sa Mayo 2027. Bukas sa 4, 8, o 12 buwang co-op term.",
   "exp.work.title": "Teknikal na karanasan sa trabaho",
-
   "job.mems.role": "Internship / Volunteer",
   "job.mems.org": "UBC MEMS Lab · Vancouver, BC",
   "job.mems.date": "Abr 2025 - Hun 2025",
@@ -116,7 +107,6 @@
   "job.mems.c2": "Nagpapatakbo ng stretch cycle na may live na datos",
   "job.mems.c3": "Kinunan gamit ang camera rig na ginawa ko, gamit ang ruler bilang sukatan para kalkulahin ang stress at strain",
   "tag.microscopy": "Microscopy",
-
   "job.hyc.role": "Engineering at Operations Intern",
   "job.hyc.org": "HYC Technology · Suzhou, China",
   "job.hyc.date": "Hul 2024 - Ago 2024",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "Nagkaroon ng karanasan sa Git, SolidWorks, Quartus Prime, Cadence Allegro, at Siemens/Mitsubishi PLC software.",
   "job.hyc.b4": "Inaral ang mga internal system, kabilang ang sariling cloud network ng HYC at mga remote desktop solution.",
   "tag.mfg": "Manufacturing",
-
   "job.yili.role": "Engineering Intern",
   "job.yili.org": "Suzhou Yi Li Energy · Suzhou, China",
   "job.yili.date": "Hul 2023 - Ago 2023",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "Pag-aayos ng PCB",
   "tag.soldering": "Paghihinang",
   "tag.scope": "Oscilloscope",
-
   "edu.title": "Edukasyon",
   "edu.ubc.role": "Bachelor of Applied Science, Electrical Engineering",
   "edu.ubc.org": "University of British Columbia Okanagan · Kelowna, BC",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "High School",
   "edu.sjs.org": "St. John's School · Vancouver, BC",
   "edu.sjs.date": "Set 2016 - Hun 2022",
-
   "lead.title": "Pamumuno",
   "lead.prefect.role": "Prefect at Kapitan ng Gunn House",
   "lead.prefect.org": "Student Council, St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "Scouts Canada · Vancouver, BC",
   "lead.scouts.date": "Set 2011 - Hun 2022",
   "lead.scouts.b1": "Nagplano ng mga kaganapan, namuno sa mga aktibidad ng kabataan, nag-ingat ng mga rekord, at nagsulong ng teamwork at kaligtasan sa mga camp at community service project.",
-
   "more.title": "Mga Kaanib at Interes",
   "more.aff": "Mga Kaanib",
   "more.egbc": "Engineers and Geoscientists BC (EGBC), 2024 hanggang ngayon",
   "more.sports": "Palakasan",
   "int.golf": "Golf",
-  "int.travel": "Paglalakbay",
-  "int.intramurals": "UBC intramurals",
-  "int.volleyball": "Volleyball",
-  "int.soccer": "Soccer",
   "int.basketball": "Basketball",
   "int.badminton": "Badminton",
-  "int.bronze": "Bronze Medallion (lifesaving)",
-  "more.activities": "Mga Aktibidad",
   "int.piano": "Piyano, mula edad 6",
-  "int.gaming": "PC at VR gaming",
   "int.keyboards": "Custom na keyboard",
-  "int.stocks": "Stock trading"
+  "more.music": "Musika",
+  "more.gaming": "Gaming",
+  "more.builds": "Pagbuo ng hardware",
+  "int.pcbuild": "Pagbuo ng PC",
+  "more.investing": "Pamumuhunan",
+  "int.stocks": "Stock trading",
+  "more.travel": "Paglalakbay",
+  "int.roadtrips": "Road trip",
+  "int.vacations": "Bakasyon"
 }

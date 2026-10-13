@@ -14,14 +14,12 @@
   "form.sending": "보내는 중…",
   "form.success": "감사합니다. 메시지가 전송되었습니다.",
   "form.error": "문제가 발생했습니다. LinkedIn으로 연락해 주세요.",
-
   "home.title": "Michael Xie | 전기공학",
   "hero.hi": "안녕하세요, 제 이름은",
   "hero.sub": "실제 문제를 해결하는 하드웨어와 소프트웨어를 만듭니다.",
   "hero.text": "저는 UBC 오카나간 캠퍼스에서 전기공학을 공부하는 학생으로, 임베디드 시스템, 컴퓨터 비전, AI 분야에서 일합니다. 산업체 고객에게 납품한 Raspberry Pi 곤충 계수기부터 흉부 X선 분류기 연구까지 다양한 작업을 해 왔습니다.",
   "hero.cta1": "작업 보기",
   "hero.cta2": "경력 보기",
-
   "about.title": "소개",
   "about.p1": "안녕하세요! 저는 Michael Xie(Pei Lin Xie)입니다. 브리티시컬럼비아 대학교 오카나간 캠퍼스에서 전기공학을 공부하고 있으며 2027년 5월에 졸업합니다. 반복적이고 번거로운 문제를 제대로 작동하는 도구로 바꾸는 일을 좋아합니다.",
   "about.p2": "UBC MEMS Lab, HYC Technology, Suzhou Yi Li Energy에서 인턴으로 일하며 심장 조직 시험 장비부터 PCB 진단과 수리까지 폭넓게 다뤘습니다.",
@@ -33,7 +31,6 @@
   "facts.loc": "캐나다 BC주 밴쿠버",
   "facts.status.label": "상태",
   "facts.status": "4, 8, 12개월 코업(Co-op) 가능",
-
   "skills.title": "기술",
   "skills.elec": "전기 및 하드웨어",
   "tag.circuit": "회로 설계",
@@ -42,7 +39,6 @@
   "skills.lang": "프로그래밍 언어",
   "skills.ai": "AI 및 컴퓨터 비전",
   "skills.tools": "도구",
-
   "research.title": "연구",
   "paper.status": "제출 완료 · SPIE Medical Imaging 2027 · 2027년 1월 결과 발표 예정",
   "paper.abstract": "흉부 X선 AI 모델은 보통 정확도로 평가되지만, 이 수치는 위험할 정도로 낮은 질병 검출률을 가릴 수 있습니다. CheXpert에서 의료 파운데이션 모델 Ark+를 평가한 결과, 정확도 86%인 모델이 표준 임계값에서 실제 질병 사례 10건 중 약 3건만 찾아냈습니다. 검증 데이터로 임계값을 조정하자 재학습 없이 민감도가 0.73-0.84로 올라갔고, 목표를 정한 클래스 가중 손실은 무기폐와 경화의 검출을 개선했습니다. 같은 고정 프로토콜에서 다섯 가지 아키텍처를 추가로 비교하고 있습니다.",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "10건 중 ~3건",
   "paper.stat2": "표준 임계값에서 검출된 실제 질병 사례",
   "paper.stat3": "임계값 조정 후 민감도, 재학습 없음",
-
   "projects.title": "프로젝트",
   "p.exuvia.title": "코들링 나방 탈피각 계수",
   "p.exuvia.desc": "Okanagan Kootenay Sterile Insect Release Program을 위한 졸업 프로젝트(2025-2026). 5명의 팀이 백색/UV 조명을 갖춘 촬영 상자, Raspberry Pi HQ 카메라, 세 번의 클릭으로 쓰는 Streamlit GUI를 만들었습니다. 라벨링된 탈피각 15,000개로 학습한 YOLOv8 모델은 약 92%의 mAP@50을 달성하고 고객의 모든 목표를 충족했습니다.",
@@ -80,7 +75,6 @@
   "p.f117.desc": "5명 팀의 주장으로서 30시간 이상에 걸쳐 F-117A 나이트호크 스텔스기를 모델링했습니다. 날개, 엔진, 동체, 조종석, 착륙 장치에 걸쳐 약 5,000개 부품, 200개 하위 어셈블리, 1,500개 메이트를 만들고 움직이는 부품의 애니메이션도 제작했습니다. A를 받았습니다.",
   "tag.anim": "애니메이션",
   "link.animation": "애니메이션 보기",
-
   "tools.title": "Python 도구와 봇",
   "tools.intro": "일상적인 작업을 자동화하려고 여가 시간에 만드는 개인 프로젝트입니다.",
   "t.resy.title": "Resy 예약 봇",
@@ -89,7 +83,6 @@
   "t.wm.desc": "이미지, PDF, Word 문서에 텍스트나 이미지 워터마크를 단일 또는 기울어진 타일 형태로 넣는 Streamlit 앱입니다.",
   "t.site.title": "이 포트폴리오",
   "t.site.desc": "HTML과 CSS로 만든 반응형 무의존성 포트폴리오로, Cloudflare에 배포했습니다.",
-
   "contact.title": "연락처",
   "contact.heading": "함께 일해요",
   "contact.text": "채용 제안, 프로젝트 아이디어, 혹은 그냥 인사라도 언제든 환영합니다. 최대한 빨리 답장드리겠습니다.",
@@ -97,12 +90,10 @@
   "form.email": "이메일",
   "form.message": "메시지",
   "form.send": "메시지 보내기",
-
   "exp.title": "경력 | Michael Xie",
   "exp.h1": "제가 일하고 배운 곳들.",
   "exp.intro": "UBC 오카나간 전기공학 전공, 2027년 5월 졸업 예정. 4, 8, 12개월 코업(Co-op) 가능합니다.",
   "exp.work.title": "기술 직무 경력",
-
   "job.mems.role": "인턴 / 자원봉사",
   "job.mems.org": "UBC MEMS Lab · BC주 밴쿠버",
   "job.mems.date": "2025년 4월 - 2025년 6월",
@@ -116,7 +107,6 @@
   "job.mems.c2": "실시간 데이터와 함께 신장 사이클 실행",
   "job.mems.c3": "직접 만든 카메라 거치대로 촬영했으며, 자를 기준 척도로 삼아 응력과 변형률을 계산했습니다",
   "tag.microscopy": "현미경 관찰",
-
   "job.hyc.role": "엔지니어링 및 운영 인턴",
   "job.hyc.org": "HYC Technology · 중국 쑤저우",
   "job.hyc.date": "2024년 7월 - 2024년 8월",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "Git, SolidWorks, Quartus Prime, Cadence Allegro, 지멘스/미쓰비시 PLC 소프트웨어를 경험했습니다.",
   "job.hyc.b4": "HYC 자체 클라우드 네트워크와 원격 데스크톱 솔루션 등 사내 시스템을 익혔습니다.",
   "tag.mfg": "제조",
-
   "job.yili.role": "엔지니어링 인턴",
   "job.yili.org": "Suzhou Yi Li Energy · 중국 쑤저우",
   "job.yili.date": "2023년 7월 - 2023년 8월",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "PCB 수리",
   "tag.soldering": "납땜",
   "tag.scope": "오실로스코프",
-
   "edu.title": "학력",
   "edu.ubc.role": "응용과학 학사, 전기공학",
   "edu.ubc.org": "브리티시컬럼비아 대학교 오카나간 캠퍼스 · BC주 켈로나",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "고등학교",
   "edu.sjs.org": "St. John's School · BC주 밴쿠버",
   "edu.sjs.date": "2016년 9월 - 2022년 6월",
-
   "lead.title": "리더십",
   "lead.prefect.role": "학생 간부 및 Gunn 하우스 주장",
   "lead.prefect.org": "학생회, St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "Scouts Canada · BC주 밴쿠버",
   "lead.scouts.date": "2011년 9월 - 2022년 6월",
   "lead.scouts.b1": "캠프와 지역 봉사 활동에서 행사를 기획하고, 청소년 활동을 이끌고, 기록을 관리하며 팀워크와 안전을 장려했습니다.",
-
   "more.title": "소속 및 관심사",
   "more.aff": "소속",
   "more.egbc": "Engineers and Geoscientists BC(EGBC), 2024년부터 현재",
   "more.sports": "스포츠",
   "int.golf": "골프",
-  "int.travel": "여행",
-  "int.intramurals": "UBC 교내 리그",
-  "int.volleyball": "배구",
-  "int.soccer": "축구",
   "int.basketball": "농구",
   "int.badminton": "배드민턴",
-  "int.bronze": "브론즈 메달리온(인명 구조)",
-  "more.activities": "활동",
   "int.piano": "피아노, 6살부터",
-  "int.gaming": "PC 및 VR 게임",
   "int.keyboards": "커스텀 키보드",
-  "int.stocks": "주식 투자"
+  "more.music": "음악",
+  "more.gaming": "게임",
+  "more.builds": "하드웨어 제작",
+  "int.pcbuild": "PC 조립",
+  "more.investing": "투자",
+  "int.stocks": "주식 투자",
+  "more.travel": "여행",
+  "int.roadtrips": "자동차 여행",
+  "int.vacations": "휴가 여행"
 }

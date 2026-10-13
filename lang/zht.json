@@ -14,14 +14,12 @@
   "form.sending": "傳送中…",
   "form.success": "謝謝，您的訊息已送出。",
   "form.error": "傳送失敗，請改用 LinkedIn 與我聯絡。",
-
   "home.title": "Michael Xie | 電機工程",
   "hero.hi": "你好，我是",
   "hero.sub": "我打造能解決實際問題的硬體與軟體。",
   "hero.text": "我是 UBC 奧卡納根校區電機工程系的學生，涉獵嵌入式系統、電腦視覺與人工智慧，從交付給業界客戶的樹莓派昆蟲計數器，到胸部 X 光分類器的研究。",
   "hero.cta1": "查看我的作品",
   "hero.cta2": "查看我的經歷",
-
   "about.title": "關於我",
   "about.p1": "你好！我是 Michael Xie（Pei Lin Xie），英屬哥倫比亞大學奧卡納根校區電機工程系的學生，將於 2027 年 5 月畢業。我喜歡把重複又惱人的問題，變成真正好用的工具。",
   "about.p2": "我曾在 UBC MEMS 實驗室、HYC Technology 與 Suzhou Yi Li Energy 實習，工作內容從心臟組織測試裝置到電路板的診斷與維修。",
@@ -33,7 +31,6 @@
   "facts.loc": "加拿大卑詩省溫哥華",
   "facts.status.label": "狀態",
   "facts.status": "可參加 4、8 或 12 個月的 co-op 實習",
-
   "skills.title": "技能",
   "skills.elec": "電機與硬體",
   "tag.circuit": "電路設計",
@@ -42,7 +39,6 @@
   "skills.lang": "程式語言",
   "skills.ai": "人工智慧與電腦視覺",
   "skills.tools": "工具",
-
   "research.title": "研究",
   "paper.status": "已投稿 · SPIE Medical Imaging 2027 · 預計 2027 年 1 月公布結果",
   "paper.abstract": "胸部 X 光 AI 模型通常以準確率評斷，但這個數字可能掩蓋極低的疾病檢出率。我們在 CheXpert 上評估醫學基礎模型 Ark+，發現一個準確率達 86% 的模型在標準閾值下只檢出約十分之三的真實病例。依驗證集調整閾值後，無須重新訓練即可將敏感度提升至 0.73-0.84，而針對性的類別加權損失則改善了肺擴張不全與實質化的檢出。另外五種架構正在同一凍結協定下進行比較。",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "約 3/10",
   "paper.stat2": "標準閾值下檢出的真實病例",
   "paper.stat3": "調整閾值後的敏感度，無須重新訓練",
-
   "projects.title": "專案",
   "p.exuvia.title": "蘋果蠹蛾蛻皮計數",
   "p.exuvia.desc": "為奧卡納根-庫特尼不孕昆蟲釋放計畫完成的畢業專題（2025-2026）。我們 5 人團隊打造了一個具白光/紫外光照明的成像箱、一台樹莓派 HQ 攝影機，以及只需三次點擊的 Streamlit 介面。我們的 YOLOv8 模型以 15,000 個標註蛻皮訓練，mAP@50 達到約 92%，達成客戶的所有目標。",
@@ -80,7 +75,6 @@
   "p.f117.desc": "擔任 5 人團隊的隊長，花費 30 多個小時為 F-117A 夜鷹隱形戰機建模：約 5,000 個零件、200 個次組合件與 1,500 個結合條件，涵蓋機翼、引擎、機身、駕駛艙與起落架，並製作活動部件的動畫。成績為 A。",
   "tag.anim": "動畫",
   "link.animation": "觀看動畫",
-
   "tools.title": "Python 工具與機器人",
   "tools.intro": "我在閒暇時開發的小專案，用來自動化日常工作。",
   "t.resy.title": "Resy 訂位機器人",
@@ -89,7 +83,6 @@
   "t.wm.desc": "一個 Streamlit 應用程式，可為圖片、PDF 與 Word 文件加上文字或圖片浮水印，支援單一或斜向平鋪。",
   "t.site.title": "這個作品集網站",
   "t.site.desc": "一個響應式、無相依套件的作品集，以 HTML 和 CSS 打造，部署於 Cloudflare。",
-
   "contact.title": "聯絡",
   "contact.heading": "一起合作吧",
   "contact.text": "無論你有職缺、專案構想，或只是想打聲招呼，我的信箱隨時開放。我會盡快回覆你。",
@@ -97,12 +90,10 @@
   "form.email": "電子郵件",
   "form.message": "訊息",
   "form.send": "送出訊息",
-
   "exp.title": "經歷 | Michael Xie",
   "exp.h1": "我工作與學習過的地方。",
   "exp.intro": "UBC 奧卡納根校區電機工程系學生，2027 年 5 月畢業。可參加 4、8 或 12 個月的 co-op 實習。",
   "exp.work.title": "技術工作經歷",
-
   "job.mems.role": "實習 / 志工",
   "job.mems.org": "UBC MEMS 實驗室 · 卑詩省溫哥華",
   "job.mems.date": "2025 年 4 月 - 2025 年 6 月",
@@ -116,7 +107,6 @@
   "job.mems.c2": "執行一次拉伸循環並顯示即時資料",
   "job.mems.c3": "以我自製的攝影機架拍攝，並用尺作為比例參考來計算應力與應變",
   "tag.microscopy": "顯微成像",
-
   "job.hyc.role": "工程與營運實習生",
   "job.hyc.org": "HYC Technology · 中國蘇州",
   "job.hyc.date": "2024 年 7 月 - 2024 年 8 月",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "接觸 Git、SolidWorks、Quartus Prime、Cadence Allegro 以及西門子/三菱 PLC 軟體。",
   "job.hyc.b4": "了解公司內部系統，包括 HYC 自有的雲端網路與遠端桌面方案。",
   "tag.mfg": "製造",
-
   "job.yili.role": "工程實習生",
   "job.yili.org": "Suzhou Yi Li Energy · 中國蘇州",
   "job.yili.date": "2023 年 7 月 - 2023 年 8 月",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "電路板維修",
   "tag.soldering": "焊接",
   "tag.scope": "示波器",
-
   "edu.title": "學歷",
   "edu.ubc.role": "電機工程應用科學學士",
   "edu.ubc.org": "英屬哥倫比亞大學奧卡納根校區 · 卑詩省基隆拿",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "高中",
   "edu.sjs.org": "St. John's School · 卑詩省溫哥華",
   "edu.sjs.date": "2016 年 9 月 - 2022 年 6 月",
-
   "lead.title": "領導經歷",
   "lead.prefect.role": "學生幹部暨 Gunn 學院隊長",
   "lead.prefect.org": "學生會，St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "加拿大童軍 · 卑詩省溫哥華",
   "lead.scouts.date": "2011 年 9 月 - 2022 年 6 月",
   "lead.scouts.b1": "在露營與社區服務專案中規劃活動、帶領青少年活動、管理紀錄，並推動團隊合作與安全。",
-
   "more.title": "協會與興趣",
   "more.aff": "協會",
   "more.egbc": "卑詩省工程師與地球科學家協會（EGBC），2024 年至今",
   "more.sports": "運動",
   "int.golf": "高爾夫",
-  "int.travel": "旅行",
-  "int.intramurals": "UBC 校內聯賽",
-  "int.volleyball": "排球",
-  "int.soccer": "足球",
   "int.basketball": "籃球",
   "int.badminton": "羽毛球",
-  "int.bronze": "銅質救生獎章",
-  "more.activities": "活動",
   "int.piano": "鋼琴，6 歲開始學",
-  "int.gaming": "PC 與 VR 遊戲",
   "int.keyboards": "客製化鍵盤",
-  "int.stocks": "股票交易"
+  "more.music": "音樂",
+  "more.gaming": "遊戲",
+  "more.builds": "硬體組裝",
+  "int.pcbuild": "組裝電腦",
+  "more.investing": "投資",
+  "int.stocks": "股票交易",
+  "more.travel": "旅行",
+  "int.roadtrips": "公路旅行",
+  "int.vacations": "度假"
 }

@@ -1595,10 +1595,30 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   line-height: 1.45;
 }
 
+/* Seven cards in rows of three: Gaming and Travel span two columns so every row is full.
+   Tablet: pairs, with the last card full width. Mobile: one column. */
 .interests-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+
+.interests-grid > .interest-wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .interests-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .interests-grid > .interest-wide {
+    grid-column: auto;
+  }
+
+  .interests-grid > :last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 /* =========================================================

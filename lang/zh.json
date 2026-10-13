@@ -14,14 +14,12 @@
   "form.sending": "正在发送…",
   "form.success": "谢谢，您的消息已发送。",
   "form.error": "发送失败，请通过 LinkedIn 联系我。",
-
   "home.title": "Michael Xie | 电气工程",
   "hero.hi": "你好，我是",
   "hero.sub": "我打造解决实际问题的硬件与软件。",
   "hero.text": "我是 UBC 奥肯那根校区电气工程专业的学生，涉猎嵌入式系统、计算机视觉和人工智能，从交付给行业客户的树莓派昆虫计数器，到胸部 X 光分类器的研究。",
   "hero.cta1": "查看我的作品",
   "hero.cta2": "查看我的经历",
-
   "about.title": "关于我",
   "about.p1": "你好！我是 Michael Xie（Pei Lin Xie），英属哥伦比亚大学奥肯那根校区电气工程专业的学生，将于 2027 年 5 月毕业。我喜欢把重复、令人头疼的问题变成真正好用的工具。",
   "about.p2": "我曾在 UBC MEMS 实验室、HYC Technology 和 Suzhou Yi Li Energy 实习，工作内容从心脏组织测试装置到 PCB 诊断与维修。",
@@ -33,7 +31,6 @@
   "facts.loc": "加拿大不列颠哥伦比亚省温哥华",
   "facts.status.label": "状态",
   "facts.status": "可参加 4、8 或 12 个月的带薪实习（co-op）",
-
   "skills.title": "技能",
   "skills.elec": "电气与硬件",
   "tag.circuit": "电路设计",
@@ -42,7 +39,6 @@
   "skills.lang": "编程语言",
   "skills.ai": "人工智能与计算机视觉",
   "skills.tools": "工具",
-
   "research.title": "研究",
   "paper.status": "已投稿 · SPIE Medical Imaging 2027 · 预计 2027 年 1 月公布结果",
   "paper.abstract": "胸部 X 光 AI 模型通常以准确率来评判，而这个数字可能掩盖极低的疾病检出率。我们在 CheXpert 上评估医学基础模型 Ark+，发现一个准确率达 86% 的模型在标准阈值下只检出了大约十分之三的真实病例。基于验证集调整阈值后，无需重新训练即可将灵敏度提升到 0.73-0.84，而针对性的类别加权损失则改善了对肺不张和实变的检出。另外五种架构正在同一冻结协议下进行比较。",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "约 3/10",
   "paper.stat2": "标准阈值下检出的真实病例",
   "paper.stat3": "调整阈值后的灵敏度，无需重新训练",
-
   "projects.title": "项目",
   "p.exuvia.title": "苹果蠹蛾蜕皮计数",
   "p.exuvia.desc": "为奥肯那根-库特尼不育昆虫释放计划完成的毕业设计（2025-2026）。我们 5 人团队打造了一个带白光/紫外照明的成像箱、一台树莓派 HQ 摄像头和一个三步操作的 Streamlit 界面。我们的 YOLOv8 模型使用 15,000 个标注蜕皮训练，mAP@50 达到约 92%，满足了客户的全部指标。",
@@ -80,7 +75,6 @@
   "p.f117.desc": "作为 5 人团队的队长，用 30 多个小时为 F-117A 夜鹰隐形战机建模：约 5,000 个零件、200 个子装配体和 1,500 个配合，涵盖机翼、发动机、机身、驾驶舱和起落架，并制作了活动部件的动画。获得 A。",
   "tag.anim": "动画",
   "link.animation": "观看动画",
-
   "tools.title": "Python 工具与机器人",
   "tools.intro": "我在业余时间开发的小项目，用来自动化日常任务。",
   "t.resy.title": "Resy 订座机器人",
@@ -89,7 +83,6 @@
   "t.wm.desc": "一个 Streamlit 应用，可以为图片、PDF 和 Word 文档添加文字或图片水印，支持单个或倾斜平铺。",
   "t.site.title": "这个作品集网站",
   "t.site.desc": "一个响应式、无依赖的作品集，使用 HTML 和 CSS 构建，部署在 Cloudflare 上。",
-
   "contact.title": "联系",
   "contact.heading": "一起合作吧",
   "contact.text": "无论你有职位机会、项目想法，还是只想打个招呼，我的收件箱随时开放。我会尽快回复你。",
@@ -97,12 +90,10 @@
   "form.email": "邮箱",
   "form.message": "留言",
   "form.send": "发送消息",
-
   "exp.title": "经历 | Michael Xie",
   "exp.h1": "我工作和学习过的地方。",
   "exp.intro": "UBC 奥肯那根校区电气工程专业学生，2027 年 5 月毕业。可参加 4、8 或 12 个月的带薪实习（co-op）。",
   "exp.work.title": "技术工作经历",
-
   "job.mems.role": "实习 / 志愿者",
   "job.mems.org": "UBC MEMS 实验室 · 不列颠哥伦比亚省温哥华",
   "job.mems.date": "2025 年 4 月 - 2025 年 6 月",
@@ -116,7 +107,6 @@
   "job.mems.c2": "运行一次拉伸循环并显示实时数据",
   "job.mems.c3": "使用我搭建的摄像头支架拍摄，以尺子作为比例参考来计算应力和应变",
   "tag.microscopy": "显微成像",
-
   "job.hyc.role": "工程与运营实习生",
   "job.hyc.org": "HYC Technology · 中国苏州",
   "job.hyc.date": "2024 年 7 月 - 2024 年 8 月",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "接触了 Git、SolidWorks、Quartus Prime、Cadence Allegro 以及西门子/三菱 PLC 软件。",
   "job.hyc.b4": "了解了公司内部系统，包括 HYC 自有的云网络和远程桌面方案。",
   "tag.mfg": "制造",
-
   "job.yili.role": "工程实习生",
   "job.yili.org": "Suzhou Yi Li Energy · 中国苏州",
   "job.yili.date": "2023 年 7 月 - 2023 年 8 月",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "PCB 维修",
   "tag.soldering": "焊接",
   "tag.scope": "示波器",
-
   "edu.title": "教育",
   "edu.ubc.role": "电气工程应用科学学士",
   "edu.ubc.org": "英属哥伦比亚大学奥肯那根校区 · 不列颠哥伦比亚省基洛纳",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "高中",
   "edu.sjs.org": "St. John's School · 不列颠哥伦比亚省温哥华",
   "edu.sjs.date": "2016 年 9 月 - 2022 年 6 月",
-
   "lead.title": "领导经历",
   "lead.prefect.role": "学生干部兼 Gunn 学院队长",
   "lead.prefect.org": "学生会，St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "加拿大童军 · 不列颠哥伦比亚省温哥华",
   "lead.scouts.date": "2011 年 9 月 - 2022 年 6 月",
   "lead.scouts.b1": "在露营和社区服务项目中策划活动、带领青少年活动、管理记录，并推动团队合作与安全。",
-
   "more.title": "协会与兴趣",
   "more.aff": "协会",
   "more.egbc": "不列颠哥伦比亚省工程师与地球科学家协会（EGBC），2024 年至今",
   "more.sports": "运动",
   "int.golf": "高尔夫",
-  "int.travel": "旅行",
-  "int.intramurals": "UBC 校内联赛",
-  "int.volleyball": "排球",
-  "int.soccer": "足球",
   "int.basketball": "篮球",
   "int.badminton": "羽毛球",
-  "int.bronze": "铜质救生奖章",
-  "more.activities": "活动",
   "int.piano": "钢琴，6 岁开始学习",
-  "int.gaming": "PC 与 VR 游戏",
   "int.keyboards": "客制化键盘",
-  "int.stocks": "股票交易"
+  "more.music": "音乐",
+  "more.gaming": "游戏",
+  "more.builds": "硬件制作",
+  "int.pcbuild": "组装电脑",
+  "more.investing": "投资",
+  "int.stocks": "股票交易",
+  "more.travel": "旅行",
+  "int.roadtrips": "自驾游",
+  "int.vacations": "度假"
 }

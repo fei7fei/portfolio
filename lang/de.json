@@ -14,14 +14,12 @@
   "form.sending": "Wird gesendet…",
   "form.success": "Danke. Ihre Nachricht wurde gesendet.",
   "form.error": "Etwas ist schiefgelaufen. Bitte kontaktieren Sie mich stattdessen über LinkedIn.",
-
   "home.title": "Michael Xie | Elektrotechnik",
   "hero.hi": "Hallo, ich heiße",
   "hero.sub": "Ich baue Hardware und Software, die echte Probleme lösen.",
   "hero.text": "Ich studiere Elektrotechnik an der UBC Okanagan und arbeite an eingebetteten Systemen, Computer Vision und KI, von einem Raspberry-Pi-Insektenzähler für einen Industriekunden bis zur Forschung an Klassifikatoren für Thorax-Röntgenbilder.",
   "hero.cta1": "Meine Projekte",
   "hero.cta2": "Meine Erfahrung",
-
   "about.title": "Über mich",
   "about.p1": "Hallo! Ich bin Michael Xie (Pei Lin Xie) und studiere Elektrotechnik an der University of British Columbia Okanagan mit Abschluss im Mai 2027. Ich mache gern aus wiederkehrenden, nervigen Problemen Werkzeuge, die einfach funktionieren.",
   "about.p2": "Ich habe Praktika im UBC MEMS Lab, bei HYC Technology und bei Suzhou Yi Li Energy gemacht und dort an allem gearbeitet, von Prüfständen für Herzgewebe bis zur Diagnose und Reparatur von Leiterplatten.",
@@ -33,7 +31,6 @@
   "facts.loc": "Vancouver, British Columbia",
   "facts.status.label": "Status",
   "facts.status": "Verfügbar für Co-op-Praktika von 4, 8 oder 12 Monaten",
-
   "skills.title": "Fähigkeiten",
   "skills.elec": "Elektrotechnik und Hardware",
   "tag.circuit": "Schaltungsentwurf",
@@ -42,7 +39,6 @@
   "skills.lang": "Programmiersprachen",
   "skills.ai": "KI und Computer Vision",
   "skills.tools": "Tools",
-
   "research.title": "Forschung",
   "paper.status": "Eingereicht · SPIE Medical Imaging 2027 · Entscheidung voraussichtlich im Januar 2027",
   "paper.abstract": "KI-Modelle für Thorax-Röntgenbilder werden meist nach ihrer Genauigkeit beurteilt, einer Zahl, die eine gefährlich niedrige Krankheitserkennung verbergen kann. Bei der Bewertung des medizinischen Foundation-Modells Ark+ auf CheXpert stellten wir fest, dass ein Modell mit 86 % Genauigkeit beim Standard-Schwellenwert nur etwa 3 von 10 echten Krankheitsfällen erkannte. Eine anhand der Validierungsdaten abgestimmte Schwellenwahl hob die Sensitivität ohne erneutes Training auf 0,73-0,84, und ein gezielter klassengewichteter Loss verbesserte die Erkennung von Atelektase und Konsolidierung. Fünf weitere Architekturen werden mit demselben eingefrorenen Protokoll verglichen.",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "~3 von 10",
   "paper.stat2": "Echte Krankheitsfälle, erkannt beim Standard-Schwellenwert",
   "paper.stat3": "Sensitivität nach Anpassung des Schwellenwerts, ohne erneutes Training",
-
   "projects.title": "Projekte",
   "p.exuvia.title": "Zählung von Apfelwickler-Exuvien",
   "p.exuvia.desc": "Abschlussprojekt (2025-2026) für das Okanagan Kootenay Sterile Insect Release Program. Ein 5-köpfiges Team baute eine Bildbox mit Weiß-/UV-Beleuchtung, einer Raspberry Pi HQ-Kamera und einer Streamlit-Oberfläche mit 3 Klicks. Unser YOLOv8-Modell, trainiert auf 15.000 annotierten Exuvien, erreichte ~92 % mAP@50 und erfüllte alle Vorgaben des Kunden.",
@@ -80,7 +75,6 @@
   "p.f117.desc": "Als Kapitän eines 5-köpfigen Teams in über 30 Stunden den Tarnkappenjet F-117A Nighthawk modelliert: ~5.000 Teile, 200 Unterbaugruppen und 1.500 Verknüpfungen über Tragflächen, Triebwerk, Rumpf, Cockpit und Fahrwerk, dazu eine Animation der beweglichen Teile. Note: A.",
   "tag.anim": "Animation",
   "link.animation": "Animation ansehen",
-
   "tools.title": "Python-Tools und Bots",
   "tools.intro": "Nebenprojekte, die ich in meiner Freizeit baue, um Alltagsaufgaben zu automatisieren.",
   "t.resy.title": "Resy-Reservierungsbot",
@@ -89,7 +83,6 @@
   "t.wm.desc": "Eine Streamlit-App, die Text- oder Bildwasserzeichen, einzeln oder schräg gekachelt, auf Bilder, PDFs und Word-Dokumente setzt.",
   "t.site.title": "Dieses Portfolio",
   "t.site.desc": "Ein responsives Portfolio ohne Abhängigkeiten, gebaut mit HTML und CSS und gehostet auf Cloudflare.",
-
   "contact.title": "Kontakt",
   "contact.heading": "Lassen Sie uns zusammenarbeiten",
   "contact.text": "Ob Sie eine Stelle im Kopf haben, eine Projektidee oder einfach Hallo sagen möchten: Mein Posteingang ist immer offen. Ich melde mich so schnell wie möglich.",
@@ -97,12 +90,10 @@
   "form.email": "E-Mail",
   "form.message": "Nachricht",
   "form.send": "Nachricht senden",
-
   "exp.title": "Erfahrung | Michael Xie",
   "exp.h1": "Wo ich gearbeitet und gelernt habe.",
   "exp.intro": "Elektrotechnikstudent an der UBC Okanagan, Abschluss im Mai 2027. Verfügbar für Co-op-Praktika von 4, 8 oder 12 Monaten.",
   "exp.work.title": "Technische Berufserfahrung",
-
   "job.mems.role": "Praktikum / Ehrenamt",
   "job.mems.org": "UBC MEMS Lab · Vancouver, BC",
   "job.mems.date": "Apr. 2025 - Juni 2025",
@@ -116,7 +107,6 @@
   "job.mems.c2": "Ein Dehnungszyklus mit Live-Daten",
   "job.mems.c3": "Aufgenommen mit einem selbst gebauten Kamerastativ, mit dem Lineal als Maßstab zur Berechnung von Spannung und Dehnung",
   "tag.microscopy": "Mikroskopie",
-
   "job.hyc.role": "Praktikant Engineering und Operations",
   "job.hyc.org": "HYC Technology · Suzhou, China",
   "job.hyc.date": "Juli 2024 - Aug. 2024",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "Einblicke in Git, SolidWorks, Quartus Prime, Cadence Allegro sowie SPS-Software von Siemens und Mitsubishi gewonnen.",
   "job.hyc.b4": "Interne Systeme kennengelernt, darunter das eigene Cloud-Netzwerk von HYC und Remote-Desktop-Lösungen.",
   "tag.mfg": "Fertigung",
-
   "job.yili.role": "Praktikant Engineering",
   "job.yili.org": "Suzhou Yi Li Energy · Suzhou, China",
   "job.yili.date": "Juli 2023 - Aug. 2023",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "Leiterplattenreparatur",
   "tag.soldering": "Löten",
   "tag.scope": "Oszilloskop",
-
   "edu.title": "Ausbildung",
   "edu.ubc.role": "Bachelor of Applied Science, Elektrotechnik",
   "edu.ubc.org": "University of British Columbia Okanagan · Kelowna, BC",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "Highschool",
   "edu.sjs.org": "St. John's School · Vancouver, BC",
   "edu.sjs.date": "Sept. 2016 - Juni 2022",
-
   "lead.title": "Führung",
   "lead.prefect.role": "Präfekt und Kapitän des Gunn House",
   "lead.prefect.org": "Schülervertretung, St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "Scouts Canada · Vancouver, BC",
   "lead.scouts.date": "Sept. 2011 - Juni 2022",
   "lead.scouts.b1": "Veranstaltungen geplant, Jugendaktivitäten geleitet, Protokolle geführt und Teamarbeit und Sicherheit bei Lagern und gemeinnützigen Projekten gefördert.",
-
   "more.title": "Mitgliedschaften und Interessen",
   "more.aff": "Mitgliedschaften",
   "more.egbc": "Engineers and Geoscientists BC (EGBC), seit 2024",
   "more.sports": "Sport",
   "int.golf": "Golf",
-  "int.travel": "Reisen",
-  "int.intramurals": "UBC-Hochschulsport",
-  "int.volleyball": "Volleyball",
-  "int.soccer": "Fußball",
   "int.basketball": "Basketball",
   "int.badminton": "Badminton",
-  "int.bronze": "Bronze-Rettungsschwimmabzeichen",
-  "more.activities": "Aktivitäten",
   "int.piano": "Klavier, seit dem 6. Lebensjahr",
-  "int.gaming": "PC- und VR-Gaming",
   "int.keyboards": "Selbstgebaute Tastaturen",
-  "int.stocks": "Aktienhandel"
+  "more.music": "Musik",
+  "more.gaming": "Gaming",
+  "more.builds": "Hardware-Projekte",
+  "int.pcbuild": "PC-Bau",
+  "more.investing": "Investieren",
+  "int.stocks": "Aktienhandel",
+  "more.travel": "Reisen",
+  "int.roadtrips": "Roadtrips",
+  "int.vacations": "Urlaub"
 }

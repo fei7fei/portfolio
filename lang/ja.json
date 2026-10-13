@@ -14,14 +14,12 @@
   "form.sending": "送信中…",
   "form.success": "ありがとうございます。メッセージを送信しました。",
   "form.error": "送信できませんでした。LinkedIn からご連絡ください。",
-
   "home.title": "Michael Xie | 電気工学",
   "hero.hi": "こんにちは、私の名前は",
   "hero.sub": "現実の問題を解決するハードウェアとソフトウェアをつくっています。",
   "hero.text": "UBC オカナガン校で電気工学を学ぶ学生です。組み込みシステム、コンピュータビジョン、AI に取り組んでおり、産業界のクライアントに納品した Raspberry Pi 製の昆虫カウンターから、胸部 X 線分類器の研究まで手がけています。",
   "hero.cta1": "作品を見る",
   "hero.cta2": "経歴を見る",
-
   "about.title": "自己紹介",
   "about.p1": "こんにちは。Michael Xie（Pei Lin Xie）です。ブリティッシュコロンビア大学オカナガン校で電気工学を学んでおり、2027 年 5 月に卒業予定です。繰り返し起こる面倒な問題を、きちんと役に立つツールに変えることが好きです。",
   "about.p2": "UBC MEMS Lab、HYC Technology、Suzhou Yi Li Energy でインターンを経験し、心臓組織の試験装置からプリント基板の診断・修理まで幅広く携わりました。",
@@ -33,7 +31,6 @@
   "facts.loc": "カナダ BC 州バンクーバー",
   "facts.status.label": "ステータス",
   "facts.status": "4・8・12 か月の Co-op インターンに対応可能",
-
   "skills.title": "スキル",
   "skills.elec": "電気・ハードウェア",
   "tag.circuit": "回路設計",
@@ -42,7 +39,6 @@
   "skills.lang": "プログラミング言語",
   "skills.ai": "AI・コンピュータビジョン",
   "skills.tools": "ツール",
-
   "research.title": "研究",
   "paper.status": "投稿済み · SPIE Medical Imaging 2027 · 2027 年 1 月に採否決定予定",
   "paper.abstract": "胸部 X 線 AI モデルは一般に精度で評価されますが、この数値は危険なほど低い疾患検出率を隠してしまうことがあります。CheXpert で医療基盤モデル Ark+ を評価したところ、精度 86% のモデルでも標準のしきい値では実際の疾患例の約 10 件中 3 件しか検出できていませんでした。検証データに基づいてしきい値を選ぶことで、再学習なしに感度を 0.73-0.84 まで高められ、クラス重み付き損失を的を絞って用いることで無気肺と浸潤影の検出も改善しました。現在、同じ固定プロトコルで別の 5 つのアーキテクチャを比較しています。",
@@ -53,7 +49,6 @@
   "paper.stat2.value": "約 10 件中 3 件",
   "paper.stat2": "標準しきい値で検出された実際の疾患例",
   "paper.stat3": "しきい値調整後の感度（再学習なし）",
-
   "projects.title": "プロジェクト",
   "p.exuvia.title": "コドリンガ抜け殻カウンター",
   "p.exuvia.desc": "Okanagan Kootenay Sterile Insect Release Program 向けの卒業プロジェクト（2025-2026）。5 人のチームで、白色/UV 照明付きの撮影ボックス、Raspberry Pi HQ カメラ、3 クリックで操作できる Streamlit GUI を製作しました。15,000 個のラベル付き抜け殻で学習した YOLOv8 モデルは約 92% の mAP@50 を達成し、クライアントの目標をすべて満たしました。",
@@ -80,7 +75,6 @@
   "p.f117.desc": "5 人チームのキャプテンとして、30 時間以上かけてステルス機 F-117A ナイトホークをモデリングしました。主翼、エンジン、胴体、コックピット、降着装置にわたる約 5,000 部品、200 のサブアセンブリ、1,500 の合致に加え、可動部のアニメーションも制作しました。評価は A。",
   "tag.anim": "アニメーション",
   "link.animation": "アニメーションを見る",
-
   "tools.title": "Python ツールとボット",
   "tools.intro": "日々の作業を自動化するために、空いた時間に作っている個人プロジェクトです。",
   "t.resy.title": "Resy 予約ボット",
@@ -89,7 +83,6 @@
   "t.wm.desc": "画像、PDF、Word 文書にテキストまたは画像の透かしを、単体または斜めのタイル状で入れられる Streamlit アプリです。",
   "t.site.title": "このポートフォリオ",
   "t.site.desc": "HTML と CSS で作った、外部依存のないレスポンシブなポートフォリオです。Cloudflare で公開しています。",
-
   "contact.title": "連絡先",
   "contact.heading": "一緒に働きませんか",
   "contact.text": "ポジションのご相談、プロジェクトのアイデア、ちょっとしたご挨拶まで、いつでもお気軽にご連絡ください。できるだけ早くお返事します。",
@@ -97,12 +90,10 @@
   "form.email": "メールアドレス",
   "form.message": "メッセージ",
   "form.send": "送信する",
-
   "exp.title": "経歴 | Michael Xie",
   "exp.h1": "これまでに働き、学んできた場所。",
   "exp.intro": "UBC オカナガン校 電気工学専攻、2027 年 5 月卒業予定。4・8・12 か月の Co-op インターンに対応可能です。",
   "exp.work.title": "技術職の経歴",
-
   "job.mems.role": "インターン / ボランティア",
   "job.mems.org": "UBC MEMS Lab · BC 州バンクーバー",
   "job.mems.date": "2025 年 4 月 - 2025 年 6 月",
@@ -116,7 +107,6 @@
   "job.mems.c2": "リアルタイムデータを表示しながら伸展サイクルを実行",
   "job.mems.c3": "自作のカメラ治具で撮影。定規をスケールの基準にして応力とひずみを算出",
   "tag.microscopy": "顕微鏡観察",
-
   "job.hyc.role": "エンジニアリング・オペレーション インターン",
   "job.hyc.org": "HYC Technology · 中国 蘇州",
   "job.hyc.date": "2024 年 7 月 - 2024 年 8 月",
@@ -125,7 +115,6 @@
   "job.hyc.b3": "Git、SolidWorks、Quartus Prime、Cadence Allegro、シーメンス/三菱の PLC ソフトウェアに触れました。",
   "job.hyc.b4": "HYC 独自のクラウドネットワークやリモートデスクトップなど、社内システムについて学びました。",
   "tag.mfg": "製造",
-
   "job.yili.role": "エンジニアリング インターン",
   "job.yili.org": "Suzhou Yi Li Energy · 中国 蘇州",
   "job.yili.date": "2023 年 7 月 - 2023 年 8 月",
@@ -137,7 +126,6 @@
   "tag.pcbrepair": "基板修理",
   "tag.soldering": "はんだ付け",
   "tag.scope": "オシロスコープ",
-
   "edu.title": "学歴",
   "edu.ubc.role": "応用科学学士（電気工学）",
   "edu.ubc.org": "ブリティッシュコロンビア大学オカナガン校 · BC 州ケロウナ",
@@ -152,7 +140,6 @@
   "edu.sjs.role": "高校",
   "edu.sjs.org": "St. John's School · BC 州バンクーバー",
   "edu.sjs.date": "2016 年 9 月 - 2022 年 6 月",
-
   "lead.title": "リーダーシップ",
   "lead.prefect.role": "監督生・Gunn ハウス キャプテン",
   "lead.prefect.org": "生徒会、St. John's School",
@@ -176,22 +163,22 @@
   "lead.scouts.org": "Scouts Canada · BC 州バンクーバー",
   "lead.scouts.date": "2011 年 9 月 - 2022 年 6 月",
   "lead.scouts.b1": "キャンプや地域奉仕活動でイベントを企画し、青少年の活動を率い、記録を管理し、チームワークと安全を推進しました。",
-
   "more.title": "所属と趣味",
   "more.aff": "所属",
   "more.egbc": "Engineers and Geoscientists BC（EGBC）、2024 年から現在",
   "more.sports": "スポーツ",
   "int.golf": "ゴルフ",
-  "int.travel": "旅行",
-  "int.intramurals": "UBC 学内リーグ",
-  "int.volleyball": "バレーボール",
-  "int.soccer": "サッカー",
   "int.basketball": "バスケットボール",
   "int.badminton": "バドミントン",
-  "int.bronze": "ブロンズメダリオン（ライフセービング）",
-  "more.activities": "活動",
   "int.piano": "ピアノ（6 歳から）",
-  "int.gaming": "PC・VR ゲーム",
   "int.keyboards": "自作キーボード",
-  "int.stocks": "株式投資"
+  "more.music": "音楽",
+  "more.gaming": "ゲーム",
+  "more.builds": "ハードウェア自作",
+  "int.pcbuild": "自作 PC",
+  "more.investing": "投資",
+  "int.stocks": "株式投資",
+  "more.travel": "旅行",
+  "int.roadtrips": "ドライブ旅行",
+  "int.vacations": "休暇旅行"
 }
