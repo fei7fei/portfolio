@@ -80,7 +80,7 @@
   "t.resy.title": "Resy 订座机器人",
   "t.resy.desc": "自动预订难订的 Resy 餐桌：监控取消的预订，并在新座位开放的第一秒抢订。包含手机提醒、取消追踪器和 Streamlit 仪表盘。",
   "t.wm.title": "水印制作工具",
-  "t.wm.desc": "一个 Streamlit 应用，可以为图片、PDF 和 Word 文档添加文字或图片水印，支持单个或倾斜平铺。",
+  "t.wm.desc": "一个 Streamlit 应用，可以为图片、PDF 和 Word 文档添加文字或图片水印，支持单个或倾斜平铺。可以直接在浏览器中使用：它通过 WebAssembly 在本地运行 Python，文件永远不会被上传。",
   "t.gd.title": "掼蛋计分器",
   "t.gd.desc": "掼蛋游戏之夜的计分器。记录两队从 2 打到 A 的级数，自动处理打 A 的规则，并统计每位玩家和每对搭档的胜率。添加到 iPhone 主屏幕后可离线使用，支持中英文。",
   "link.app": "打开应用",

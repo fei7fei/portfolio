@@ -80,7 +80,7 @@
   "t.resy.title": "Bot de reservas de Resy",
   "t.resy.desc": "Reserva automáticamente mesas de Resy muy solicitadas: vigila las cancelaciones y captura las nuevas disponibilidades en el mismo segundo en que se abren. Incluye alertas al teléfono, un registro de cancelaciones y un panel de Streamlit.",
   "t.wm.title": "Herramienta de marcas de agua",
-  "t.wm.desc": "Una app de Streamlit que añade marcas de agua de texto o imagen, sencillas o inclinadas en mosaico, a imágenes, PDF y documentos de Word.",
+  "t.wm.desc": "Una app de Streamlit que añade marcas de agua de texto o imagen, sencillas o inclinadas en mosaico, a imágenes, PDF y documentos de Word. Pruébala en tu navegador: ejecuta Python localmente con WebAssembly, así que tus archivos nunca se suben.",
   "t.gd.title": "Marcador de Guandan",
   "t.gd.desc": "Un marcador para noches de Guandan (掼蛋). Lleva el nivel de ambos equipos del 2 al As, aplica las reglas para ganar en el As y guarda el porcentaje de victorias de cada jugador y cada pareja. Funciona sin conexión desde la pantalla de inicio del iPhone, en inglés y chino.",
   "link.app": "Abrir la app",

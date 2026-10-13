@@ -80,7 +80,7 @@
   "t.resy.title": "Bot de réservation Resy",
   "t.resy.desc": "Réserve automatiquement les tables Resy les plus convoitées : surveille les annulations et saisit les nouvelles disponibilités dès la seconde où elles ouvrent. Comprend des alertes sur téléphone, un suivi des annulations et un tableau de bord Streamlit.",
   "t.wm.title": "Outil de création de filigranes",
-  "t.wm.desc": "Une application Streamlit qui ajoute des filigranes texte ou image, uniques ou inclinés en mosaïque, aux images, PDF et documents Word.",
+  "t.wm.desc": "Une application Streamlit qui ajoute des filigranes texte ou image, uniques ou inclinés en mosaïque, aux images, PDF et documents Word. Essayez-la dans votre navigateur : elle exécute Python en local grâce à WebAssembly, vos fichiers ne sont donc jamais envoyés.",
   "t.gd.title": "Compteur de Guandan",
   "t.gd.desc": "Un compteur de points pour les soirées Guandan (掼蛋). Il suit le niveau des deux équipes de 2 à l'As, applique les règles pour gagner sur l'As et garde le taux de victoire de chaque joueur et de chaque duo. Fonctionne hors ligne depuis l'écran d'accueil de l'iPhone, en anglais et en chinois.",
   "link.app": "Ouvrir l'appli",
