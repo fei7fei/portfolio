@@ -459,6 +459,28 @@ p {
   object-position: top left;
 }
 
+.video-thumb {
+  position: relative;
+  display: block;
+}
+
+.video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center / 30px no-repeat;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.video-thumb:hover::after {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .thumb-1 { background: linear-gradient(135deg, #6366f1, #a855f7); }
 .thumb-2 { background: linear-gradient(135deg, #0ea5e9, #22d3ee); }
 .thumb-3 { background: linear-gradient(135deg, #f97316, #f43f5e); }
