@@ -22,14 +22,14 @@ menu.querySelectorAll("a").forEach((link) =>
 
 // Submit the contact form without leaving the page (works with Formspree)
 const form = document.querySelector(".contact-form");
-const status = form.querySelector(".form-status");
+const status = form?.querySelector(".form-status");
 
-form.addEventListener("submit", async (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (form.action.includes("YOUR_FORM_ID")) {
     status.className = "form-status error";
-    status.textContent = "The contact form isn't available yet. Please reach out on GitHub for now.";
+    status.textContent = "The contact form isn't available yet. Please reach out on LinkedIn for now.";
     return;
   }
 

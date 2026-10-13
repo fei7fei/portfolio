@@ -456,6 +456,10 @@ p {
 .thumb-2 { background: linear-gradient(135deg, #0ea5e9, #22d3ee); }
 .thumb-3 { background: linear-gradient(135deg, #f97316, #f43f5e); }
 .thumb-4 { background: linear-gradient(135deg, #10b981, #84cc16); }
+.thumb-5 { background: linear-gradient(135deg, #eab308, #f97316); }
+.thumb-6 { background: linear-gradient(135deg, #64748b, #0ea5e9); }
+.thumb-7 { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
+.thumb-8 { background: linear-gradient(135deg, #14b8a6, #3b82f6); }
 
 .project-body {
   padding: 24px;
@@ -502,6 +506,94 @@ p {
 
 .paper-authors {
   font-size: 0.9rem !important;
+}
+
+/* =========================================================
+   EXPERIENCE PAGE
+   ========================================================= */
+.page-intro {
+  padding-top: 72px;
+}
+
+.page-intro h1 {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.nav-links a[aria-current="page"] {
+  color: var(--accent);
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 24px;
+  border-left: 2px solid var(--border);
+  display: grid;
+  gap: 28px;
+}
+
+.timeline-item {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.timeline-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+}
+
+.timeline-head h3 {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.timeline-org {
+  color: var(--muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+.timeline-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin: 4px 0 0;
+  white-space: nowrap;
+}
+
+.timeline-item > ul:not(.tags) {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.timeline-item > ul:not(.tags) li + li {
+  margin-top: 6px;
+}
+
+.timeline-item > .tags {
+  margin-top: 16px;
 }
 
 /* =========================================================
