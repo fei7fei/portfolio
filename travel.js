@@ -145,7 +145,7 @@
     globe.pointOfView({ lat: 30, lng: 125, altitude }, 0);
 
     const zoom = (factor) => {
-      altitude = Math.min(2.8, Math.max(0.45, altitude * factor));
+      altitude = Math.min(2.8, Math.max(0.7, altitude * factor));
       controls.autoRotate = false;
       globe.pointOfView({ altitude }, 600);
     };

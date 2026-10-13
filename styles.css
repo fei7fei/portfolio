@@ -1638,13 +1638,18 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   align-items: center;
 }
 
+/* The canvas bleeds past its column and fades out in a soft circle,
+   so a zoomed-in globe dissolves at the edges instead of being cut off in straight lines. */
 .globe {
   position: relative;
-  height: 560px;
+  height: 620px;
+  margin-inline: -32px;
   cursor: grab;
   opacity: 0;
   transition: opacity 1.2s ease;
   touch-action: pan-y;
+  -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
 }
 
 .globe:active {
@@ -1839,13 +1844,14 @@ html:is(:lang(zh), :lang(ja), :lang(ko), :lang(hi), :lang(pa), :lang(ar), :lang(
   }
 
   .globe {
-    height: 460px;
+    height: 520px;
   }
 }
 
 @media (max-width: 767px) {
   .globe {
-    height: 340px;
+    height: 380px;
+    margin-inline: -16px;
   }
 
   .travel-panel {
