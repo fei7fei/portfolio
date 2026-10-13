@@ -237,12 +237,14 @@
         </article>
 
         <article class="project-card">
-          <div class="project-thumb thumb-6" aria-hidden="true"></div>
+          <div class="project-thumb thumb-6">
+            <img src="images/cpu-architecture.png" alt="Block diagram of the two-cycle processor: instruction register, finite state machine, memory control, address bus multiplexer, program counter, and RAM" loading="lazy" style="object-position: center" />
+          </div>
           <div class="project-body">
-            <h3>32-Bit Modular Processor</h3>
-            <p>Designed a 32-bit modular ALU for a 15-instruction RISC architecture: adder, subtractor, and multiplier with NZCV flag logic, plus parameterized shift/rotate units, verified with ModelSim testbenches.</p>
+            <h3>32-Bit Microprocessor</h3>
+            <p>With a partner, built a fully synchronous, multi-cycle Von Neumann 32-bit processor in Verilog for a 15-instruction ISA: an ALU with NZCV flags, conditional execution, shift/rotate, and RAM with memory control. A two-cycle fetch/execute state machine fixed a deadlock on loads and stores, and ModelSim testbenches verified it running a compiled if/else program.</p>
             <ul class="tags tags-small">
-              <li>SystemVerilog</li><li>ModelSim</li><li>Digital Design</li>
+              <li>Verilog</li><li>ModelSim</li><li>Quartus</li><li>Computer Architecture</li>
             </ul>
           </div>
         </article>
