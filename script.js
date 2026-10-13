@@ -29,7 +29,7 @@ form.addEventListener("submit", async (event) => {
 
   if (form.action.includes("YOUR_FORM_ID")) {
     status.className = "form-status error";
-    status.textContent = "Form not set up yet: add your Formspree form ID in index.html.";
+    status.textContent = "The contact form isn't available yet. Please reach out on GitHub for now.";
     return;
   }
 
