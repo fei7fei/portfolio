@@ -16,6 +16,7 @@ window.PLACES = [
   { name: "Seattle", country: "United States", lat: 47.6062, lng: -122.3321, type: "trip" },
   { name: "Portland", country: "United States", lat: 45.5152, lng: -122.6784, type: "trip", side: "left" },
   { name: "Los Angeles", country: "United States", lat: 34.0522, lng: -118.2437, type: "trip" },
+  { name: "Alaska", country: "United States", lat: 61.2181, lng: -149.9003, type: "trip" },
   { name: "Tokyo", country: "Japan", lat: 35.6762, lng: 139.6503, type: "trip" },
   { name: "Seoul", country: "South Korea", lat: 37.5665, lng: 126.978, type: "trip" },
   { name: "Taipei", country: "Taiwan", lat: 25.033, lng: 121.5654, type: "trip" },
